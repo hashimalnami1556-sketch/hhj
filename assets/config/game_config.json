@@ -1,0 +1,103 @@
+{
+  "game": {
+    "title": "NARIS: الأساطير المفقودة",
+    "version": "0.1.0",
+    "language": "ar",
+    "description": "لعبة بطل الرحلة الملحمية في عالم الرماد المظلم",
+    "genre": "RPG Action",
+    "target_platform": "Web, Desktop, Mobile"
+  },
+  "graphics": {
+    "default_resolution": "1920x1080",
+    "vsync": true,
+    "max_frame_rate": 60,
+    "quality_preset": "high",
+    "shadow_quality": "medium",
+    "particle_count": 1000,
+    "draw_distance": 100
+  },
+  "audio": {
+    "master_volume": 0.8,
+    "music_volume": 0.6,
+    "effects_volume": 0.8,
+    "voice_volume": 0.8,
+    "enable_music": true,
+    "enable_effects": true,
+    "enable_voice": true
+  },
+  "gameplay": {
+    "difficulty": "normal",
+    "auto_save": true,
+    "auto_save_interval": 300,
+    "difficulty_levels": {
+      "easy": {
+        "damage_received": 0.7,
+        "experience_gain": 1.2,
+        "enemy_health": 0.8
+      },
+      "normal": {
+        "damage_received": 1.0,
+        "experience_gain": 1.0,
+        "enemy_health": 1.0
+      },
+      "hard": {
+        "damage_received": 1.3,
+        "experience_gain": 1.5,
+        "enemy_health": 1.3
+      },
+      "legendary": {
+        "damage_received": 2.0,
+        "experience_gain": 2.5,
+        "enemy_health": 2.0
+      }
+    }
+  },
+  "controls": {
+    "movement": {
+      "forward": "W",
+      "backward": "S",
+      "left": "A",
+      "right": "D"
+    },
+    "combat": {
+      "attack": "Left_Mouse",
+      "heavy_attack": "Right_Mouse",
+      "ability_1": "Q",
+      "ability_2": "E",
+      "ability_3": "R",
+      "ability_4": "F"
+    },
+    "interface": {
+      "inventory": "I",
+      "character": "C",
+      "quest_log": "J",
+      "map": "M",
+      "pause": "Escape"
+    }
+  },
+  "features": {
+    "single_player": true,
+    "multiplayer": false,
+    "pvp": false,
+    "companions": true,
+    "crafting": true,
+    "quest_system": true,
+    "skill_tree": true,
+    "dynamic_lighting": true,
+    "day_night_cycle": true
+  },
+  "performance": {
+    "enable_debug_mode": false,
+    "enable_console": false,
+    "log_level": "warning",
+    "profiling_enabled": false,
+    "memory_limit_mb": 2048
+  },
+  "color_scheme": {
+    "primary": "#ff6b35",
+    "secondary": "#7b2cbf",
+    "accent": "#00ffff",
+    "highlight": "#d4a574",
+    "dark": "#1a1a1a"
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "id": "staff_fire_mage",
+  "name": "عصا الساحر الناري",
+  "type": "staff",
+  "rarity": "rare",
+  "description": "عصا سحرية مع كرة نار متوهجة في القمة. تزيد من قوة السحر الناري بشكل كبير.",
+  "stats": {
+    "magic": 28,
+    "magic_defense": 12,
+    "intelligence_requirement": 18,
+    "weight": 4.0
+  },
+  "materials": {
+    "orb": "mat_naris_fire",
+    "staff": "mat_ancient_gold",
+    "grip": "mat_ash_black"
+  },
+  "special_properties": {
+    "fire_magic_boost": 1.3,
+    "casting_speed": 1.1,
+    "mana_regen": 0.5
+  },
+  "spells": ["fireball", "flame_burst", "inferno", "fire_wall"],
+  "color_palette": {
+    "orb": "#ff6b35",
+    "staff_gold": "#d4a574"
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "animation_sets": [
+    {
+      "id": "anim_hero_idle",
+      "name": "خامل البطل",
+      "type": "idle",
+      "duration": 2.0,
+      "looping": true,
+      "keyframes": [
+        {"time": 0.0, "properties": {"rotation": 0, "position": 0}},
+        {"time": 1.0, "properties": {"rotation": 2, "position": 0.1}},
+        {"time": 2.0, "properties": {"rotation": 0, "position": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_walk",
+      "name": "مشي البطل",
+      "type": "locomotion",
+      "duration": 0.8,
+      "looping": true,
+      "speed_multiplier": 1.0,
+      "keyframes": [
+        {"time": 0.0, "properties": {"position": 0, "stride": 0}},
+        {"time": 0.4, "properties": {"position": 0.5, "stride": 0.8}},
+        {"time": 0.8, "properties": {"position": 1.0, "stride": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_run",
+      "name": "جري البطل",
+      "type": "locomotion",
+      "duration": 0.5,
+      "looping": true,
+      "speed_multiplier": 1.5,
+      "keyframes": [
+        {"time": 0.0, "properties": {"position": 0, "stride": 0}},
+        {"time": 0.25, "properties": {"position": 0.5, "stride": 1.0}},
+        {"time": 0.5, "properties": {"position": 1.0, "stride": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_attack_light",
+      "name": "هجمة خفيفة",
+      "type": "attack",
+      "duration": 0.6,
+      "looping": false,
+      "damage_frame": 0.3,
+      "keyframes": [
+        {"time": 0.0, "properties": {"weapon_rotation": 0, "arm_position": 0}},
+        {"time": 0.3, "properties": {"weapon_rotation": 45, "arm_position": 0.8}},
+        {"time": 0.6, "properties": {"weapon_rotation": 0, "arm_position": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_attack_heavy",
+      "name": "هجمة ثقيلة",
+      "type": "attack",
+      "duration": 1.0,
+      "looping": false,
+      "damage_frame": 0.5,
+      "stamina_cost": 30,
+      "keyframes": [
+        {"time": 0.0, "properties": {"weapon_rotation": -45, "arm_position": -0.5}},
+        {"time": 0.5, "properties": {"weapon_rotation": 90, "arm_position": 1.0}},
+        {"time": 1.0, "properties": {"weapon_rotation": 0, "arm_position": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_cast_ability",
+      "name": "إطلاق قدرة سحرية",
+      "type": "cast",
+      "duration": 1.2,
+      "looping": false,
+      "cast_frame": 0.8,
+      "keyframes": [
+        {"time": 0.0, "properties": {"hands_position": 0, "glow": 0}},
+        {"time": 0.8, "properties": {"hands_position": 1.0, "glow": 1.0}},
+        {"time": 1.2, "properties": {"hands_position": 0, "glow": 0}}
+      ]
+    },
+    {
+      "id": "anim_hero_take_damage",
+      "name": "تأثر بالضرر",
+      "type": "reaction",
+      "duration": 0.4,
+      "looping": false,
+      "knockback": 0.5,
+      "keyframes": [
+        {"time": 0.0, "properties": {"position": 0, "opacity": 1.0}},
+        {"time": 0.2, "properties": {"position": 0.5, "opacity": 0.8}},
+        {"time": 0.4, "properties": {"position": 0, "opacity": 1.0}}
+      ]
+    },
+    {
+      "id": "anim_hero_death",
+      "name": "الموت",
+      "type": "death",
+      "duration": 2.0,
+      "looping": false,
+      "ragdoll": true,
+      "keyframes": [
+        {"time": 0.0, "properties": {"position": 0, "opacity": 1.0}},
+        {"time": 1.0, "properties": {"position": 0.5, "opacity": 0.5}},
+        {"time": 2.0, "properties": {"position": 0.5, "opacity": 0}}
+      ]
+    }
+  ]
+}

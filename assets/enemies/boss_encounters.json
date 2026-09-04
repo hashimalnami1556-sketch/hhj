@@ -1,0 +1,203 @@
+{
+  "bosses": [
+    {
+      "id": "boss_shadow_beast",
+      "name": "وحش الظل الكبير",
+      "type": "shadow_creature",
+      "rarity": "legendary",
+      "description": "كائن مظلم قديم يجسد الظلام نفسه.",
+      "stats": {
+        "health": 150,
+        "attack": 28,
+        "defense": 8,
+        "intelligence": 12,
+        "level": 20
+      },
+      "resistances": {
+        "void": 0.3,
+        "fire": 1.3
+      },
+      "phases": [
+        {
+          "name": "phase_1",
+          "health_threshold": 100,
+          "attacks": [
+            {
+              "name": "shadow_slash",
+              "damage": 20,
+              "type": "void"
+            },
+            {
+              "name": "darkness_burst",
+              "damage": 15,
+              "aoe_radius": 2.5
+            }
+          ]
+        },
+        {
+          "name": "phase_2",
+          "health_threshold": 50,
+          "attacks": [
+            {
+              "name": "shadow_clone",
+              "clones": 2
+            },
+            {
+              "name": "void_explosion",
+              "damage": 25,
+              "aoe_radius": 3.0
+            }
+          ]
+        }
+      ],
+      "rewards": {
+        "experience": 1500,
+        "gold": 500,
+        "guaranteed_items": ["armor_ash_plate"],
+        "rare_drops": ["ring_evasion_shadow", "cloak_void_walker"]
+      }
+    },
+    {
+      "id": "boss_fire_dragon",
+      "name": "التنين الناري الأحمر",
+      "type": "dragon",
+      "rarity": "legendary",
+      "description": "تنين عملاق يحترق بنار لا تنطفئ.",
+      "stats": {
+        "health": 200,
+        "attack": 32,
+        "defense": 12,
+        "level": 25
+      },
+      "resistances": {
+        "fire": 0.2,
+        "aether": 1.2,
+        "void": 1.3
+      },
+      "abilities": [
+        {
+          "name": "inferno_breath",
+          "damage": 30,
+          "type": "fire",
+          "aoe_radius": 3.0
+        },
+        {
+          "name": "tail_swipe",
+          "damage": 25,
+          "knockback": 1.0
+        },
+        {
+          "name": "dragon_roar",
+          "stun_duration": 2,
+          "radius": 2.5
+        }
+      ],
+      "rewards": {
+        "experience": 2000,
+        "gold": 700,
+        "guaranteed_items": ["sword_of_poem"],
+        "rare_drops": ["ring_fire_strength", "helm_flame_drake"]
+      }
+    },
+    {
+      "id": "boss_void_lord",
+      "name": "رب الفراغ الأبدي",
+      "type": "void_entity",
+      "rarity": "legendary",
+      "description": "كائن قديم يمثل قوة الفراغ نفسها.",
+      "stats": {
+        "health": 250,
+        "attack": 35,
+        "defense": 10,
+        "intelligence": 18,
+        "level": 30
+      },
+      "resistances": {
+        "void": 0.1,
+        "aether": 1.4,
+        "fire": 0.9
+      },
+      "phases": [
+        {
+          "name": "phase_1",
+          "health_threshold": 170,
+          "abilities": [
+            {
+              "name": "void_bolt",
+              "damage": 25,
+              "type": "void"
+            }
+          ]
+        },
+        {
+          "name": "phase_2",
+          "health_threshold": 85,
+          "abilities": [
+            {
+              "name": "reality_tear",
+              "damage": 35,
+              "aoe_radius": 3.5
+            }
+          ]
+        },
+        {
+          "name": "phase_3",
+          "health_threshold": 0,
+          "abilities": [
+            {
+              "name": "void_annihilation",
+              "damage": 50,
+              "aoe_radius": 4.0
+            }
+          ]
+        }
+      ],
+      "rewards": {
+        "experience": 3000,
+        "gold": 1000,
+        "guaranteed_items": ["amulet_hero_blessing"],
+        "rare_drops": ["ring_magic_seal", "wand_aether_conduit"]
+      }
+    },
+    {
+      "id": "boss_aether_guardian",
+      "name": "حارس الأثير القديم",
+      "type": "construct",
+      "rarity": "legendary",
+      "description": "آلية قديمة تحرس المعابد الضائعة.",
+      "stats": {
+        "health": 180,
+        "attack": 26,
+        "defense": 16,
+        "level": 22
+      },
+      "resistances": {
+        "aether": 0.2,
+        "physical": 0.7,
+        "magic": 0.5
+      },
+      "abilities": [
+        {
+          "name": "laser_beam",
+          "damage": 28,
+          "type": "aether"
+        },
+        {
+          "name": "shield_barrier",
+          "effect": "temporary_immunity"
+        },
+        {
+          "name": "aether_pulse",
+          "damage": 20,
+          "aoe_radius": 2.0
+        }
+      ],
+      "rewards": {
+        "experience": 1800,
+        "gold": 600,
+        "guaranteed_items": ["shield_mirrored_void"],
+        "rare_drops": ["ring_magic_seal", "armor_mist_robe"]
+      }
+    }
+  ]
+}

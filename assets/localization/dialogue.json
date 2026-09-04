@@ -1,0 +1,111 @@
+{
+  "dialogues": [
+    {
+      "id": "dialogue_first_meeting",
+      "speaker": "guide_elder_sage",
+      "lines": [
+        "مرحبا بك أيها البطل.",
+        "جئت في الوقت المناسب جداً.",
+        "العالم يحتاج إلى شخص قوي مثلك."
+      ]
+    },
+    {
+      "id": "dialogue_merchant_greeting",
+      "speaker": "merchant_old_trader",
+      "lines": [
+        "أهلاً وسهلاً يا صديقي!",
+        "عندي أفضل الأسلحة والمعدات.",
+        "هل تريد شراء أم بيع؟"
+      ]
+    },
+    {
+      "id": "dialogue_companion_join",
+      "speaker": "companion_warrior_kael",
+      "lines": [
+        "مرحباً! أنا كايل.",
+        "سمعت عنك الكثير.",
+        "دعني أساعدك في هذه المهمة الخطيرة."
+      ]
+    },
+    {
+      "id": "dialogue_boss_defeated",
+      "speaker": "guide_elder_sage",
+      "lines": [
+        "نعم! لقد فعلت ذلك!",
+        "هزمت وحش الظل أخيراً.",
+        "الآن يمكننا أن نأمل بأيام أفضل."
+      ]
+    },
+    {
+      "id": "dialogue_city_guard",
+      "speaker": "city_guard",
+      "lines": [
+        "مرحباً يا غريب.",
+        "مرحباً بك في قريتنا.",
+        "إن كنت بحاجة لأي شيء فقل."
+      ]
+    },
+    {
+      "id": "dialogue_tavern_keeper",
+      "speaker": "tavern_keeper",
+      "lines": [
+        "ماذا تريد يا غريب؟",
+        "الشراب هنا الأفضل في المنطقة.",
+        "استرخ وشارك قصتك معنا."
+      ]
+    },
+    {
+      "id": "dialogue_quest_accept",
+      "speaker": "guide_elder_sage",
+      "lines": [
+        "شكراً لقبولك هذه المهمة.",
+        "إنها خطيرة جداً.",
+        "لكني أثق بقوتك."
+      ]
+    },
+    {
+      "id": "dialogue_item_found",
+      "speaker": "system",
+      "lines": [
+        "وجدت عنصراً!",
+        "نالت {item_name}"
+      ]
+    },
+    {
+      "id": "dialogue_level_up",
+      "speaker": "system",
+      "lines": [
+        "مبروك!",
+        "صعدت إلى المستوى {level}",
+        "إحصائياتك تحسنت!"
+      ]
+    },
+    {
+      "id": "dialogue_companion_ability",
+      "speaker": "companion_mage_elara",
+      "lines": [
+        "دعني أساعدك بسحري!",
+        "ستشعر بقوة الأثير الآن.",
+        "كن حذراً يا صديقي."
+      ]
+    }
+  ],
+  "ui_strings": {
+    "inventory": "الحقيبة",
+    "equipment": "المعدات",
+    "stats": "الإحصائيات",
+    "quest_log": "سجل المهام",
+    "save_game": "حفظ اللعبة",
+    "load_game": "تحميل اللعبة",
+    "settings": "الإعدادات",
+    "exit": "خروج",
+    "hp": "الصحة",
+    "stamina": "الطاقة",
+    "mana": "المانا",
+    "experience": "الخبرة",
+    "level": "المستوى",
+    "gold": "الذهب",
+    "attack": "الهجوم",
+    "defense": "الدفاع"
+  }
+}

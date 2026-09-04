@@ -22,6 +22,13 @@
 | v1.5 | `Naris_Vertical_Slice_Godot_v1_5_World_Quest_Inventory.zip` | World interaction, quests, inventory, dialogue, lore, locked gates, save/load. |
 | v1.6 | `Naris_Vertical_Slice_Godot_v1_6_Companion_Crafting_Map_AI.zip` | Spirit Wolf companion, crafting, upgrades, map, AI director, factions, world events. |
 
+## Related documents
+
+| Document | Purpose |
+|---|---|
+| `docs/SRS.md` | Software Requirements Specification. |
+| `docs/CONCEPT_ART_AND_3D_ASSET_PROPOSAL.md` | Anime-style character concept art references and the proposed 3D character/tile/material/prop asset list for the next art pass. |
+
 ## Note
 
 Binary ZIP packages are referenced here as production artifacts. Large binary upload should later be handled by GitHub Releases or Git LFS. This repository currently stores the production documents and handoff records.

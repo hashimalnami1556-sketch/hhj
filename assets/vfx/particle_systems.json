@@ -1,0 +1,109 @@
+{
+  "particle_systems": [
+    {
+      "id": "ps_fire_burst",
+      "name": "انفجار النار",
+      "description": "انفجار من الجزيئات النارية.",
+      "emission": {
+        "rate": 50,
+        "duration": 0.5,
+        "lifetime": 1.0
+      },
+      "particle_properties": {
+        "size": {"min": 0.1, "max": 0.3},
+        "color": {"r": 255, "g": 107, "b": 53},
+        "velocity": 5.0,
+        "acceleration": -2.0,
+        "spread": 1.5
+      },
+      "physics": {
+        "gravity": -0.5,
+        "drag": 0.3
+      }
+    },
+    {
+      "id": "ps_aether_pulse",
+      "name": "نبض الأثير",
+      "description": "نبض من الجزيئات الأرجوانية.",
+      "emission": {
+        "rate": 80,
+        "duration": 0.8,
+        "lifetime": 1.2
+      },
+      "particle_properties": {
+        "size": {"min": 0.2, "max": 0.4},
+        "color": {"r": 123, "g": 44, "b": 191},
+        "velocity": 3.0,
+        "spread": 2.0,
+        "emission_shape": "sphere"
+      },
+      "glow": {
+        "intensity": 0.8,
+        "color": {"r": 123, "g": 44, "b": 191}
+      }
+    },
+    {
+      "id": "ps_heal_aura",
+      "name": "هالة الشفاء",
+      "description": "هالة خضراء شافية.",
+      "emission": {
+        "rate": 30,
+        "duration": 1.5,
+        "lifetime": 1.5
+      },
+      "particle_properties": {
+        "size": {"min": 0.15, "max": 0.35},
+        "color": {"r": 0, "g": 200, "b": 100},
+        "velocity": 1.5,
+        "spread": 1.0,
+        "emission_shape": "circle"
+      },
+      "glow": {
+        "intensity": 1.0,
+        "color": {"r": 0, "g": 200, "b": 100}
+      }
+    },
+    {
+      "id": "ps_mist_fog",
+      "name": "ضباب الضباب",
+      "description": "ضباب أزرق كثيف.",
+      "emission": {
+        "rate": 20,
+        "duration": 2.0,
+        "lifetime": 2.5
+      },
+      "particle_properties": {
+        "size": {"min": 0.5, "max": 1.5},
+        "color": {"r": 0, "g": 255, "b": 255},
+        "velocity": 0.5,
+        "spread": 0.8,
+        "opacity": 0.4
+      },
+      "physics": {
+        "gravity": 0.0,
+        "drag": 0.8
+      }
+    },
+    {
+      "id": "ps_void_explosion",
+      "name": "انفجار الفراغ",
+      "description": "انفجار سوداء غامضة.",
+      "emission": {
+        "rate": 100,
+        "duration": 0.6,
+        "lifetime": 1.0
+      },
+      "particle_properties": {
+        "size": {"min": 0.2, "max": 0.5},
+        "color": {"r": 26, "g": 26, "b": 26},
+        "velocity": 6.0,
+        "spread": 2.0,
+        "edge_glow": true
+      },
+      "glow": {
+        "intensity": 0.5,
+        "color": {"r": 123, "g": 44, "b": 191}
+      }
+    }
+  ]
+}

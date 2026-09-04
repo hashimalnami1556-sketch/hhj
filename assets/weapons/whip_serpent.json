@@ -1,0 +1,39 @@
+{
+  "id": "whip_serpent",
+  "name": "السوط: الثعبان الذهبي",
+  "type": "whip",
+  "rarity": "uncommon",
+  "description": "سوط مرن مع رؤوس ذهبية حادة. يُستخدم للسيطرة والهجمات من بعيد.",
+  "stats": {
+    "attack": 14,
+    "dexterity": 6,
+    "dexterity_requirement": 9,
+    "weight": 1.0
+  },
+  "materials": {
+    "cord": "mat_mist_cyan",
+    "tips": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "reach": 1.8,
+    "stun_chance": 0.15,
+    "disarm_chance": 0.1
+  },
+  "attacks": {
+    "lash": {
+      "damage": 10,
+      "speed": "medium",
+      "reach": 1.8,
+      "consumes_stamina": 12,
+      "stun_chance": 0.15
+    },
+    "whirlwind": {
+      "damage": 8,
+      "speed": "fast",
+      "hits": 4,
+      "aoe": true,
+      "radius": 1.5,
+      "consumes_stamina": 28
+    }
+  }
+}

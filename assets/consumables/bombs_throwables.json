@@ -1,0 +1,99 @@
+{
+  "consumables": [
+    {
+      "id": "bomb_fire",
+      "name": "قنبلة النار",
+      "type": "throwable",
+      "rarity": "uncommon",
+      "description": "كرة متفجرة برتقالية تنفجر بالنار.",
+      "value": 60,
+      "weight": 0.3,
+      "effects": {
+        "explosion_type": "fire",
+        "damage": 25,
+        "aoe_radius": 2.0,
+        "cooldown": 6
+      }
+    },
+    {
+      "id": "bomb_frost",
+      "name": "قنبلة الجليد",
+      "type": "throwable",
+      "rarity": "uncommon",
+      "description": "كرة زرقاء تتجمد الأشياء من حولها.",
+      "value": 60,
+      "weight": 0.3,
+      "effects": {
+        "explosion_type": "frost",
+        "damage": 20,
+        "aoe_radius": 2.0,
+        "stun_duration": 2.0,
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "bomb_poison",
+      "name": "قنبلة السم",
+      "type": "throwable",
+      "rarity": "rare",
+      "description": "كرة خضراء سامة تترك غيمة سم.",
+      "value": 100,
+      "weight": 0.3,
+      "effects": {
+        "explosion_type": "poison",
+        "damage": 15,
+        "aoe_radius": 2.5,
+        "poison_duration": 10,
+        "poison_damage_per_tick": 3,
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "bomb_aether",
+      "name": "قنبلة الأثير",
+      "type": "throwable",
+      "rarity": "rare",
+      "description": "كرة أرجوانية تنفجر بطاقة الأثير النقية.",
+      "value": 110,
+      "weight": 0.3,
+      "effects": {
+        "explosion_type": "aether",
+        "damage": 30,
+        "aoe_radius": 2.0,
+        "knockback": 0.8,
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "bomb_smoke",
+      "name": "قنبلة الدخان",
+      "type": "throwable",
+      "rarity": "common",
+      "description": "كرة سوداء تخلق دخان كثيف للهروب.",
+      "value": 25,
+      "weight": 0.2,
+      "effects": {
+        "explosion_type": "smoke",
+        "radius": 3.0,
+        "evasion_bonus": 0.4,
+        "duration": 8,
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "bomb_flash",
+      "name": "قنبلة الومضة",
+      "type": "throwable",
+      "rarity": "uncommon",
+      "description": "كرة بيضاء ساطعة تعمي الأعداء.",
+      "value": 50,
+      "weight": 0.2,
+      "effects": {
+        "explosion_type": "flash",
+        "radius": 2.5,
+        "blind_duration": 3,
+        "cooldown": 12
+      }
+    }
+  ]
+}

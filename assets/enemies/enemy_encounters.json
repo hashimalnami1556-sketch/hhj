@@ -1,0 +1,147 @@
+{
+  "enemies": [
+    {
+      "id": "enemy_ash_skeleton",
+      "name": "هيكل عظمي الرماد",
+      "type": "undead",
+      "rarity": "common",
+      "description": "هيكل عظمي قديم مع سلاح خفيف.",
+      "stats": {
+        "health": 20,
+        "attack": 8,
+        "defense": 3,
+        "level": 3
+      },
+      "drops": {
+        "experience": 50,
+        "gold": 10,
+        "items": ["mat_iron_ore"]
+      }
+    },
+    {
+      "id": "enemy_fire_wraith",
+      "name": "شبح ناري",
+      "type": "spirit",
+      "rarity": "uncommon",
+      "description": "روح بنية نارية تحترق بنار سحرية.",
+      "stats": {
+        "health": 35,
+        "attack": 12,
+        "intelligence": 8,
+        "level": 6
+      },
+      "resistances": {
+        "fire": 0.3,
+        "aether": 1.2
+      },
+      "attacks": [
+        {
+          "name": "fireball",
+          "damage": 15,
+          "type": "fire"
+        }
+      ],
+      "drops": {
+        "experience": 120,
+        "gold": 30,
+        "items": ["mat_naris_shard"]
+      }
+    },
+    {
+      "id": "enemy_void_spider",
+      "name": "عنكبوت الفراغ",
+      "type": "beast",
+      "rarity": "uncommon",
+      "description": "عنكبوت ضخم أسود مع سم قوي.",
+      "stats": {
+        "health": 40,
+        "attack": 14,
+        "dexterity": 6,
+        "level": 7
+      },
+      "resistances": {
+        "poison": 0.2
+      },
+      "attacks": [
+        {
+          "name": "poison_bite",
+          "damage": 10,
+          "poison_damage_per_tick": 2,
+          "duration": 5
+        },
+        {
+          "name": "web_trap",
+          "stun_duration": 2
+        }
+      ],
+      "drops": {
+        "experience": 140,
+        "gold": 35,
+        "items": ["mat_steel_ingot"]
+      }
+    },
+    {
+      "id": "enemy_aether_golem",
+      "name": "غولم الأثير",
+      "type": "construct",
+      "rarity": "rare",
+      "description": "حارس حجري ضخم ينبض بطاقة الأثير.",
+      "stats": {
+        "health": 80,
+        "attack": 18,
+        "defense": 12,
+        "level": 12
+      },
+      "resistances": {
+        "aether": 0.2,
+        "physical": 0.8
+      },
+      "attacks": [
+        {
+          "name": "heavy_slam",
+          "damage": 20,
+          "aoe_radius": 1.5,
+          "knockback": 0.8
+        }
+      ],
+      "drops": {
+        "experience": 250,
+        "gold": 80,
+        "items": ["mat_aether_crystal"]
+      }
+    },
+    {
+      "id": "enemy_shadow_knight",
+      "name": "فارس الظل",
+      "type": "humanoid",
+      "rarity": "rare",
+      "description": "فارس مظلم يرتدي درع سوداء ويحمل سيف الفراغ.",
+      "stats": {
+        "health": 70,
+        "attack": 22,
+        "defense": 10,
+        "level": 14
+      },
+      "resistances": {
+        "void": 0.4,
+        "fire": 1.2
+      },
+      "attacks": [
+        {
+          "name": "void_slash",
+          "damage": 18,
+          "type": "void"
+        },
+        {
+          "name": "shadow_step",
+          "effect": "teleport"
+        }
+      ],
+      "drops": {
+        "experience": 300,
+        "gold": 120,
+        "items": ["armor_ash_plate", "sword_of_poem"]
+      }
+    }
+  ]
+}

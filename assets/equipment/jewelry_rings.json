@@ -1,0 +1,96 @@
+{
+  "accessories": [
+    {
+      "id": "ring_health_vitality",
+      "name": "خاتم الحيوية",
+      "type": "ring",
+      "rarity": "uncommon",
+      "description": "خاتم أحمر يزيد من الصحة والتجدد.",
+      "stats": {
+        "health_bonus": 15,
+        "health_regen": 0.5,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_ancient_gold"
+      },
+      "special_properties": {
+        "health_regen": 0.5
+      }
+    },
+    {
+      "id": "ring_evasion_shadow",
+      "name": "خاتم ظل التفادي",
+      "type": "ring",
+      "rarity": "rare",
+      "description": "خاتم أسود يزيد من القدرة على تفادي الهجمات.",
+      "stats": {
+        "dexterity_bonus": 3,
+        "evasion_bonus": 0.1,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "special_properties": {
+        "evasion_boost": 1.15,
+        "backstab_bonus": 1.1
+      }
+    },
+    {
+      "id": "ring_mana_surge",
+      "name": "خاتم اندفاع المانا",
+      "type": "ring",
+      "rarity": "rare",
+      "description": "خاتم أزرق يزيد من المانا وسرعة استعادتها.",
+      "stats": {
+        "mana_bonus": 20,
+        "mana_regen": 0.8,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_mist_cyan"
+      },
+      "special_properties": {
+        "mana_regen": 0.8,
+        "spell_speed": 1.1
+      }
+    },
+    {
+      "id": "ring_poison_resistance",
+      "name": "خاتم مقاومة السم",
+      "type": "ring",
+      "rarity": "uncommon",
+      "description": "خاتم أخضر يقاوم تأثيرات السم.",
+      "stats": {
+        "poison_resistance": 0.6,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_ancient_gold"
+      },
+      "special_properties": {
+        "poison_immunity": 0.6
+      }
+    },
+    {
+      "id": "ring_strength_amplifier",
+      "name": "خاتم مضخم القوة",
+      "type": "ring",
+      "rarity": "rare",
+      "description": "خاتم برتقالي يضخم قوة الضربات.",
+      "stats": {
+        "strength_bonus": 5,
+        "impact_damage": 1.25,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_naris_fire"
+      },
+      "special_properties": {
+        "impact_boost": 1.25,
+        "poise_damage": 0.15
+      }
+    }
+  ]
+}

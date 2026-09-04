@@ -1,0 +1,38 @@
+{
+  "id": "wand_aether_conduit",
+  "name": "عصا موصلة الأثير",
+  "type": "wand",
+  "rarity": "rare",
+  "description": "عصا أرجوانية متوهجة تنقل طاقة الأثير. مثالية لرشات السحر.",
+  "stats": {
+    "attack": 14,
+    "intelligence": 7,
+    "intelligence_requirement": 12,
+    "weight": 1.5
+  },
+  "materials": {
+    "core": "mat_aether_crystal",
+    "shaft": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "aether_magic_boost": 1.35,
+    "spell_power": 1.2,
+    "mana_cost_reduction": 0.85
+  },
+  "attacks": {
+    "aether_bolt": {
+      "damage": 12,
+      "type": "aether_magic",
+      "consumes_mana": 15,
+      "cast_time": 0.6
+    },
+    "aether_orb": {
+      "damage": 20,
+      "type": "aether_magic",
+      "consumes_mana": 30,
+      "cast_time": 1.2,
+      "aoe": true,
+      "radius": 2.5
+    }
+  }
+}

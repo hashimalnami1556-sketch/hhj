@@ -1,0 +1,111 @@
+{
+  "consumables": [
+    {
+      "id": "potion_health_minor",
+      "name": "جرعة الصحة البسيطة",
+      "type": "potion",
+      "rarity": "common",
+      "description": "جرعة حمراء توفر شفاء طفيف.",
+      "value": 30,
+      "weight": 0.2,
+      "effects": {
+        "health_restore": 25,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "potion_health_greater",
+      "name": "جرعة الصحة القوية",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة حمراء زاهية توفر شفاء كبير.",
+      "value": 100,
+      "weight": 0.2,
+      "effects": {
+        "health_restore": 75,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "potion_mana_minor",
+      "name": "جرعة المانا البسيطة",
+      "type": "potion",
+      "rarity": "common",
+      "description": "جرعة زرقاء فاتحة توفر استعادة مانا طفيفة.",
+      "value": 25,
+      "weight": 0.2,
+      "effects": {
+        "mana_restore": 30,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "potion_mana_greater",
+      "name": "جرعة المانا القوية",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة زرقاء عميقة توفر استعادة مانا كبيرة.",
+      "value": 90,
+      "weight": 0.2,
+      "effects": {
+        "mana_restore": 80,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "potion_stamina",
+      "name": "جرعة النشاط",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة برتقالية توفر استعادة الطاقة بسرعة.",
+      "value": 60,
+      "weight": 0.2,
+      "effects": {
+        "stamina_restore": 50,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "potion_strength",
+      "name": "جرعة القوة",
+      "type": "potion",
+      "rarity": "rare",
+      "description": "جرعة برتقالية مشعة تزيد من القوة مؤقتاً.",
+      "value": 150,
+      "weight": 0.2,
+      "effects": {
+        "strength_bonus": 5,
+        "duration": 60,
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "potion_magic_shield",
+      "name": "جرعة درع السحر",
+      "type": "potion",
+      "rarity": "rare",
+      "description": "جرعة أرجوانية تخلق حاجز سحري.",
+      "value": 140,
+      "weight": 0.2,
+      "effects": {
+        "magic_shield": 40,
+        "duration": 45,
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "potion_fire_resistance",
+      "name": "جرعة مقاومة النار",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة حمراء مشتعلة توفر مقاومة النار.",
+      "value": 70,
+      "weight": 0.2,
+      "effects": {
+        "fire_resistance": 0.5,
+        "duration": 120,
+        "cooldown": 10
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "armor_mist_robe",
+  "name": "رداء الضباب الأزرق",
+  "type": "robe",
+  "rarity": "uncommon",
+  "description": "رداء سحري خفيف مع شريط أزرق مرقش. يزيد من مقاومة السحر.",
+  "stats": {
+    "defense": 12,
+    "magic_defense": 16,
+    "intelligence_bonus": 2,
+    "weight": 2.0
+  },
+  "materials": {
+    "primary": "mat_mist_cyan",
+    "accents": "mat_aether_violet"
+  },
+  "special_properties": {
+    "mana_regen": 0.5,
+    "spell_power": 1.08
+  },
+  "socket_slots": {
+    "rune_slots": 2,
+    "gem_slots": 1
+  }
+}

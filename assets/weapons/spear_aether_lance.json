@@ -1,0 +1,57 @@
+{
+  "id": "spear_aether_lance",
+  "name": "رمح الأثير",
+  "type": "spear",
+  "rarity": "rare",
+  "description": "رمح طويل مع رأس متوهج بأثير بنفسجي. يستخدم من قبل فرسان الحارس القديم.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 2.0,
+    "components": ["shaft", "tip", "cross_guard", "grip"]
+  },
+  "stats": {
+    "attack": 32,
+    "magic": 10,
+    "dexterity_requirement": 14,
+    "strength_requirement": 12,
+    "weight": 5.5,
+    "reach": 1.8
+  },
+  "materials": {
+    "tip": "mat_aether_violet",
+    "shaft": "mat_ash_black",
+    "cross_guard": "mat_ancient_gold",
+    "grip": "mat_ash_black"
+  },
+  "special_properties": {
+    "magic_damage": 8,
+    "reach_bonus": 0.3,
+    "poise_damage": 12
+  },
+  "attacks": {
+    "thrust": {
+      "damage": 12,
+      "speed": "medium",
+      "animation": "spear_thrust",
+      "reach": 1.8
+    },
+    "sweep": {
+      "damage": 10,
+      "speed": "fast",
+      "animation": "spear_sweep",
+      "aoe": true
+    },
+    "special": {
+      "name": "Aether Lance",
+      "damage": 22,
+      "magic_cost": 18,
+      "animation": "aether_lance",
+      "vfx": "fx_aether_pulse"
+    }
+  },
+  "color_palette": {
+    "tip_glow": "#a855ff",
+    "shaft_black": "#1a1a1a",
+    "guard_gold": "#d4a574"
+  }
+}

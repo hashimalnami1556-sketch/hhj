@@ -1,0 +1,22 @@
+{
+  "id": "boots_ash_walker",
+  "name": "أحذية سائر الرماد",
+  "type": "boots",
+  "rarity": "uncommon",
+  "description": "أحذية قوية من جلد الوحش مع حماية ممتازة. توفر حماية قدمين وتقلل الضرر من السقوط.",
+  "stats": {
+    "defense": 12,
+    "poise": 8,
+    "weight": 3.0,
+    "movement_speed": 1.05,
+    "fall_damage_reduction": 0.3
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "sole": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "poison_resistance": 0.8,
+    "curse_resistance": 0.9
+  }
+}

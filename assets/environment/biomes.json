@@ -1,0 +1,87 @@
+{
+  "biomes": [
+    {
+      "id": "biome_ashfall_plains",
+      "name": "سهول الرماد الساقط",
+      "description": "سهول واسعة مغطاة برماد بركاني.",
+      "temperature": 35,
+      "weather": ["clear", "ash_storm"],
+      "ground_material": "mat_ash_black",
+      "vegetation": ["dead_tree", "ash_grass"],
+      "ambience": "fx_ember_particle_emitter",
+      "music": "theme_ashfall_plains",
+      "enemies": ["enemy_ash_skeleton", "enemy_fire_wraith"],
+      "loot_tier": "common"
+    },
+    {
+      "id": "biome_dark_forest",
+      "name": "غابة الظل المظلمة",
+      "description": "غابة كثيفة حيث الضوء نادر جداً.",
+      "temperature": 15,
+      "weather": ["rain", "fog"],
+      "ground_material": "mat_mist_cyan",
+      "vegetation": ["dead_tree", "void_plant", "crystal_tree"],
+      "ambience": "fx_mist_fog_plane",
+      "music": "theme_dark_forest",
+      "enemies": ["enemy_void_spider", "enemy_shadow_knight"],
+      "loot_tier": "uncommon"
+    },
+    {
+      "id": "biome_aether_realm",
+      "name": "عالم الأثير",
+      "description": "عالم سحري يتوهج بطاقة الأثير.",
+      "temperature": 20,
+      "weather": ["clear", "aether_storm"],
+      "ground_material": "mat_aether_violet",
+      "vegetation": ["aether_crystal", "spirit_flower"],
+      "ambience": "fx_aether_pulse",
+      "music": "theme_aether_realm",
+      "enemies": ["enemy_aether_golem", "spirit_guardian"],
+      "loot_tier": "rare"
+    },
+    {
+      "id": "biome_volcanic_cavern",
+      "name": "كهف بركاني",
+      "description": "كهف ساخن مليء بالحمم البركانية.",
+      "temperature": 60,
+      "weather": ["none"],
+      "ground_material": "mat_naris_fire",
+      "vegetation": [],
+      "ambience": "fx_ember_particle_emitter",
+      "music": "theme_volcanic_cavern",
+      "enemies": ["enemy_fire_wraith", "fire_drake"],
+      "loot_tier": "rare",
+      "hazards": ["lava_pool", "thermal_damage"]
+    },
+    {
+      "id": "biome_void_rift",
+      "name": "شق الفراغ",
+      "description": "منطقة حيث الواقع نفسه مشوه.",
+      "temperature": 0,
+      "weather": ["void_storm"],
+      "ground_material": "mat_ash_black",
+      "vegetation": [],
+      "ambience": "fx_void_explosion",
+      "music": "theme_void_rift",
+      "enemies": ["enemy_void_spider", "void_construct"],
+      "boss": "void_lord",
+      "loot_tier": "legendary",
+      "hazards": ["void_damage", "reality_distortion"]
+    },
+    {
+      "id": "biome_ancient_temple",
+      "name": "معبد قديم",
+      "description": "معبد ضخم من حضارة مفقودة.",
+      "temperature": 25,
+      "weather": ["clear"],
+      "ground_material": "mat_ancient_gold",
+      "vegetation": [],
+      "ambience": "fx_aether_pulse",
+      "music": "theme_ancient_temple",
+      "enemies": ["enemy_aether_golem"],
+      "boss": "aether_guardian",
+      "loot_tier": "legendary",
+      "features": ["treasure_vault", "spell_library"]
+    }
+  ]
+}

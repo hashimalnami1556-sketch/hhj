@@ -1,0 +1,120 @@
+{
+  "companions": [
+    {
+      "id": "companion_mage_elara",
+      "name": "إيلارا الساحرة",
+      "type": "companion",
+      "role": "mage",
+      "rarity": "rare",
+      "description": "ساحرة بارعة متخصصة في السحر الأثيري.",
+      "stats": {
+        "health": 50,
+        "intelligence": 16,
+        "magic_defense": 12,
+        "level": 1
+      },
+      "materials": {
+        "robes": "mat_aether_violet",
+        "staff": "mat_ancient_gold"
+      },
+      "starting_equipment": {
+        "weapon": "staff_fire_mage",
+        "armor": "armor_mist_robe"
+      },
+      "abilities": [
+        "spell_fireball",
+        "spell_mana_shield",
+        "spell_heal_minor"
+      ],
+      "personality": "حكيمة وهادئة، توفر نصائح حكيمة.",
+      "relationship": 0
+    },
+    {
+      "id": "companion_warrior_kael",
+      "name": "كايل المحارب",
+      "type": "companion",
+      "role": "warrior",
+      "rarity": "rare",
+      "description": "محارب قوي متخصص في القتال المباشر.",
+      "stats": {
+        "health": 100,
+        "strength": 16,
+        "defense": 12,
+        "level": 1
+      },
+      "materials": {
+        "armor": "mat_ash_black",
+        "sword": "mat_naris_fire"
+      },
+      "starting_equipment": {
+        "weapon": "sword_of_poem",
+        "armor": "armor_ash_plate"
+      },
+      "abilities": [
+        "skill_whirlwind_slash",
+        "skill_dragon_strike",
+        "shield_bash"
+      ],
+      "personality": "شجاع وفخور، يحب الحركة والعمل.",
+      "relationship": 0
+    },
+    {
+      "id": "companion_rogue_shadow",
+      "name": "ظل القاتل",
+      "type": "companion",
+      "role": "rogue",
+      "rarity": "rare",
+      "description": "قاتل ماهر متخصص في الهجمات الخاطفة والاغتيالات.",
+      "stats": {
+        "health": 60,
+        "dexterity": 18,
+        "defense": 8,
+        "level": 1
+      },
+      "materials": {
+        "armor": "mat_ash_black",
+        "daggers": "mat_ancient_gold"
+      },
+      "starting_equipment": {
+        "weapon": "dagger_shadow_bite",
+        "armor": "armor_leather_assassin"
+      },
+      "abilities": [
+        "skill_backstab",
+        "skill_shadow_clone",
+        "skill_poison_strike"
+      ],
+      "personality": "غامض وحسوب، لا يثق بسهولة لكن مخلص.",
+      "relationship": 0
+    },
+    {
+      "id": "companion_paladin_grace",
+      "name": "جريس الفارس المقدس",
+      "type": "companion",
+      "role": "paladin",
+      "rarity": "rare",
+      "description": "فارس مقدس متخصص في الدفاع والشفاء.",
+      "stats": {
+        "health": 90,
+        "strength": 12,
+        "magic_defense": 14,
+        "level": 1
+      },
+      "materials": {
+        "armor": "mat_ancient_gold",
+        "shield": "mat_ash_black"
+      },
+      "starting_equipment": {
+        "weapon": "shield_mirrored_void",
+        "armor": "armor_ash_plate"
+      },
+      "abilities": [
+        "skill_healing_light",
+        "skill_divine_shield",
+        "skill_holy_strike"
+      ],
+      "personality": "عادلة وطيبة، ملتزمة بحماية الضعفاء.",
+      "relationship": 0
+    }
+  ]
+}

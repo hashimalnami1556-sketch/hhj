@@ -1,0 +1,80 @@
+{
+  "locations": [
+    {
+      "id": "location_ashfall_village",
+      "name": "قرية الرماد الساقط",
+      "type": "hub",
+      "description": "قرية صغيرة مركز حضارة البشر.",
+      "coordinates": {"x": 0, "y": 0},
+      "size": "medium",
+      "npcs": ["merchant_old_trader", "guide_elder_sage"],
+      "features": [
+        "tavern",
+        "shop",
+        "inn",
+        "quest_board"
+      ]
+    },
+    {
+      "id": "location_ashfall_cave",
+      "name": "كهف الرماد الساقط",
+      "type": "dungeon",
+      "description": "كهف مظلم عميق يحتوي على كنز قديم.",
+      "coordinates": {"x": 10, "y": -5},
+      "difficulty": "hard",
+      "enemies": [
+        "enemy_ash_skeleton",
+        "enemy_fire_wraith"
+      ],
+      "boss": "ash_giant",
+      "rewards": ["crystal_ancient_naris"]
+    },
+    {
+      "id": "location_dark_forest",
+      "name": "الغابة المظلمة",
+      "type": "wilderness",
+      "description": "غابة كثيفة مليئة بالأسرار والأخطار.",
+      "coordinates": {"x": -15, "y": 10},
+      "difficulty": "medium",
+      "enemies": [
+        "enemy_void_spider",
+        "enemy_shadow_knight"
+      ],
+      "exploration_reward": true
+    },
+    {
+      "id": "location_lost_library",
+      "name": "المكتبة المفقودة",
+      "type": "dungeon",
+      "description": "مكتبة قديمة تحتوي على معرفة سحرية.",
+      "coordinates": {"x": 20, "y": 15},
+      "difficulty": "hard",
+      "enemies": [
+        "enemy_aether_golem",
+        "enemy_fire_wraith"
+      ],
+      "treasure": "tome_ancient_magic",
+      "features": ["spell_books", "enchantment_station"]
+    },
+    {
+      "id": "location_ancient_temple",
+      "name": "المعبد القديم",
+      "type": "sacred_site",
+      "description": "معبد ضخم مكرس لآلهة قديمة.",
+      "coordinates": {"x": 30, "y": -20},
+      "difficulty": "hard",
+      "bosses": ["aether_guardian"],
+      "treasure": ["amulet_hero_blessing"]
+    },
+    {
+      "id": "location_void_rift",
+      "name": "شق الفراغ",
+      "type": "otherworld",
+      "description": "منطقة غريبة حيث الواقع نفسه مشوه.",
+      "coordinates": {"x": -30, "y": -30},
+      "difficulty": "extreme",
+      "boss": "void_lord",
+      "rewards": ["crystal_ancient_naris", "orichalcum_ingot"]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "props": [
+    {
+      "id": "prop_statue_ancient",
+      "name": "تمثال قديم",
+      "type": "decoration",
+      "description": "تمثال حجري عملاق لحاكم قديم.",
+      "dimensions": {"x": 2.0, "y": 4.0, "z": 2.0},
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "collision": true
+    },
+    {
+      "id": "prop_fountain_crystal",
+      "name": "نافورة البلور",
+      "type": "water_feature",
+      "description": "نافورة بلورية قديمة تتوهج بنور غامض.",
+      "dimensions": {"x": 3.0, "y": 2.0, "z": 3.0},
+      "materials": {
+        "primary": "mat_mist_cyan",
+        "trim": "mat_aether_violet"
+      },
+      "vfx": "fx_mist_fog_plane",
+      "collision": false
+    },
+    {
+      "id": "prop_barrel_wood",
+      "name": "برميل خشبي",
+      "type": "container",
+      "description": "برميل خشبي قديم قد يحتوي على الكنز.",
+      "dimensions": {"x": 0.8, "y": 1.0, "z": 0.8},
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "collision": true,
+      "lootable": true,
+      "potential_items": ["gold_coin", "potion_health_minor"]
+    },
+    {
+      "id": "prop_chain_iron",
+      "name": "سلسلة حديدية",
+      "type": "decoration",
+      "description": "سلسلة حديدية ثقيلة معلقة من السقف.",
+      "dimensions": {"x": 0.1, "y": 3.0, "z": 0.1},
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "collision": false
+    },
+    {
+      "id": "prop_skeleton_remains",
+      "name": "بقايا هيكل عظمي",
+      "type": "environmental_object",
+      "description": "بقايا هيكل عظمي قديم على الأرض.",
+      "dimensions": {"x": 1.5, "y": 0.5, "z": 2.0},
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "collision": true
+    },
+    {
+      "id": "prop_bookshelf_ancient",
+      "name": "رف كتب قديم",
+      "type": "decoration",
+      "description": "رف كتب معقد مليء بالكتب التاريخية.",
+      "dimensions": {"x": 1.5, "y": 2.5, "z": 0.4},
+      "materials": {
+        "primary": "mat_ash_black",
+        "accent": "mat_ancient_gold"
+      },
+      "collision": true
+    },
+    {
+      "id": "prop_cauldron_bubbling",
+      "name": "قدر غلي سحري",
+      "type": "crafting_station",
+      "description": "قدر قديم يغلي بسائل سحري غامض.",
+      "dimensions": {"x": 1.0, "y": 1.2, "z": 1.0},
+      "materials": {
+        "primary": "mat_ash_black",
+        "liquid": "mat_aether_violet"
+      },
+      "vfx": "fx_mist_fog_plane",
+      "collision": false,
+      "crafting_enabled": true
+    }
+  ]
+}

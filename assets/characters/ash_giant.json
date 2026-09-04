@@ -1,0 +1,78 @@
+{
+  "id": "ash_giant",
+  "name": "Ash Giant",
+  "type": "boss",
+  "role": "encounter_boss",
+  "description": "Multi-phase boss. Cracked obsidian-black body with molten fissures. Ash Gate encounter.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 12.5,
+    "rigged": true,
+    "bones": [
+      "Armature",
+      "Hips", "Spine", "Chest", "Neck", "Head",
+      "LeftShoulder", "LeftArm", "LeftHand",
+      "RightShoulder", "RightArm", "RightHand",
+      "LeftLeg", "LeftFoot",
+      "RightLeg", "RightFoot",
+      "Core"
+    ]
+  },
+  "materials": {
+    "body": "mat_ash_black",
+    "fire_fissures": "mat_naris_fire",
+    "core": "mat_aether_violet",
+    "rune_plating": "mat_ancient_gold"
+  },
+  "phases": [
+    {
+      "phase": 1,
+      "health_threshold": 100,
+      "description": "Sealed state. Slow attacks.",
+      "materials": {
+        "core": "mat_aether_violet"
+      }
+    },
+    {
+      "phase": 2,
+      "health_threshold": 50,
+      "description": "Awakens. Molten cracks appear. Faster attacks.",
+      "materials": {
+        "body": "mat_ash_black",
+        "fire_fissures": "mat_naris_fire"
+      }
+    },
+    {
+      "phase": 3,
+      "health_threshold": 0,
+      "description": "Final phase. Massive AoE attacks. All materials glow.",
+      "materials": {
+        "body": "mat_ash_black",
+        "fire_fissures": "mat_naris_fire",
+        "core": "mat_aether_violet",
+        "rune_plating": "mat_ancient_gold"
+      }
+    }
+  ],
+  "combat": {
+    "health": 200,
+    "poise": 80,
+    "damage": 25,
+    "abilities": [
+      "slam_attack",
+      "fire_burst",
+      "aether_pulse",
+      "phase_transition"
+    ]
+  },
+  "attachment_points": {
+    "phase_transition_vfx": { "bone": "Core", "position": [0, 0, 0] },
+    "summon_gate": { "bone": "Hips", "position": [0, -2, 0] }
+  },
+  "color_palette": {
+    "body": "#0d0d0d",
+    "fissures": "#ff6b35",
+    "core": "#7b2cbf",
+    "runes": "#d4a574"
+  }
+}

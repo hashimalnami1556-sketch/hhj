@@ -1,0 +1,93 @@
+{
+  "consumables": [
+    {
+      "id": "scroll_fireball",
+      "name": "لفيفة كرة النار",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "description": "لفيفة قديمة تحتوي على تعويذة كرة نار.",
+      "value": 80,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "fireball",
+        "damage": 30,
+        "aoe_radius": 2.0,
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "scroll_teleport",
+      "name": "لفيفة الانتقال الآني",
+      "type": "scroll",
+      "rarity": "rare",
+      "description": "لفيفة بنفسجية تنقلك بشكل فوري.",
+      "value": 120,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "teleport",
+        "distance": 10.0,
+        "cooldown": 15
+      }
+    },
+    {
+      "id": "scroll_heal_area",
+      "name": "لفيفة الشفاء الجماعي",
+      "type": "scroll",
+      "rarity": "rare",
+      "description": "لفيفة خضراء تشفي جميع الحلفاء القريبين.",
+      "value": 150,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "heal_area",
+        "health_restore": 50,
+        "radius": 3.0,
+        "cooldown": 20
+      }
+    },
+    {
+      "id": "scroll_invisibility",
+      "name": "لفيفة الاختفاء",
+      "type": "scroll",
+      "rarity": "rare",
+      "description": "لفيفة سوداء تجعلك غير مرئي مؤقتاً.",
+      "value": 130,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "invisibility",
+        "duration": 30,
+        "stealth_bonus": 1.0,
+        "cooldown": 25
+      }
+    },
+    {
+      "id": "scroll_aether_burst",
+      "name": "لفيفة انفجار الأثير",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "description": "لفيفة أرجوانية توطلق موجة أثير قوية.",
+      "value": 90,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "aether_burst",
+        "damage": 35,
+        "aoe_radius": 2.5,
+        "cooldown": 10
+      }
+    },
+    {
+      "id": "scroll_stone_skin",
+      "name": "لفيفة جلد الحجر",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "description": "لفيفة رمادية تقسي جسدك ضد الضرر.",
+      "value": 85,
+      "weight": 0.1,
+      "effects": {
+        "spell_cast": "stone_skin",
+        "defense_bonus": 10,
+        "duration": 40,
+        "cooldown": 15
+      }
+    }
+  ]
+}

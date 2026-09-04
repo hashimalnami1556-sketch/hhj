@@ -1,0 +1,44 @@
+{
+  "id": "guide_elder_sage",
+  "name": "الحكيم الكبير",
+  "type": "npc",
+  "role": "guide_mentor",
+  "rarity": "rare",
+  "description": "ساحر عجوز حكيم يقدم إرشادات وقصة العالم.",
+  "stats": {
+    "health": 50,
+    "intelligence": 10,
+    "magic_defense": 20
+  },
+  "materials": {
+    "robes": "mat_aether_violet",
+    "staff": "mat_ancient_gold"
+  },
+  "animations": [
+    "idle_meditate",
+    "spell_cast",
+    "conversation_wise",
+    "teach_gesture"
+  ],
+  "dialogue_trees": {
+    "greeting": "أهلا بك يا بطل. جئت في الوقت المناسب. العالم بحاجة إلى شخص قوي.",
+    "story_segments": [
+      {
+        "id": "chapter_1",
+        "title": "البدايات",
+        "text": "كان هناك زمن ذهبي قبل الرماد..."
+      },
+      {
+        "id": "chapter_2",
+        "title": "سقوط الحضارة",
+        "text": "لكن الظلام جاء وغطى كل شيء..."
+      }
+    ]
+  },
+  "quest_givers": true,
+  "quests": [
+    "quest_retrieve_crystal",
+    "quest_defeat_shadow_beast",
+    "quest_find_ancient_tome"
+  ]
+}

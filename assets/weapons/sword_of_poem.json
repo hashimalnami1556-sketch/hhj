@@ -1,0 +1,79 @@
+{
+  "id": "sword_of_poem",
+  "name": "سيف القصيدة",
+  "type": "sword",
+  "rarity": "legendary",
+  "description": "سيف مقدس مع شفرة نارية متوهجة. الأسطورة تقول أنه يحتوي على روح الشاعر الأول.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 2.5,
+    "components": ["blade", "hilt", "cross_guard", "pommel"]
+  },
+  "stats": {
+    "attack": 35,
+    "magic": 15,
+    "dexterity_requirement": 12,
+    "weight": 4.5
+  },
+  "materials": {
+    "blade": "mat_naris_fire",
+    "hilt": "mat_ancient_gold",
+    "grip": "mat_ash_black",
+    "cross_guard": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "fire_damage": 12,
+    "magic_scaling": 0.8,
+    "fire_buildup": 45
+  },
+  "attacks": {
+    "light": {
+      "damage": 8,
+      "speed": "fast",
+      "animation": "slash_light"
+    },
+    "heavy": {
+      "damage": 18,
+      "speed": "slow",
+      "animation": "slash_heavy",
+      "consumes_stamina": 25
+    },
+    "special": {
+      "name": "Fire Burst",
+      "damage": 25,
+      "magic_cost": 20,
+      "animation": "fire_burst",
+      "vfx": "fx_sword_fire_burst"
+    }
+  },
+  "color_palette": {
+    "blade_base": "#ff6b35",
+    "blade_glow": "#ffaa44",
+    "hilt_gold": "#d4a574",
+    "grip_black": "#1a1a1a"
+  },
+  "upgrades": {
+    "tier_1": {
+      "level": 3,
+      "materials_required": ["iron_ore", "naris_shard"],
+      "attack_bonus": 5
+    },
+    "tier_2": {
+      "level": 6,
+      "materials_required": ["steel_ingot", "aether_crystal"],
+      "attack_bonus": 8,
+      "fire_damage_bonus": 3
+    },
+    "tier_3": {
+      "level": 10,
+      "materials_required": ["orichalcum", "naris_core"],
+      "attack_bonus": 12,
+      "fire_damage_bonus": 6,
+      "special_property": "fire_imbued"
+    }
+  },
+  "attachment_points": {
+    "sheath": {"position": [0, -1, 0], "rotation": [0, 0, 0]},
+    "fire_effect": {"bone": "blade", "position": [0.5, 0, 0]}
+  }
+}

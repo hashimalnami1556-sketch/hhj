@@ -1,0 +1,90 @@
+{
+  "structures": {
+    "primary": [
+      {
+        "id": "structure_ruin_tower",
+        "name": "برج الأطلال",
+        "type": "tower",
+        "description": "برج قديم متداعي من حقبة ما قبل الرماد.",
+        "dimensions": {"x": 8, "y": 15, "z": 8},
+        "materials": {
+          "primary": "mat_ash_black",
+          "accents": "mat_ancient_gold"
+        },
+        "lod": true,
+        "collision": true
+      },
+      {
+        "id": "structure_ritual_circle",
+        "name": "دائرة طقسية",
+        "type": "decoration",
+        "description": "دائرة سحرية قديمة محفورة في الأرض.",
+        "dimensions": {"x": 6, "y": 0.2, "z": 6},
+        "materials": {
+          "primary": "mat_aether_violet"
+        },
+        "visual_effects": "fx_aether_pulse",
+        "collision": false
+      }
+    ]
+  },
+  "props": [
+    {
+      "id": "prop_torch_fire",
+      "name": "مشعل ناري",
+      "type": "light_source",
+      "description": "مشعل متوهج على الجدران.",
+      "light_intensity": 0.8,
+      "light_radius": 5.0,
+      "light_color": "#ff6b35",
+      "vfx": "fx_ember_particle_emitter"
+    },
+    {
+      "id": "prop_lantern_blue",
+      "name": "فانوس أزرق",
+      "type": "light_source",
+      "description": "فانوس معلق بضوء أزرق غامض.",
+      "light_intensity": 0.6,
+      "light_radius": 4.0,
+      "light_color": "#00ffff",
+      "vfx": "fx_spirit_echo"
+    },
+    {
+      "id": "prop_stone_pedestal",
+      "name": "تمثال حجري",
+      "type": "decoration",
+      "description": "تمثال حجري عتيق.",
+      "dimensions": {"x": 1.5, "y": 2.0, "z": 1.5},
+      "materials": {
+        "primary": "mat_ash_black"
+      },
+      "collision": true
+    },
+    {
+      "id": "prop_broken_statue",
+      "name": "تمثال مكسور",
+      "type": "environmental_object",
+      "description": "بقايا تمثال قديم منسي.",
+      "dimensions": {"x": 2.0, "y": 2.5, "z": 1.0},
+      "materials": {
+        "primary": "mat_ash_black",
+        "detail": "mat_ancient_gold"
+      },
+      "collision": true,
+      "climbable": false
+    },
+    {
+      "id": "prop_mystical_pool",
+      "name": "حوض غامض",
+      "type": "water_feature",
+      "description": "حوض مياه بنية غامضة متوهجة.",
+      "dimensions": {"x": 4.0, "y": 0.5, "z": 4.0},
+      "materials": {
+        "primary": "mat_mist_cyan"
+      },
+      "vfx": "fx_mist_fog_plane",
+      "collision": false,
+      "hazard": true
+    }
+  ]
+}

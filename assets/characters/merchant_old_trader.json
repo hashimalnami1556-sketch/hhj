@@ -1,0 +1,48 @@
+{
+  "id": "merchant_old_trader",
+  "name": "التاجر العجوز",
+  "type": "npc",
+  "role": "merchant",
+  "rarity": "common",
+  "description": "تاجر عجوز يبيع الأسلحة والمعدات والاستهلاكات النادرة.",
+  "stats": {
+    "health": 40,
+    "defense": 8
+  },
+  "materials": {
+    "clothing": "mat_ancient_gold",
+    "robes": "mat_ash_black"
+  },
+  "animations": [
+    "idle_count_money",
+    "idle_greet",
+    "conversation_interested",
+    "trade_complete"
+  ],
+  "dialogue_trees": {
+    "greeting": "مرحبا يا غريب! لدي أفضل الأسلحة والمعدات في المملكة.",
+    "trades": [
+      {
+        "id": "weapon_trade",
+        "description": "شراء وبيع الأسلحة"
+      },
+      {
+        "id": "equipment_trade",
+        "description": "شراء وبيع المعدات"
+      },
+      {
+        "id": "potion_trade",
+        "description": "شراء وبيع الجرعات"
+      }
+    ]
+  },
+  "inventory": {
+    "sell_items": [
+      "sword_of_poem",
+      "bow_mist_song",
+      "armor_ash_plate",
+      "potion_health_greater",
+      "scroll_fireball"
+    ]
+  }
+}

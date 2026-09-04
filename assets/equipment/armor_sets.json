@@ -1,0 +1,52 @@
+{
+  "armor_sets": [
+    {
+      "id": "set_infernal_warrior",
+      "name": "مجموعة المحارب الجهنمي",
+      "description": "مجموعة درع كاملة تستعمل الطاقة النارية.",
+      "pieces": [
+        {"item": "armor_ash_plate", "name": "درع النار"},
+        {"item": "helm_flame_drake", "name": "خوذة التنين"},
+        {"item": "gauntlets_iron_fist", "name": "القفازات الحديدية"}
+      ],
+      "set_bonus": {
+        "fire_damage": 0.25,
+        "defense": 5,
+        "fire_resistance": 0.3
+      },
+      "rarity": "rare"
+    },
+    {
+      "id": "set_void_assassin",
+      "name": "مجموعة قاتل الفراغ",
+      "description": "مجموعة خفيفة سوداء للحركة السريعة والاختفاء.",
+      "pieces": [
+        {"item": "armor_leather_assassin", "name": "الدرع الجلدية"},
+        {"item": "leggings_stalker", "name": "السراويل"},
+        {"item": "cloak_void_walker", "name": "العباءة"}
+      ],
+      "set_bonus": {
+        "movement_speed": 0.15,
+        "stealth_bonus": 0.3,
+        "void_resistance": 0.5
+      },
+      "rarity": "rare"
+    },
+    {
+      "id": "set_mystic_mage",
+      "name": "مجموعة الساحر الغامض",
+      "description": "مجموعة سحرية أرجوانية توفر قوة سحرية قوية.",
+      "pieces": [
+        {"item": "armor_mist_robe", "name": "الرداء الأرجواني"},
+        {"item": "ring_magic_seal", "name": "خاتم الختم السحري"},
+        {"item": "ring_mana_surge", "name": "خاتم اندفاع المانا"}
+      ],
+      "set_bonus": {
+        "spell_power": 1.25,
+        "magic_defense": 10,
+        "mana_regen": 1.0
+      },
+      "rarity": "rare"
+    }
+  ]
+}

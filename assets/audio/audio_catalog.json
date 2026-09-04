@@ -1,0 +1,146 @@
+{
+  "music": [
+    {
+      "id": "theme_main_menu",
+      "name": "موضوع القائمة الرئيسية",
+      "duration": 120,
+      "loop": true,
+      "intensity": "calm",
+      "bpm": 80
+    },
+    {
+      "id": "theme_ashfall_plains",
+      "name": "موضوع سهول الرماد",
+      "duration": 180,
+      "loop": true,
+      "intensity": "medium",
+      "bpm": 100
+    },
+    {
+      "id": "theme_dark_forest",
+      "name": "موضوع غابة الظل",
+      "duration": 240,
+      "loop": true,
+      "intensity": "tense",
+      "bpm": 120
+    },
+    {
+      "id": "theme_aether_realm",
+      "name": "موضوع عالم الأثير",
+      "duration": 200,
+      "loop": true,
+      "intensity": "mystical",
+      "bpm": 95
+    },
+    {
+      "id": "theme_boss_battle",
+      "name": "موضوع معركة الزعيم",
+      "duration": 240,
+      "loop": true,
+      "intensity": "intense",
+      "bpm": 140
+    },
+    {
+      "id": "theme_victory",
+      "name": "موضوع النصر",
+      "duration": 60,
+      "loop": false,
+      "intensity": "triumphant",
+      "bpm": 130
+    }
+  ],
+  "sound_effects": [
+    {
+      "id": "sfx_sword_slash",
+      "name": "صوت رفع السيف",
+      "duration": 0.3,
+      "volume": 0.8,
+      "pitch": 1.0,
+      "category": "combat"
+    },
+    {
+      "id": "sfx_spell_cast",
+      "name": "صوت إطلاق التعويذة",
+      "duration": 0.5,
+      "volume": 0.7,
+      "pitch": 0.9,
+      "category": "magic",
+      "pitch_variation": 0.2
+    },
+    {
+      "id": "sfx_heal",
+      "name": "صوت الشفاء",
+      "duration": 0.8,
+      "volume": 0.6,
+      "pitch": 1.2,
+      "category": "magic"
+    },
+    {
+      "id": "sfx_damage_taken",
+      "name": "صوت الضرر",
+      "duration": 0.4,
+      "volume": 0.8,
+      "pitch": 0.8,
+      "category": "impact"
+    },
+    {
+      "id": "sfx_level_up",
+      "name": "صوت صعود المستوى",
+      "duration": 1.0,
+      "volume": 0.9,
+      "pitch": 1.0,
+      "category": "system"
+    },
+    {
+      "id": "sfx_item_pickup",
+      "name": "صوت التقاط الغنيمة",
+      "duration": 0.3,
+      "volume": 0.7,
+      "pitch": 1.1,
+      "category": "system"
+    },
+    {
+      "id": "sfx_fire_burst",
+      "name": "صوت انفجار النار",
+      "duration": 1.2,
+      "volume": 0.9,
+      "pitch": 0.7,
+      "category": "magic"
+    },
+    {
+      "id": "sfx_void_blast",
+      "name": "صوت انفجار الفراغ",
+      "duration": 1.0,
+      "volume": 1.0,
+      "pitch": 0.6,
+      "category": "magic",
+      "lowpass_filter": 0.8
+    }
+  ],
+  "voice_lines": [
+    {
+      "id": "vo_hero_attack",
+      "name": "صوت هجوم البطل",
+      "speaker": "hero",
+      "text": "خذ هذا!",
+      "duration": 0.5,
+      "priority": "high"
+    },
+    {
+      "id": "vo_merchant_greeting",
+      "name": "تحية التاجر",
+      "speaker": "merchant",
+      "text": "مرحباً بك يا صديقي!",
+      "duration": 1.0,
+      "priority": "medium"
+    },
+    {
+      "id": "vo_sage_wisdom",
+      "name": "حكمة الحكيم",
+      "speaker": "elder_sage",
+      "text": "الحكمة أهم من القوة.",
+      "duration": 2.0,
+      "priority": "high"
+    }
+  ]
+}

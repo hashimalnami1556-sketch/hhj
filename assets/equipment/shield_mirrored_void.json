@@ -1,0 +1,27 @@
+{
+  "id": "shield_mirrored_void",
+  "name": "درع: المرآة الفارغة",
+  "type": "shield",
+  "rarity": "rare",
+  "description": "درع سوداء مزخرفة بذهب قديم، تعكس الضررر السحري.",
+  "stats": {
+    "defense": 22,
+    "magic_defense": 18,
+    "poise": 30,
+    "weight": 8.5
+  },
+  "materials": {
+    "face": "mat_ash_black",
+    "trim": "mat_ancient_gold",
+    "core": "mat_aether_violet"
+  },
+  "special_properties": {
+    "magic_reflection": 0.35,
+    "block_recovery": 0.8,
+    "parry_boost": 1.15
+  },
+  "socket_slots": {
+    "rune_slots": 1,
+    "gem_slots": 2
+  }
+}

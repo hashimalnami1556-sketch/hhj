@@ -1,0 +1,140 @@
+{
+  "id": "ashen_forest_kit",
+  "name": "Ashen Forest Modular Kit",
+  "type": "environment",
+  "region": "ashen_forest",
+  "description": "Modular tileset for the opening zone. Reusable ground tiles, trees, rocks, and structures.",
+  "tiles": {
+    "ground": [
+      {
+        "id": "tile_ash_ground_a",
+        "name": "Scorched Ground A",
+        "type": "floor",
+        "dimensions": { "x": 10, "y": 0.5, "z": 10 },
+        "material": "mat_ash_black",
+        "tileable": true,
+        "variants": 4
+      },
+      {
+        "id": "tile_ash_ground_b",
+        "name": "Scorched Ground B - Cracked",
+        "type": "floor",
+        "dimensions": { "x": 10, "y": 0.5, "z": 10 },
+        "material": "mat_ash_black",
+        "detail": "cracks"
+      },
+      {
+        "id": "tile_ash_ground_c",
+        "name": "Scorched Ground C - Ember",
+        "type": "floor",
+        "dimensions": { "x": 10, "y": 0.5, "z": 10 },
+        "material": "mat_ash_black",
+        "detail": "ember_spots",
+        "vfx": "ember_particles"
+      },
+      {
+        "id": "tile_ash_ground_d",
+        "name": "Scorched Ground D - Mist",
+        "type": "floor",
+        "dimensions": { "x": 10, "y": 0.5, "z": 10 },
+        "material": "mat_ash_black",
+        "detail": "mist_patches"
+      }
+    ],
+    "vegetation": [
+      {
+        "id": "prop_burnt_tree_a",
+        "name": "Twisted Tree A",
+        "type": "tree",
+        "height": 12,
+        "lod": true,
+        "material": "mat_ash_black",
+        "collision": true
+      },
+      {
+        "id": "prop_burnt_tree_b",
+        "name": "Twisted Tree B - Hollow",
+        "type": "tree",
+        "height": 10,
+        "material": "mat_ash_black",
+        "special": "climbable"
+      },
+      {
+        "id": "prop_burnt_tree_c",
+        "name": "Twisted Tree C - Fallen",
+        "type": "log",
+        "dimensions": { "x": 2, "y": 1, "z": 15 },
+        "material": "mat_ash_black"
+      }
+    ],
+    "rocks": [
+      {
+        "id": "prop_ash_rock_cluster_a",
+        "name": "Rock Cluster A",
+        "type": "rock",
+        "scale": 2.0,
+        "material": "mat_ash_black"
+      },
+      {
+        "id": "prop_ash_rock_cluster_b",
+        "name": "Rock Cluster B - Glowing",
+        "type": "rock",
+        "scale": 1.5,
+        "material": "mat_aether_violet",
+        "glow": true
+      },
+      {
+        "id": "prop_ash_rock_cluster_c",
+        "name": "Rock Cluster C - Ember",
+        "type": "rock",
+        "scale": 1.8,
+        "material": "mat_naris_fire",
+        "vfx": "ember_glow"
+      }
+    ]
+  },
+  "structures": {
+    "primary": [
+      {
+        "id": "structure_ash_gate",
+        "name": "Ash Gate",
+        "type": "gate",
+        "state": "sealed",
+        "materials": {
+          "frame": "mat_ash_black",
+          "runes": "mat_ancient_gold",
+          "glow": "mat_aether_violet"
+        },
+        "dimensions": { "x": 5, "y": 8, "z": 1 },
+        "collision": true,
+        "quest_objective": "FR-042-5",
+        "unlock_condition": "has_memory_crystal"
+      }
+    ]
+  },
+  "fx_anchors": [
+    {
+      "id": "fx_ember_particle_emitter",
+      "name": "Ember Particle Anchor",
+      "type": "particle_system",
+      "material": "mat_naris_fire",
+      "emission_rate": 50,
+      "lifetime": 3.0
+    },
+    {
+      "id": "fx_mist_fog_plane",
+      "name": "Mist Fog Plane",
+      "type": "fog_effect",
+      "material": "mat_mist_cyan",
+      "dimensions": { "x": 100, "y": 2, "z": 100 },
+      "transparency": 0.6
+    }
+  ],
+  "color_scheme": {
+    "primary": "#1a1a1a",
+    "fire_accent": "#ff6b35",
+    "aether_accent": "#7b2cbf",
+    "mist_accent": "#00d4ff",
+    "gold_accent": "#d4a574"
+  }
+}

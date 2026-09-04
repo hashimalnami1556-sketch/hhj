@@ -1,0 +1,86 @@
+{
+  "special_items": [
+    {
+      "id": "crystal_ancient_naris",
+      "name": "بلورة ناريس القديمة",
+      "type": "quest_item",
+      "rarity": "legendary",
+      "description": "بلورة أسطورية تحتوي على قوة الأثير القديمة.",
+      "value": 0,
+      "weight": 1.0,
+      "tradeable": false,
+      "effects": {
+        "aether_damage": 1.5,
+        "light_radius": 3.0,
+        "emits_aether_particles": true
+      }
+    },
+    {
+      "id": "tome_ancient_magic",
+      "name": "كتاب السحر القديم",
+      "type": "quest_item",
+      "rarity": "legendary",
+      "description": "كتاب قديم يحتوي على معرفة سحرية قديمة.",
+      "value": 500,
+      "weight": 2.0,
+      "tradeable": false,
+      "effects": {
+        "unlock_spells": ["spell_ancient_knowledge"],
+        "intelligence_bonus": 5
+      }
+    },
+    {
+      "id": "key_obsidian_vault",
+      "name": "مفتاح الخزنة السوداء",
+      "type": "key_item",
+      "rarity": "rare",
+      "description": "مفتاح نادر يفتح خزائن سوداء قديمة.",
+      "value": 200,
+      "weight": 0.2,
+      "tradeable": false,
+      "unlocks": ["vault_obsidian_dark_forest"]
+    },
+    {
+      "id": "amulet_hero_blessing",
+      "name": "تميمة بركة البطل",
+      "type": "amulet",
+      "rarity": "legendary",
+      "description": "تميمة ذهبية تمنحك بركات الأبطال القدماء.",
+      "value": 1000,
+      "weight": 0.3,
+      "stats": {
+        "all_stats_bonus": 3,
+        "experience_boost": 1.25,
+        "item_discovery": 1.15
+      }
+    },
+    {
+      "id": "lantern_eternal_light",
+      "name": "فانوس الضوء الأبدي",
+      "type": "light_source",
+      "rarity": "rare",
+      "description": "فانوس سحري يوفر ضوء بلا حدود.",
+      "value": 300,
+      "weight": 1.0,
+      "effects": {
+        "light_radius": 10.0,
+        "light_intensity": 1.0,
+        "darkness_immunity": true
+      }
+    },
+    {
+      "id": "map_lost_civilization",
+      "name": "خريطة الحضارة المفقودة",
+      "type": "map_item",
+      "rarity": "rare",
+      "description": "خريطة قديمة تكشف عن مواقع حضارات مفقودة.",
+      "value": 400,
+      "weight": 0.3,
+      "reveals_locations": [
+        "lost_library",
+        "ancient_temple",
+        "forgotten_city"
+      ]
+    }
+  ]
+}

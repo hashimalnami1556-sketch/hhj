@@ -1,0 +1,24 @@
+{
+  "id": "leggings_stalker",
+  "name": "سراويل المطارد الصامت",
+  "type": "leggings",
+  "rarity": "uncommon",
+  "description": "سراويل جلدية سوداء مرنة. تسهل الحركة الخاطفة والركض السريع.",
+  "stats": {
+    "defense": 8,
+    "dexterity_bonus": 2,
+    "weight": 1.0
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "reinforcement": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "movement_speed": 1.12,
+    "evasion_bonus": 0.08,
+    "fall_damage_reduction": 0.15
+  },
+  "socket_slots": {
+    "gem_slots": 1
+  }
+}

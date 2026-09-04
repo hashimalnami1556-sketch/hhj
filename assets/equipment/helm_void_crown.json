@@ -1,0 +1,30 @@
+{
+  "id": "helm_void_crown",
+  "name": "تاج الفراغ",
+  "type": "helmet",
+  "rarity": "legendary",
+  "description": "خوذة مرعبة مع توهج أثير بنفسجي. توفر حماية سحرية عالية جداً.",
+  "stats": {
+    "defense": 18,
+    "magic_defense": 24,
+    "poise": 15,
+    "weight": 4.5,
+    "intelligence_bonus": 3
+  },
+  "materials": {
+    "primary": "mat_aether_violet",
+    "accents": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "magic_resistance": 1.2,
+    "curse_resistance": 0.8,
+    "dark_vision": true
+  },
+  "slots": [
+    {
+      "slot_type": "rune",
+      "position": "front",
+      "quantity": 1
+    }
+  ]
+}

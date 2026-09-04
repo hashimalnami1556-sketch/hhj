@@ -1,0 +1,85 @@
+{
+  "materials": [
+    {
+      "id": "mat_naris_fire",
+      "name": "Naris Fire - Orange Ember",
+      "type": "emissive",
+      "properties": {
+        "base_color": [1.0, 0.42, 0.21],
+        "emission": [1.0, 0.42, 0.21],
+        "emission_strength": 1.5,
+        "metallic": 0.0,
+        "roughness": 0.6
+      },
+      "shader": "pbr_emissive",
+      "animation": {
+        "type": "flicker",
+        "frequency": 0.5,
+        "intensity": 0.3
+      },
+      "used_on": ["sword_of_poem", "ember_particles", "naris_aura", "fire_fissures"]
+    },
+    {
+      "id": "mat_aether_violet",
+      "name": "Aether Violet - Saturated Purple",
+      "type": "emissive_metallic",
+      "properties": {
+        "base_color": [0.48, 0.17, 0.75],
+        "emission": [0.48, 0.17, 0.75],
+        "emission_strength": 1.2,
+        "metallic": 0.3,
+        "roughness": 0.4
+      },
+      "shader": "pbr_emissive",
+      "glow_falloff": "soft",
+      "used_on": ["spirit_wolf", "aether_effects", "ash_giant_core", "memory_crystal"]
+    },
+    {
+      "id": "mat_mist_cyan",
+      "name": "Mist Cyan - Translucent Fog",
+      "type": "translucent",
+      "properties": {
+        "base_color": [0.0, 1.0, 1.0],
+        "transmission": 0.8,
+        "transparency": 0.7,
+        "rim_light_color": [0.0, 1.0, 1.0],
+        "rim_light_strength": 1.0
+      },
+      "shader": "pbr_translucent",
+      "used_on": ["spirit_wolf_body", "mist_fog_plane", "spectral_rim_light"]
+    },
+    {
+      "id": "mat_ancient_gold",
+      "name": "Ancient Gold - Metallic",
+      "type": "metallic",
+      "properties": {
+        "base_color": [0.83, 0.65, 0.46],
+        "metallic": 1.0,
+        "roughness": 0.3,
+        "specular": 0.8
+      },
+      "shader": "pbr_metallic",
+      "used_on": ["armor_trim", "ash_gate_runes", "sword_hilts"]
+    },
+    {
+      "id": "mat_ash_black",
+      "name": "Ash Black - Matte PBR",
+      "type": "pbr",
+      "properties": {
+        "base_color": [0.1, 0.1, 0.1],
+        "metallic": 0.0,
+        "roughness": 0.9
+      },
+      "shader": "pbr_standard",
+      "used_on": ["base_armor", "character_bodies", "environment_rocks", "sinew"]
+    }
+  ],
+  "color_bible": {
+    "naris_fire": "#ff6b35",
+    "aether_violet": "#7b2cbf",
+    "mist_cyan": "#00ffff",
+    "ancient_gold": "#d4a574",
+    "ash_black": "#1a1a1a"
+  },
+  "design_rule": "Dark fantasy does not mean colorless. Each key frame should include orange ember + violet aether + cyan mist rim + ancient gold accent."
+}

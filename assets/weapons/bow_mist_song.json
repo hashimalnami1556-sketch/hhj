@@ -1,0 +1,95 @@
+{
+  "id": "bow_mist_song",
+  "name": "قوس أنشودة الضباب",
+  "type": "bow",
+  "rarity": "rare",
+  "description": "قوس مصنوع من خشب شجرة روحية نادرة مع أوتار من أثير سماوي. يطلق أسهماً تاركة آثار ضباب متوهج.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 2.0,
+    "components": ["limbs", "grip", "string", "sight"]
+  },
+  "stats": {
+    "attack": 28,
+    "dexterity": 18,
+    "magic": 12,
+    "dexterity_requirement": 16,
+    "weight": 3.5
+  },
+  "materials": {
+    "limbs": "mat_mist_cyan",
+    "grip": "mat_ancient_gold",
+    "string": "mat_aether_violet",
+    "sight": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "magic_damage": 10,
+    "projectile_speed": 1.2,
+    "arrow_lifetime": 8.0
+  },
+  "attacks": {
+    "charged_shot": {
+      "base_damage": 12,
+      "max_damage": 32,
+      "charge_time": 2.5,
+      "animation": "bow_charge"
+    },
+    "rapid_shot": {
+      "damage": 8,
+      "speed": "very_fast",
+      "animation": "bow_rapid",
+      "consecutive_shots": 3
+    },
+    "special": {
+      "name": "Mist Arrow",
+      "damage": 20,
+      "magic_cost": 15,
+      "animation": "mist_arrow",
+      "vfx": "fx_mist_arrow",
+      "effect": "slows_movement"
+    }
+  },
+  "color_palette": {
+    "limbs_cyan": "#00ffff",
+    "limbs_glow": "#00ccff",
+    "grip_gold": "#d4a574",
+    "string_purple": "#7b2cbf"
+  },
+  "ammunition_types": {
+    "basic_arrow": {
+      "damage": 8,
+      "type": "physical"
+    },
+    "fire_arrow": {
+      "damage": 10,
+      "bonus_damage": 5,
+      "type": "fire",
+      "uses_material": "naris_fire"
+    },
+    "aether_arrow": {
+      "damage": 12,
+      "bonus_damage": 8,
+      "type": "magic",
+      "uses_material": "aether_crystal"
+    },
+    "ice_arrow": {
+      "damage": 10,
+      "bonus_damage": 6,
+      "type": "ice",
+      "effect": "freeze_duration_0.5"
+    }
+  },
+  "upgrades": {
+    "tier_1": {
+      "level": 3,
+      "attack_bonus": 4,
+      "projectile_speed_bonus": 0.1
+    },
+    "tier_2": {
+      "level": 6,
+      "attack_bonus": 7,
+      "projectile_speed_bonus": 0.2,
+      "magic_damage_bonus": 3
+    }
+  }
+}

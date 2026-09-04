@@ -1,0 +1,36 @@
+{
+  "id": "axe_ash_breaker",
+  "name": "فأس كاسر الرماد",
+  "type": "greataxe",
+  "rarity": "rare",
+  "description": "فأس ثقيلة عملاقة مع شفرة متوهجة برتقالية. توفر ضرر ساحق عالي جداً.",
+  "stats": {
+    "attack": 38,
+    "strength": 6,
+    "strength_requirement": 16,
+    "weight": 12.0
+  },
+  "materials": {
+    "blade": "mat_naris_fire",
+    "handle": "mat_ash_black"
+  },
+  "special_properties": {
+    "impact_damage": 1.3,
+    "poise_damage": 20,
+    "heavy_attack": true
+  },
+  "attacks": {
+    "overhead_slam": {
+      "damage": 28,
+      "speed": "slow",
+      "consumes_stamina": 30,
+      "aoe": true,
+      "radius": 2.0
+    },
+    "spinning_attack": {
+      "damage": 22,
+      "speed": "slow",
+      "animation": "axe_spin"
+    }
+  }
+}

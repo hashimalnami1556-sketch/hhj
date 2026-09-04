@@ -1,0 +1,25 @@
+{
+  "id": "helm_flame_drake",
+  "name": "خوذة التنين الناري",
+  "type": "helmet",
+  "rarity": "rare",
+  "description": "خوذة محفورة على شكل رأس تنين ناري. تزيد من مقاومة النار والقوة.",
+  "stats": {
+    "defense": 16,
+    "strength_bonus": 2,
+    "weight": 3.5
+  },
+  "materials": {
+    "primary": "mat_naris_fire",
+    "trim": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "fire_resistance": 0.7,
+    "fire_damage_bonus": 0.15,
+    "intimidate_effect": 0.1
+  },
+  "socket_slots": {
+    "rune_slots": 1,
+    "gem_slots": 1
+  }
+}

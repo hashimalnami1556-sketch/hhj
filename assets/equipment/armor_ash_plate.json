@@ -1,0 +1,84 @@
+{
+  "id": "armor_ash_plate",
+  "name": "درع الرماد المعدني",
+  "type": "heavy_armor",
+  "rarity": "common",
+  "description": "درع من الفولاذ الأسود المرتفع مع طلاء ذهب قديم. توفر حماية قوية لكن تقلل الحركة.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 3.5,
+    "components": ["chest_plate", "shoulder_guards", "arm_guards", "leg_guards", "belt"]
+  },
+  "stats": {
+    "defense": 28,
+    "magic_defense": 8,
+    "poise": 35,
+    "weight": 18.0,
+    "equip_load_percent": 35,
+    "movement_speed_penalty": 0.85
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "accents": "mat_ancient_gold",
+    "trim": "mat_naris_fire"
+  },
+  "resistance": {
+    "physical": 0.85,
+    "fire": 1.1,
+    "magic": 0.9,
+    "curse": 1.0
+  },
+  "special_properties": {
+    "durability": 100,
+    "repair_material": "iron_ore",
+    "reputation": "guards_of_ashen_forest"
+  },
+  "slots": [
+    {
+      "slot_type": "rune",
+      "position": "chest",
+      "quantity": 2
+    },
+    {
+      "slot_type": "gem",
+      "position": "shoulders",
+      "quantity": 2
+    }
+  ],
+  "color_palette": {
+    "primary_black": "#1a1a1a",
+    "accent_gold": "#d4a574",
+    "trim_fire": "#ff6b35"
+  },
+  "variations": {
+    "polished": {
+      "description": "Increased shininess, better reputation",
+      "material_modifier": "mat_ancient_gold_gloss",
+      "stat_bonus": {"reputation": 1.2}
+    },
+    "weathered": {
+      "description": "Battle-worn appearance",
+      "material_modifier": "mat_ash_black_worn",
+      "stat_bonus": {"durability": 1.1}
+    }
+  },
+  "upgrades": {
+    "reinforcement_1": {
+      "level": 3,
+      "defense_bonus": 5,
+      "materials": ["iron_ore", "coal"]
+    },
+    "reinforcement_2": {
+      "level": 6,
+      "defense_bonus": 8,
+      "poise_bonus": 8,
+      "materials": ["steel_ingot", "orichalcum"]
+    },
+    "aether_infusion": {
+      "level": 10,
+      "defense_bonus": 12,
+      "magic_defense_bonus": 8,
+      "materials": ["aether_crystal", "naris_core"]
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "id": "spirit_wolf",
+  "name": "Spirit Wolf",
+  "type": "character",
+  "role": "companion",
+  "description": "Ethereal spectral companion. Semi-transparent shader. Glowing aether energy.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 5.2,
+    "rigged": true,
+    "bones": [
+      "Armature",
+      "Hips", "Spine", "Chest", "Neck", "Head",
+      "LeftFrontLeg", "LeftFrontPaw",
+      "RightFrontLeg", "RightFrontPaw",
+      "LeftBackLeg", "LeftBackPaw",
+      "RightBackLeg", "RightBackPaw",
+      "Tail"
+    ]
+  },
+  "materials": {
+    "body": "mat_mist_cyan",
+    "aether_core": "mat_aether_violet",
+    "fire_markings": "mat_naris_fire"
+  },
+  "attachment_points": {
+    "spine_particle": { "bone": "Spine", "position": [0, 0.3, 0] },
+    "eye_glow_left": { "bone": "Head", "position": [-0.08, 0.05, 0.15] },
+    "eye_glow_right": { "bone": "Head", "position": [0.08, 0.05, 0.15] }
+  },
+  "animations": [
+    "idle",
+    "follow",
+    "attack",
+    "guard",
+    "track",
+    "echo_link",
+    "bond_increase",
+    "damage_taken"
+  ],
+  "shader_properties": {
+    "transparency": 0.7,
+    "rim_light_color": "#00ffff",
+    "rim_light_intensity": 1.2,
+    "glow_emission": 0.8
+  },
+  "color_palette": {
+    "primary": "#00d4ff",
+    "secondary": "#7b2cbf",
+    "accent": "#ff6b35"
+  },
+  "vfx": {
+    "particle_system": "spirit_aura",
+    "trail_effect": "cyan_mist_trail"
+  }
+}

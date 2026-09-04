@@ -1,0 +1,39 @@
+{
+  "id": "hammer_earthquake",
+  "name": "المطرقة: زلزال الأرض",
+  "type": "hammer",
+  "rarity": "rare",
+  "description": "مطرقة عملاقة ثقيلة جداً بوجه حجري ضخم. تهز الأرض عند كل ضربة.",
+  "stats": {
+    "attack": 36,
+    "strength": 8,
+    "strength_requirement": 17,
+    "weight": 14.0
+  },
+  "materials": {
+    "head": "mat_ash_black",
+    "handle": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "impact_damage": 1.4,
+    "poise_damage": 25,
+    "earthquake_effect": 0.8
+  },
+  "attacks": {
+    "heavy_swing": {
+      "damage": 30,
+      "speed": "slow",
+      "consumes_stamina": 32,
+      "poise_damage": 20
+    },
+    "earthquake_smash": {
+      "damage": 36,
+      "speed": "very_slow",
+      "aoe": true,
+      "radius": 2.5,
+      "consumes_stamina": 40,
+      "poise_damage": 25,
+      "knockback": 1.0
+    }
+  }
+}

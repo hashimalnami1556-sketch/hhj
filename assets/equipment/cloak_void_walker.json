@@ -1,0 +1,21 @@
+{
+  "id": "cloak_void_walker",
+  "name": "عباءة سائر الفراغ",
+  "type": "cloak",
+  "rarity": "rare",
+  "description": "عباءة سوداء غامضة تنبض بطاقة الفراغ. تعطي قدرات خاصة على الحركة والاختفاء.",
+  "stats": {
+    "defense": 4,
+    "magic_defense": 8,
+    "weight": 0.5
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "lining": "mat_aether_violet"
+  },
+  "special_properties": {
+    "stealth_bonus": 0.25,
+    "void_damage_resistance": 0.6,
+    "shadow_step_cooldown": 20.0
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "id": "bow_void_walker",
+  "name": "القوس: سائر الفراغ",
+  "type": "bow",
+  "rarity": "rare",
+  "description": "قوس أسود مصنوع من خشب قديم. يطلق أسهماً تخترق الحقيقة نفسها.",
+  "stats": {
+    "attack": 26,
+    "dexterity": 7,
+    "dexterity_requirement": 12,
+    "weight": 2.5
+  },
+  "materials": {
+    "limbs": "mat_ash_black",
+    "string": "mat_mist_cyan"
+  },
+  "special_properties": {
+    "void_damage": 1.3,
+    "penetrating_shots": true,
+    "arrow_speed": 1.2
+  },
+  "ammunition_types": [
+    {
+      "id": "arrow_void",
+      "name": "سهم الفراغ",
+      "damage": 22,
+      "type": "void"
+    },
+    {
+      "id": "arrow_piercing",
+      "name": "سهم خارق",
+      "damage": 18,
+      "penetrating": true
+    },
+    {
+      "id": "arrow_multishot",
+      "name": "سهم متعدد",
+      "damage": 12,
+      "count": 3
+    }
+  ],
+  "attacks": {
+    "rapid_fire": {
+      "damage": 18,
+      "speed": "fast",
+      "consumes_stamina": 12,
+      "shots": 2
+    },
+    "charged_void_shot": {
+      "damage": 26,
+      "speed": "slow",
+      "consumes_stamina": 30,
+      "charge_time": 1.0,
+      "void_damage": 1.3
+    }
+  }
+}

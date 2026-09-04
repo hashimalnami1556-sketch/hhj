@@ -1,0 +1,347 @@
+{
+  "ui_system": {
+    "theme": "naris_dark_fantasy",
+    "color_scheme": {
+      "primary": "#ff6b35",
+      "secondary": "#7b2cbf",
+      "accent": "#00ffff",
+      "background": "#0a0a0a",
+      "text": "#ffffff",
+      "disabled": "#444444",
+      "error": "#ff4444",
+      "success": "#44ff44"
+    },
+    "fonts": {
+      "primary": "Segoe UI",
+      "monospace": "Courier New",
+      "decorative": "Arial Black"
+    }
+  },
+  "ui_elements": [
+    {
+      "id": "hud_health_bar",
+      "name": "شريط الصحة",
+      "type": "progress_bar",
+      "dimensions": {"width": 300, "height": 30},
+      "background_color": "#1a1a1a",
+      "fill_color": "#ff6b35",
+      "border": {"width": 2, "color": "#d4a574"},
+      "animation": {
+        "damage_shake": true,
+        "shake_intensity": 0.05,
+        "shake_duration": 0.3
+      },
+      "elements": [
+        {
+          "type": "text",
+          "content": "صحة",
+          "position": {"x": 10, "y": 5},
+          "color": "#00ffff"
+        },
+        {
+          "type": "text",
+          "content": "100/100",
+          "position": {"x": 250, "y": 5},
+          "color": "#ffffff",
+          "font_size": 12
+        }
+      ]
+    },
+    {
+      "id": "hud_stamina_bar",
+      "name": "شريط الطاقة",
+      "type": "progress_bar",
+      "dimensions": {"width": 300, "height": 20},
+      "background_color": "#1a1a1a",
+      "fill_color": "#7b2cbf",
+      "border": {"width": 1, "color": "#7b2cbf"},
+      "animation": {
+        "regen_glow": true,
+        "glow_speed": 0.5
+      }
+    },
+    {
+      "id": "hud_mana_bar",
+      "name": "شريط السحر",
+      "type": "progress_bar",
+      "dimensions": {"width": 300, "height": 20},
+      "background_color": "#1a1a1a",
+      "fill_color": "#00ffff",
+      "border": {"width": 1, "color": "#00ffff"},
+      "animation": {
+        "regen_pulse": true,
+        "pulse_speed": 1.0
+      }
+    },
+    {
+      "id": "hud_inventory_slot",
+      "name": "فتحة المخزون",
+      "type": "grid_cell",
+      "dimensions": {"width": 64, "height": 64},
+      "background": "#1a1a1a",
+      "border": {"width": 1, "color": "#7b2cbf"},
+      "hover_state": {
+        "border_color": "#ff6b35",
+        "scale": 1.05,
+        "glow": true
+      },
+      "active_state": {
+        "background": "#7b2cbf",
+        "border_color": "#00ffff",
+        "glow_intensity": 0.8
+      },
+      "elements": [
+        {
+          "type": "image",
+          "position": {"x": 2, "y": 2},
+          "size": {"width": 60, "height": 60}
+        },
+        {
+          "type": "text",
+          "content": "99",
+          "position": {"x": 45, "y": 48},
+          "color": "#ff6b35",
+          "font_size": 10,
+          "alignment": "right"
+        }
+      ]
+    },
+    {
+      "id": "hud_equipment_slot",
+      "name": "فتحة المعدات",
+      "type": "equipment_slot",
+      "dimensions": {"width": 80, "height": 80},
+      "slot_types": [
+        "head",
+        "chest",
+        "hands",
+        "legs",
+        "feet",
+        "right_hand",
+        "left_hand",
+        "back",
+        "ring_1",
+        "ring_2"
+      ],
+      "background": "#0a0a0a",
+      "border": {"width": 2, "color": "#d4a574"},
+      "empty_state": {
+        "icon": "empty_slot",
+        "color": "#444444"
+      }
+    },
+    {
+      "id": "hud_status_effect",
+      "name": "أيقونة تأثير الحالة",
+      "type": "icon_with_timer",
+      "dimensions": {"width": 48, "height": 48},
+      "background": "#1a1a1a",
+      "border": {"width": 1, "color": "#7b2cbf"},
+      "elements": [
+        {
+          "type": "image",
+          "size": {"width": 44, "height": 44},
+          "position": {"x": 2, "y": 2}
+        },
+        {
+          "type": "circular_progress",
+          "radius": 24,
+          "color": "#00ffff",
+          "shows": "remaining_duration"
+        },
+        {
+          "type": "text",
+          "content": "30s",
+          "position": {"x": 24, "y": 38},
+          "font_size": 8,
+          "color": "#00ffff"
+        }
+      ]
+    },
+    {
+      "id": "hud_dialogue_box",
+      "name": "صندوق الحوار",
+      "type": "text_box",
+      "dimensions": {"width": 800, "height": 200},
+      "background": {
+        "color": "rgba(10, 10, 10, 0.9)",
+        "border": 3,
+        "border_color": "#d4a574",
+        "corners": "rounded"
+      },
+      "padding": 20,
+      "animation": {
+        "slide_in": true,
+        "slide_direction": "up",
+        "duration": 0.5
+      },
+      "elements": [
+        {
+          "type": "text",
+          "name": "speaker",
+          "font_size": 16,
+          "color": "#ff6b35",
+          "font_weight": "bold",
+          "margin_bottom": 10
+        },
+        {
+          "type": "text",
+          "name": "dialogue",
+          "font_size": 14,
+          "color": "#ffffff",
+          "line_height": 1.6
+        },
+        {
+          "type": "text",
+          "name": "continue_indicator",
+          "content": "▼",
+          "position": {"x": 750, "y": 170},
+          "color": "#7b2cbf",
+          "animation": "blink"
+        }
+      ]
+    },
+    {
+      "id": "hud_quest_marker",
+      "name": "علامة المهمة",
+      "type": "3d_waypoint",
+      "icon_size": 32,
+      "colors": {
+        "active": "#ff6b35",
+        "completed": "#44ff44",
+        "failed": "#ff4444",
+        "optional": "#00ffff"
+      },
+      "animation": {
+        "pulse": true,
+        "pulse_speed": 1.0,
+        "rotation": true,
+        "rotation_speed": 45
+      }
+    },
+    {
+      "id": "hud_minimap",
+      "name": "الخريطة الصغيرة",
+      "type": "minimap",
+      "dimensions": {"width": 200, "height": 200},
+      "position": {"x": 10, "y": 10},
+      "background": {
+        "color": "#0a0a0a",
+        "border": 2,
+        "border_color": "#7b2cbf"
+      },
+      "grid": {
+        "enabled": true,
+        "color": "#333333",
+        "spacing": 20
+      },
+      "elements": [
+        {
+          "type": "player_indicator",
+          "icon": "circle",
+          "color": "#ff6b35",
+          "size": 8
+        },
+        {
+          "type": "enemy_indicator",
+          "icon": "triangle",
+          "color": "#ff4444",
+          "size": 6
+        },
+        {
+          "type": "npc_indicator",
+          "icon": "square",
+          "color": "#00ffff",
+          "size": 6
+        },
+        {
+          "type": "waypoint_indicator",
+          "icon": "star",
+          "color": "#d4a574",
+          "size": 8
+        }
+      ]
+    },
+    {
+      "id": "hud_main_menu",
+      "name": "القائمة الرئيسية",
+      "type": "screen",
+      "background": {
+        "type": "gradient",
+        "colors": ["#1a1a1a", "#2a1a3a"],
+        "direction": "135deg"
+      },
+      "logo": {
+        "text": "نارس",
+        "font_size": 64,
+        "color": "#ff6b35",
+        "glow": true,
+        "glow_color": "#ffaa44"
+      },
+      "buttons": [
+        {
+          "id": "btn_new_game",
+          "label": "لعبة جديدة",
+          "width": 300,
+          "height": 50,
+          "style": "primary"
+        },
+        {
+          "id": "btn_continue",
+          "label": "متابعة",
+          "width": 300,
+          "height": 50,
+          "style": "secondary"
+        },
+        {
+          "id": "btn_settings",
+          "label": "الإعدادات",
+          "width": 300,
+          "height": 50,
+          "style": "secondary"
+        },
+        {
+          "id": "btn_quit",
+          "label": "خروج",
+          "width": 300,
+          "height": 50,
+          "style": "secondary"
+        }
+      ]
+    }
+  ],
+  "button_styles": {
+    "primary": {
+      "background": "#ff6b35",
+      "text_color": "#000000",
+      "border": {"width": 2, "color": "#ffaa44"},
+      "hover": {
+        "background": "#ffaa44",
+        "scale": 1.05,
+        "shadow": true
+      },
+      "active": {
+        "background": "#dd5a2b",
+        "scale": 0.98
+      }
+    },
+    "secondary": {
+      "background": "#1a1a1a",
+      "text_color": "#ffffff",
+      "border": {"width": 2, "color": "#7b2cbf"},
+      "hover": {
+        "background": "#2a2a2a",
+        "border_color": "#ff6b35",
+        "scale": 1.02
+      },
+      "active": {
+        "background": "#0a0a0a"
+      }
+    },
+    "disabled": {
+      "background": "#444444",
+      "text_color": "#888888",
+      "border": {"width": 1, "color": "#333333"}
+    }
+  }
+}

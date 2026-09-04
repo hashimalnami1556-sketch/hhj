@@ -1,0 +1,55 @@
+{
+  "id": "bone_beast",
+  "name": "Bone Beast",
+  "type": "enemy",
+  "role": "early_encounter",
+  "description": "Quadruped predator built from bleached bone and ash-black sinew. Prologue quest target.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 6.8,
+    "rigged": true,
+    "bones": [
+      "Armature",
+      "Hips", "Spine", "Chest", "Neck", "Head",
+      "LeftFrontLeg", "LeftFrontPaw",
+      "RightFrontLeg", "RightFrontPaw",
+      "LeftBackLeg", "LeftBackPaw",
+      "RightBackLeg", "RightBackPaw",
+      "Tail", "Jaw"
+    ]
+  },
+  "materials": {
+    "bone_structure": "mat_ash_black",
+    "aether_cracks": "mat_aether_violet",
+    "sinew": "mat_ash_black"
+  },
+  "attachment_points": {
+    "poise_break_vfx": { "bone": "Head", "position": [0, 0.2, 0] },
+    "damage_point": { "bone": "Chest", "position": [0, 0, 0] }
+  },
+  "animations": [
+    "idle",
+    "walk",
+    "run",
+    "attack_bite",
+    "attack_swipe",
+    "poise_break",
+    "stagger",
+    "death"
+  ],
+  "combat": {
+    "health": 45,
+    "poise": 30,
+    "damage": 8,
+    "resistance": {
+      "fire": 0.8,
+      "aether": 1.2,
+      "void": 0.9
+    }
+  },
+  "color_palette": {
+    "bone": "#e8e8e8",
+    "aether_cracks": "#7b2cbf",
+    "sinew": "#1a1a1a"
+  }
+}

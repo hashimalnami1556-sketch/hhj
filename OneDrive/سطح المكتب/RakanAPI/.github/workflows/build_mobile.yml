@@ -1,0 +1,83 @@
+name: Build Mobile Apps (iOS & Android)
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build_ios:
+    name: Build iOS
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'latest'
+          channel: 'stable'
+      
+      - name: Get dependencies
+        run: |
+          cd flutter
+          flutter pub get
+      
+      - name: Build iOS Release
+        run: |
+          cd flutter
+          flutter build ios --release --no-codesign
+      
+      - name: Upload iOS Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ios-build
+          path: flutter/build/ios/iphoneos/
+
+  build_android:
+    name: Build Android APK & AAB
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '11'
+      
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'latest'
+          channel: 'stable'
+      
+      - name: Get dependencies
+        run: |
+          cd flutter
+          flutter pub get
+      
+      - name: Build APK
+        run: |
+          cd flutter
+          flutter build apk --release
+      
+      - name: Build AAB (App Bundle)
+        run: |
+          cd flutter
+          flutter build appbundle --release
+      
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-apk
+          path: flutter/build/app/outputs/flutter-apk/app-release.apk
+      
+      - name: Upload AAB Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: android-aab
+          path: flutter/build/app/outputs/bundle/release/app-release.aab

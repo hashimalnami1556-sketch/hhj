@@ -1,0 +1,64 @@
+{
+  "id": "naris_hero",
+  "name": "Naris",
+  "type": "character",
+  "role": "protagonist",
+  "description": "The amnesiac protagonist. Wields the Sword of Poem. Cloak + armor with cloth simulation.",
+  "model": {
+    "format": "glb",
+    "filesize_estimate_mb": 8.5,
+    "rigged": true,
+    "bones": [
+      "Armature",
+      "Hips", "Spine", "Chest", "Neck", "Head",
+      "LeftShoulder", "LeftArm", "LeftForearm", "LeftHand",
+      "RightShoulder", "RightArm", "RightForearm", "RightHand",
+      "LeftUpLeg", "LeftLeg", "LeftFoot",
+      "RightUpLeg", "RightLeg", "RightFoot",
+      "Cloak_Base"
+    ]
+  },
+  "materials": {
+    "base_armor": "mat_ash_black",
+    "trim": "mat_ancient_gold",
+    "cloak": "mat_ash_black",
+    "skin": "mat_ash_black"
+  },
+  "attachment_points": {
+    "right_hand": { "bone": "RightHand", "position": [0.1, 0, 0] },
+    "sword_sheath": { "bone": "Hips", "position": [0.15, -0.05, 0] }
+  },
+  "animations": [
+    "idle",
+    "walk_forward",
+    "walk_backward",
+    "run",
+    "attack_light",
+    "attack_heavy",
+    "cast_ability",
+    "take_damage",
+    "death"
+  ],
+  "color_palette": {
+    "primary": "#1a1a1a",
+    "secondary": "#d4a574",
+    "accent_fire": "#ff6b35",
+    "accent_aether": "#7b2cbf"
+  },
+  "variations": [
+    {
+      "name": "default",
+      "materials": {
+        "base_armor": "mat_ash_black",
+        "trim": "mat_ancient_gold"
+      }
+    },
+    {
+      "name": "upgraded_aether",
+      "materials": {
+        "base_armor": "mat_ash_black",
+        "trim": "mat_aether_violet"
+      }
+    }
+  ]
+}

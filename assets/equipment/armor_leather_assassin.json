@@ -1,0 +1,25 @@
+{
+  "id": "armor_leather_assassin",
+  "name": "درع جلدية: الغاتل الخفي",
+  "type": "light_armor",
+  "rarity": "uncommon",
+  "description": "درع جلدية سوداء مرنة وخفيفة جداً. تزيد من سرعة الحركة والهجوم.",
+  "stats": {
+    "defense": 10,
+    "dexterity_bonus": 3,
+    "weight": 1.5
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "binding": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "attack_speed": 1.12,
+    "movement_speed": 1.1,
+    "stealth_bonus": 0.2
+  },
+  "socket_slots": {
+    "rune_slots": 1,
+    "gem_slots": 1
+  }
+}

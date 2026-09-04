@@ -1,0 +1,87 @@
+{
+  "crafting_materials": [
+    {
+      "id": "mat_iron_ore",
+      "name": "خام الحديد",
+      "type": "ore",
+      "rarity": "common",
+      "description": "خام حديد خام يمكن صهره وتنقيته.",
+      "weight": 2.5,
+      "value": 10,
+      "uses": ["metalworking", "armor_crafting"],
+      "color": "#4a4a4a"
+    },
+    {
+      "id": "mat_steel_ingot",
+      "name": "سبيكة الفولاذ",
+      "type": "ingot",
+      "rarity": "uncommon",
+      "description": "سبيكة فولاذ نقية وقوية للحرفية المتقدمة.",
+      "weight": 1.5,
+      "value": 50,
+      "uses": ["weapon_crafting", "armor_reinforcement"],
+      "color": "#6a6a6a"
+    },
+    {
+      "id": "mat_naris_shard",
+      "name": "شظية نارس",
+      "type": "crystal",
+      "rarity": "rare",
+      "description": "جزء صغير من بلور نارس الأسطوري. يتوهج بنار برتقالية.",
+      "weight": 0.5,
+      "value": 200,
+      "uses": ["weapon_upgrade", "special_crafting"],
+      "color": "#ff6b35"
+    },
+    {
+      "id": "mat_aether_crystal",
+      "name": "بلور الأثير",
+      "type": "crystal",
+      "rarity": "rare",
+      "description": "بلور نقي يحتوي على جوهر الأثير البنفسجي.",
+      "weight": 0.6,
+      "value": 220,
+      "uses": ["magic_weapon_upgrade", "spell_enhancement"],
+      "color": "#7b2cbf"
+    },
+    {
+      "id": "mat_mist_essence",
+      "name": "جوهر الضباب",
+      "type": "essence",
+      "rarity": "rare",
+      "description": "جوهر سائل ساحر من الضباب السماوي.",
+      "weight": 0.3,
+      "value": 180,
+      "uses": ["potion_crafting", "enchantment"],
+      "color": "#00ffff"
+    },
+    {
+      "id": "mat_orichalcum",
+      "name": "الأوريخالكوم",
+      "type": "metal",
+      "rarity": "legendary",
+      "description": "معدن أسطوري نادر جداً مع خصائص سحرية.",
+      "weight": 2.0,
+      "value": 500,
+      "uses": ["legendary_weapon_crafting", "supreme_upgrades"],
+      "color": "#d4a574"
+    },
+    {
+      "id": "mat_coal",
+      "name": "فحم",
+      "type": "material",
+      "rarity": "common",
+      "description": "فحم طبيعي لتسخين الأفران والحدادة.",
+      "weight": 1.0,
+      "value": 5,
+      "uses": ["smelting", "fire_starting"],
+      "color": "#2a2a2a"
+    }
+  ],
+  "component_drops": {
+    "common_enemies": ["mat_iron_ore", "mat_coal"],
+    "uncommon_enemies": ["mat_steel_ingot", "mat_mist_essence"],
+    "rare_enemies": ["mat_aether_crystal", "mat_naris_shard"],
+    "boss_drops": ["mat_orichalcum"]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "claws_void_rend",
+  "name": "المخالب: تمزق الفراغ",
+  "type": "claws",
+  "rarity": "uncommon",
+  "description": "مخالب ثلاثية الأصابع سوداء محفورة بطاقة الفراغ. سريعة وقاتلة.",
+  "stats": {
+    "attack": 16,
+    "dexterity": 8,
+    "dexterity_requirement": 10,
+    "weight": 0.5
+  },
+  "materials": {
+    "claws": "mat_ash_black",
+    "wrapping": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "attack_speed": 1.4,
+    "bleed_chance": 0.2,
+    "combo_multiplier": 1.15
+  },
+  "attacks": {
+    "quick_slash": {
+      "damage": 8,
+      "speed": "very_fast",
+      "animation": "claw_slash",
+      "consumes_stamina": 8
+    },
+    "rending_combo": {
+      "damage": 10,
+      "speed": "very_fast",
+      "hits": 3,
+      "consumes_stamina": 24,
+      "bleed_chance": 0.2,
+      "combo_multiplier": 1.15
+    }
+  }
+}

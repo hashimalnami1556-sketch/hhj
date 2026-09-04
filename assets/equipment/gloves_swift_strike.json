@@ -1,0 +1,21 @@
+{
+  "id": "gloves_swift_strike",
+  "name": "قفازات الضربة السريعة",
+  "type": "gloves",
+  "rarity": "rare",
+  "description": "قفازات جلدية خفيفة مع خطوط ذهبية. تزيد سرعة الهجوم بشكل ملحوظ.",
+  "stats": {
+    "defense": 8,
+    "dexterity": 5,
+    "attack_speed": 1.15,
+    "weight": 1.5
+  },
+  "materials": {
+    "primary": "mat_ash_black",
+    "trim": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "attack_speed_bonus": 0.15,
+    "critical_chance": 0.08
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "accessories": [
+    {
+      "id": "ring_fire_strength",
+      "name": "خاتم قوة النار",
+      "type": "ring",
+      "rarity": "rare",
+      "description": "خاتم ذهبي متوهج يزيد من ضرر النار والقوة.",
+      "stats": {
+        "strength_bonus": 3,
+        "fire_damage_bonus": 15,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_ancient_gold"
+      },
+      "special_properties": {
+        "fire_boost": 1.15,
+        "strength_boost": 1.05
+      }
+    },
+    {
+      "id": "ring_magic_seal",
+      "name": "خاتم الختم السحري",
+      "type": "ring",
+      "rarity": "rare",
+      "description": "خاتم أرجواني متوهج يزيد من السحر والمقاومة السحرية.",
+      "stats": {
+        "intelligence_bonus": 4,
+        "magic_defense_bonus": 12,
+        "weight": 0.1
+      },
+      "materials": {
+        "primary": "mat_aether_violet"
+      },
+      "special_properties": {
+        "magic_defense": 1.2,
+        "magic_power": 1.12
+      }
+    },
+    {
+      "id": "amulet_spirit_bond",
+      "name": "تميمة رابطة الروح",
+      "type": "amulet",
+      "rarity": "rare",
+      "description": "تميمة زرقاء تعزز الرابط مع الرفيق الروحي وتزيد HP.",
+      "stats": {
+        "health_bonus": 20,
+        "companion_damage_bonus": 10,
+        "weight": 0.5
+      },
+      "materials": {
+        "primary": "mat_mist_cyan"
+      },
+      "special_properties": {
+        "companion_boost": 1.15,
+        "health_regen": 0.3
+      }
+    },
+    {
+      "id": "charm_ancient_wisdom",
+      "name": "سحر الحكمة القديمة",
+      "type": "charm",
+      "rarity": "uncommon",
+      "description": "سحر يزيد من المعرفة والخبرة المكتسبة.",
+      "stats": {
+        "experience_boost": 1.1,
+        "item_discovery": 1.05,
+        "weight": 0.3
+      },
+      "materials": {
+        "primary": "mat_ancient_gold"
+      }
+    }
+  ]
+}

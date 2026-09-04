@@ -1,0 +1,160 @@
+{
+  "progression": {
+    "levels": [
+      {
+        "level": 1,
+        "experience_required": 0,
+        "stat_gains": {
+          "health": 30,
+          "stamina": 30,
+          "mana": 20
+        },
+        "unlocks": []
+      },
+      {
+        "level": 5,
+        "experience_required": 500,
+        "stat_gains": {
+          "health": 35,
+          "stamina": 35,
+          "mana": 25
+        },
+        "unlocks": ["skill_whirlwind_slash"]
+      },
+      {
+        "level": 10,
+        "experience_required": 1500,
+        "stat_gains": {
+          "health": 40,
+          "stamina": 40,
+          "mana": 30,
+          "strength": 1,
+          "dexterity": 1
+        },
+        "unlocks": ["skill_dragon_strike", "companion_warrior_kael"]
+      },
+      {
+        "level": 15,
+        "experience_required": 3500,
+        "stat_gains": {
+          "health": 45,
+          "stamina": 45,
+          "mana": 35,
+          "intelligence": 1
+        },
+        "unlocks": ["skill_shadow_clone", "companion_mage_elara"]
+      },
+      {
+        "level": 20,
+        "experience_required": 6500,
+        "stat_gains": {
+          "health": 50,
+          "stamina": 50,
+          "mana": 40,
+          "strength": 2,
+          "intelligence": 2
+        },
+        "unlocks": ["skill_berserk_mode", "companion_rogue_shadow"]
+      },
+      {
+        "level": 25,
+        "experience_required": 10500,
+        "stat_gains": {
+          "health": 55,
+          "stamina": 55,
+          "mana": 45,
+          "all_stats": 2
+        },
+        "unlocks": ["skill_inferno_blast", "companion_paladin_grace"]
+      },
+      {
+        "level": 30,
+        "experience_required": 15000,
+        "stat_gains": {
+          "health": 60,
+          "stamina": 60,
+          "mana": 50,
+          "all_stats": 3
+        },
+        "unlocks": ["ultimate_ability_void_annihilation"]
+      }
+    ]
+  },
+  "skill_trees": [
+    {
+      "id": "tree_warrior",
+      "name": "شجرة المحارب",
+      "description": "تخصص في القتال المباشر والدفاع.",
+      "nodes": [
+        {
+          "id": "node_heavy_armor",
+          "name": "درع ثقيلة",
+          "description": "+5 defense",
+          "requirements": {"level": 1}
+        },
+        {
+          "id": "node_shield_mastery",
+          "name": "إتقان الدرع",
+          "description": "+3 block recovery",
+          "requirements": {"level": 10, "parent": "node_heavy_armor"}
+        },
+        {
+          "id": "node_poise",
+          "name": "ثبات الموقف",
+          "description": "+10 poise",
+          "requirements": {"level": 15}
+        }
+      ]
+    },
+    {
+      "id": "tree_mage",
+      "name": "شجرة الساحر",
+      "description": "تخصص في السحر والقدرات السحرية.",
+      "nodes": [
+        {
+          "id": "node_spell_power",
+          "name": "قوة التعويذة",
+          "description": "+10% spell damage",
+          "requirements": {"level": 1}
+        },
+        {
+          "id": "node_mana_efficiency",
+          "name": "كفاءة المانا",
+          "description": "-20% mana cost",
+          "requirements": {"level": 10, "parent": "node_spell_power"}
+        },
+        {
+          "id": "node_elemental_mastery",
+          "name": "إتقان العناصر",
+          "description": "+15% fire/ice/lightning damage",
+          "requirements": {"level": 20, "parent": "node_mana_efficiency"}
+        }
+      ]
+    },
+    {
+      "id": "tree_rogue",
+      "name": "شجرة القاتل",
+      "description": "تخصص في السرعة والاغتيالات.",
+      "nodes": [
+        {
+          "id": "node_backstab",
+          "name": "طعنة خلفية",
+          "description": "+50% backstab damage",
+          "requirements": {"level": 1}
+        },
+        {
+          "id": "node_stealth",
+          "name": "التخفي",
+          "description": "+25% stealth effectiveness",
+          "requirements": {"level": 8, "parent": "node_backstab"}
+        },
+        {
+          "id": "node_critical_strike",
+          "name": "ضربة حاسمة",
+          "description": "+15% critical chance",
+          "requirements": {"level": 12}
+        }
+      ]
+    }
+  ]
+}

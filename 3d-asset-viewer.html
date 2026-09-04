@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NARIS Asset Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a 0%, #2a1a3a 100%);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+            gap: 0;
+        }
+
+        #canvas {
+            flex: 1;
+            background: radial-gradient(circle at center, #2a1a3a, #0a0a0a);
+        }
+
+        .sidebar {
+            width: 320px;
+            background: rgba(10, 10, 10, 0.9);
+            padding: 20px;
+            overflow-y: auto;
+            border-right: 2px solid #d4a574;
+            backdrop-filter: blur(10px);
+        }
+
+        .sidebar h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #ff6b35;
+            text-shadow: 0 0 10px rgba(255, 107, 53, 0.5);
+        }
+
+        .sidebar h2 {
+            font-size: 14px;
+            color: #7b2cbf;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .asset-list {
+            list-style: none;
+        }
+
+        .asset-item {
+            padding: 12px;
+            margin: 8px 0;
+            background: rgba(123, 44, 191, 0.1);
+            border: 1px solid rgba(123, 44, 191, 0.3);
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 12px;
+        }
+
+        .asset-item:hover {
+            background: rgba(123, 44, 191, 0.2);
+            border-color: #7b2cbf;
+            transform: translateX(-5px);
+        }
+
+        .asset-item.active {
+            background: rgba(255, 107, 53, 0.2);
+            border-color: #ff6b35;
+            box-shadow: 0 0 10px rgba(255, 107, 53, 0.3);
+        }
+
+        .asset-name {
+            font-weight: bold;
+            color: #ff6b35;
+        }
+
+        .asset-type {
+            font-size: 10px;
+            color: #00ffff;
+            margin-top: 4px;
+        }
+
+        .properties {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 255, 255, 0.05);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 4px;
+            font-size: 11px;
+        }
+
+        .properties h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .property {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px 0;
+            padding: 3px 0;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .property-label {
+            color: #7b2cbf;
+        }
+
+        .property-value {
+            color: #00ffff;
+            font-family: monospace;
+        }
+
+        .controls {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(212, 165, 116, 0.05);
+            border: 1px solid rgba(212, 165, 116, 0.2);
+            border-radius: 4px;
+        }
+
+        .controls h3 {
+            color: #d4a574;
+            margin-bottom: 10px;
+            font-size: 12px;
+        }
+
+        .control-group {
+            margin: 10px 0;
+        }
+
+        .control-label {
+            display: block;
+            font-size: 11px;
+            color: #00ffff;
+            margin-bottom: 5px;
+        }
+
+        input[type="range"],
+        button {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            background: rgba(123, 44, 191, 0.2);
+            border: 1px solid #7b2cbf;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 11px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="range"] {
+            padding: 0;
+            height: 5px;
+        }
+
+        button:hover {
+            background: rgba(255, 107, 53, 0.3);
+            border-color: #ff6b35;
+        }
+
+        .color-palette {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .color-swatch {
+            padding: 10px;
+            border-radius: 4px;
+            text-align: center;
+            font-size: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .info-panel {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(255, 107, 53, 0.05);
+            border: 1px solid rgba(255, 107, 53, 0.2);
+            border-radius: 4px;
+            font-size: 10px;
+            line-height: 1.6;
+        }
+
+        .info-panel h3 {
+            color: #ff6b35;
+            margin-bottom: 8px;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #7b2cbf;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <canvas id="canvas"></canvas>
+        <div class="sidebar">
+            <h1>نارس</h1>
+            <p style="font-size: 11px; color: #00ffff; margin-bottom: 20px;">NARIS Asset Viewer</p>
+
+            <h2>الشخصيات</h2>
+            <ul class="asset-list" id="characters">
+                <li class="asset-item" onclick="loadAsset('naris_hero')">
+                    <div class="asset-name">نارس (البطل)</div>
+                    <div class="asset-type">Protagonist</div>
+                </li>
+                <li class="asset-item" onclick="loadAsset('spirit_wolf')">
+                    <div class="asset-name">الذئب الروحاني</div>
+                    <div class="asset-type">Companion</div>
+                </li>
+                <li class="asset-item" onclick="loadAsset('bone_beast')">
+                    <div class="asset-name">وحش العظام</div>
+                    <div class="asset-type">Enemy</div>
+                </li>
+                <li class="asset-item" onclick="loadAsset('ash_giant')">
+                    <div class="asset-name">عملاق الرماد</div>
+                    <div class="asset-type">Boss</div>
+                </li>
+            </ul>
+
+            <h2>البيئة</h2>
+            <ul class="asset-list" id="environment">
+                <li class="asset-item" onclick="loadAsset('ashen_forest_kit')">
+                    <div class="asset-name">غابة الرماد</div>
+                    <div class="asset-type">Environment Kit</div>
+                </li>
+            </ul>
+
+            <div class="properties">
+                <h3>معلومات الأصل</h3>
+                <div id="asset-info"></div>
+            </div>
+
+            <div class="controls">
+                <h3>عناصر التحكم</h3>
+                <div class="control-group">
+                    <label class="control-label">الدوران (Rotation)</label>
+                    <input type="range" min="0" max="360" value="0" id="rotationX">
+                </div>
+                <div class="control-group">
+                    <label class="control-label">الزووم (Zoom)</label>
+                    <input type="range" min="0.5" max="5" step="0.1" value="2" id="zoom">
+                </div>
+                <button onclick="toggleAnimation()">▶ تحريك</button>
+                <button onclick="resetView()">↻ إعادة تعيين</button>
+            </div>
+
+            <h2>لوحة الألوان</h2>
+            <div class="color-palette">
+                <div class="color-swatch" style="background: #ff6b35;">
+                    <div>نار نارس</div>
+                    <div style="font-size: 9px;">#ff6b35</div>
+                </div>
+                <div class="color-swatch" style="background: #7b2cbf;">
+                    <div>أثير بنفسجي</div>
+                    <div style="font-size: 9px;">#7b2cbf</div>
+                </div>
+                <div class="color-swatch" style="background: #00ffff;">
+                    <div>ضباب سماوي</div>
+                    <div style="font-size: 9px;">#00ffff</div>
+                </div>
+                <div class="color-swatch" style="background: #d4a574;">
+                    <div>ذهب قديم</div>
+                    <div style="font-size: 9px;">#d4a574</div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <h3>عن العارض</h3>
+                <p>عارض أصول NARIS تفاعلي يدعم معاينة الشخصيات والبيئات والمواد مع خيارات تحكم حية.</p>
+                <p style="margin-top: 8px;">تم البناء باستخدام Three.js و WebGL</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script>
+        // Three.js Setup
+        const canvas = document.getElementById('canvas');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+
+        renderer.setSize(window.innerWidth - 320, window.innerHeight);
+        renderer.setClearColor(0x0a0a0a);
+        camera.position.z = 5;
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
+        scene.add(ambientLight);
+
+        const directionalLight = new THREE.DirectionalLight(0xff6b35, 0.8);
+        directionalLight.position.set(5, 5, 5);
+        scene.add(directionalLight);
+
+        const rimLight = new THREE.DirectionalLight(0x00ffff, 0.5);
+        rimLight.position.set(-5, 0, -5);
+        scene.add(rimLight);
+
+        // Assets Data
+        const assetsData = {
+            naris_hero: {
+                name: 'نارس',
+                type: 'Protagonist',
+                description: 'البطل الرئيسي. يمتلك سيف القصيدة.',
+                health: 100,
+                materials: ['ash_black', 'ancient_gold', 'naris_fire']
+            },
+            spirit_wolf: {
+                name: 'الذئب الروحاني',
+                type: 'Companion',
+                description: 'مخلوق روحاني متعاقد. مصنوع من الضباب السماوي والأثير.',
+                bond: 0,
+                materials: ['mist_cyan', 'aether_violet', 'naris_fire']
+            },
+            bone_beast: {
+                name: 'وحش العظام',
+                type: 'Enemy',
+                description: 'حيوان مفترس رباعي الأرجل مصنوع من العظام والأوتار.',
+                health: 45,
+                poise: 30,
+                materials: ['ash_black', 'aether_violet']
+            },
+            ash_giant: {
+                name: 'عملاق الرماد',
+                type: 'Boss',
+                description: 'زعيم الرماد. حارس بوابة الرماد.',
+                health: 200,
+                poise: 80,
+                phase: 1,
+                materials: ['ash_black', 'naris_fire', 'aether_violet', 'ancient_gold']
+            },
+            ashen_forest_kit: {
+                name: 'غابة الرماد',
+                type: 'Environment',
+                description: 'مجموعة معمارية معيارية لمنطقة الفتح.',
+                tiles: 4,
+                structures: 3,
+                materials: ['ash_black', 'aether_violet', 'naris_fire', 'mist_cyan']
+            }
+        };
+
+        let currentAsset = null;
+        let currentMesh = null;
+        let isAnimating = true;
+        let rotationSpeed = 0.01;
+
+        function createAssetMesh(assetId) {
+            const data = assetsData[assetId];
+            if (!data) return null;
+
+            // Create a simple geometric representation
+            let geometry, material;
+            const color = 0x1a1a1a;
+
+            if (data.type === 'Protagonist' || data.type === 'Companion' || data.type === 'Enemy') {
+                geometry = new THREE.CapsuleGeometry(0.5, 2, 4, 16);
+            } else if (data.type === 'Boss') {
+                geometry = new THREE.BoxGeometry(2, 3, 1);
+            } else {
+                geometry = new THREE.BoxGeometry(10, 1, 10);
+            }
+
+            material = new THREE.MeshPhongMaterial({
+                color: color,
+                emissive: 0x7b2cbf,
+                emissiveIntensity: 0.3,
+                wireframe: false
+            });
+
+            const mesh = new THREE.Mesh(geometry, material);
+            return mesh;
+        }
+
+        function loadAsset(assetId) {
+            // Remove previous mesh
+            if (currentMesh) {
+                scene.remove(currentMesh);
+            }
+
+            currentAsset = assetId;
+            const assetMesh = createAssetMesh(assetId);
+
+            if (assetMesh) {
+                scene.add(assetMesh);
+                currentMesh = assetMesh;
+            }
+
+            // Update info panel
+            const data = assetsData[assetId];
+            const infoDiv = document.getElementById('asset-info');
+            infoDiv.innerHTML = `
+                <div class="property">
+                    <span class="property-label">الاسم:</span>
+                    <span class="property-value">${data.name}</span>
+                </div>
+                <div class="property">
+                    <span class="property-label">النوع:</span>
+                    <span class="property-value">${data.type}</span>
+                </div>
+                <div class="property">
+                    <span class="property-label">الوصف:</span>
+                    <span class="property-value">${data.description}</span>
+                </div>
+                ${data.health ? `<div class="property"><span class="property-label">الصحة:</span><span class="property-value">${data.health}</span></div>` : ''}
+                ${data.poise ? `<div class="property"><span class="property-label">الصلابة:</span><span class="property-value">${data.poise}</span></div>` : ''}
+            `;
+
+            // Update active item styling
+            document.querySelectorAll('.asset-item').forEach(item => item.classList.remove('active'));
+            event.target.closest('.asset-item').classList.add('active');
+        }
+
+        function toggleAnimation() {
+            isAnimating = !isAnimating;
+        }
+
+        function resetView() {
+            camera.position.z = 5;
+            if (currentMesh) {
+                currentMesh.rotation.x = 0;
+                currentMesh.rotation.y = 0;
+                currentMesh.rotation.z = 0;
+            }
+            document.getElementById('rotationX').value = 0;
+            document.getElementById('zoom').value = 2;
+        }
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            if (isAnimating && currentMesh) {
+                currentMesh.rotation.y += rotationSpeed;
+                currentMesh.rotation.x += rotationSpeed * 0.5;
+            }
+
+            // Handle controls
+            if (currentMesh) {
+                currentMesh.rotation.z = (document.getElementById('rotationX').value / 180) * Math.PI;
+            }
+
+            camera.position.z = 5 / parseFloat(document.getElementById('zoom').value);
+
+            renderer.render(scene, camera);
+        }
+
+        // Window resize handler
+        window.addEventListener('resize', () => {
+            const width = window.innerWidth - 320;
+            const height = window.innerHeight;
+            camera.aspect = width / height;
+            camera.updateProjectionMatrix();
+            renderer.setSize(width, height);
+        });
+
+        // Initialize
+        loadAsset('naris_hero');
+        animate();
+    </script>
+</body>
+</html>

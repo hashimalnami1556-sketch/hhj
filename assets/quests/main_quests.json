@@ -1,0 +1,95 @@
+{
+  "quests": [
+    {
+      "id": "quest_retrieve_crystal",
+      "title": "استرجاع البلورة المفقودة",
+      "type": "main",
+      "description": "ابحث عن البلورة القديمة المفقودة في كهف الرماد.",
+      "giver": "guide_elder_sage",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "توجه إلى كهف الرماد",
+          "location": "ashfall_cave",
+          "type": "travel"
+        },
+        {
+          "id": "obj_2",
+          "description": "هزم أسياد الكهف",
+          "enemy_count": 3,
+          "type": "combat"
+        },
+        {
+          "id": "obj_3",
+          "description": "احصل على البلورة",
+          "item": "crystal_ancient_naris",
+          "type": "collect"
+        }
+      ],
+      "rewards": {
+        "experience": 500,
+        "gold": 250,
+        "items": ["ring_fire_strength"]
+      },
+      "completion_dialogue": "شكراً لك يا بطل! هذه البلورة ستساعدنا في محاربة الظلام."
+    },
+    {
+      "id": "quest_defeat_shadow_beast",
+      "title": "هزم وحش الظل",
+      "type": "main",
+      "description": "يوجد وحش مظلم يرعب القرية. اذهب واستأصل هذا التهديد.",
+      "giver": "guide_elder_sage",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "ابحث عن وحش الظل",
+          "location": "dark_forest",
+          "type": "travel"
+        },
+        {
+          "id": "obj_2",
+          "description": "هزم وحش الظل",
+          "enemy": "shadow_beast_boss",
+          "type": "boss_combat"
+        },
+        {
+          "id": "obj_3",
+          "description": "عد إلى الحكيم",
+          "location": "sage_tower",
+          "type": "travel"
+        }
+      ],
+      "rewards": {
+        "experience": 750,
+        "gold": 400,
+        "items": ["armor_ash_plate", "sword_of_poem"]
+      }
+    },
+    {
+      "id": "quest_find_ancient_tome",
+      "title": "البحث عن الكتاب القديم",
+      "type": "side",
+      "description": "ابحث عن الكتاب القديم المخفي في خزائن المكتبة الضائعة.",
+      "giver": "guide_elder_sage",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "توجه إلى المكتبة الضائعة",
+          "location": "lost_library",
+          "type": "travel"
+        },
+        {
+          "id": "obj_2",
+          "description": "احصل على الكتاب القديم",
+          "item": "tome_ancient_magic",
+          "type": "collect"
+        }
+      ],
+      "rewards": {
+        "experience": 300,
+        "gold": 150,
+        "items": ["scroll_aether_burst"]
+      }
+    }
+  ]
+}

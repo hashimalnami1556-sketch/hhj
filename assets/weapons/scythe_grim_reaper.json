@@ -1,0 +1,41 @@
+{
+  "id": "scythe_grim_reaper",
+  "name": "المنجل: حاصد الأرواح",
+  "type": "scythe",
+  "rarity": "rare",
+  "description": "منجل طويل مرعب مع شفرة سوداء متغطية بالضباب. يمتص حياة أعدائك.",
+  "stats": {
+    "attack": 32,
+    "strength": 4,
+    "dexterity": 6,
+    "strength_requirement": 13,
+    "dexterity_requirement": 11,
+    "weight": 9.5
+  },
+  "materials": {
+    "blade": "mat_ash_black",
+    "shaft": "mat_mist_cyan"
+  },
+  "special_properties": {
+    "lifesteal": 0.25,
+    "reach": 2.0,
+    "void_damage": 1.2
+  },
+  "attacks": {
+    "wide_sweep": {
+      "damage": 26,
+      "speed": "medium",
+      "aoe": true,
+      "radius": 2.2,
+      "consumes_stamina": 28,
+      "lifesteal_damage": 0.25
+    },
+    "harvest": {
+      "damage": 32,
+      "speed": "slow",
+      "consumes_stamina": 35,
+      "lifesteal_damage": 0.3,
+      "critical_chance": 0.2
+    }
+  }
+}

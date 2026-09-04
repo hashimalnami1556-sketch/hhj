@@ -1,0 +1,208 @@
+{
+  "vfx_library": [
+    {
+      "id": "fx_sword_fire_burst",
+      "name": "Fire Burst من السيف",
+      "category": "weapon_attack",
+      "type": "particle_system",
+      "material": "mat_naris_fire",
+      "duration": 1.5,
+      "emission_rate": 120,
+      "particle_lifetime": 2.0,
+      "particle_size": [0.1, 0.3],
+      "color": "#ff6b35",
+      "emission_strength": 1.5,
+      "scale_variation": 0.3,
+      "spread_angle": 45,
+      "lifetime_curve": "ease_out",
+      "properties": {
+        "collision_enabled": true,
+        "cast_shadow": false,
+        "light_strength": 0.8
+      }
+    },
+    {
+      "id": "fx_mist_arrow",
+      "name": "سهم الضباب",
+      "category": "projectile",
+      "type": "particle_system",
+      "material": "mat_mist_cyan",
+      "duration": 3.0,
+      "emission_rate": 80,
+      "particle_lifetime": 3.5,
+      "particle_size": [0.2, 0.5],
+      "color": "#00ffff",
+      "transparency": 0.7,
+      "rim_light_strength": 1.0,
+      "trail_enabled": true,
+      "trail_width": 0.15,
+      "properties": {
+        "collision_enabled": false,
+        "cast_shadow": false,
+        "light_strength": 0.5,
+        "slowdown_effect": 0.8
+      }
+    },
+    {
+      "id": "fx_aether_pulse",
+      "name": "نبضة الأثير",
+      "category": "magic_spell",
+      "type": "expanding_ring",
+      "material": "mat_aether_violet",
+      "duration": 0.8,
+      "max_radius": 5.0,
+      "thickness": 0.3,
+      "color": "#7b2cbf",
+      "emission_strength": 1.2,
+      "metallic_strength": 0.3,
+      "properties": {
+        "collision_enabled": true,
+        "collision_damage": 20,
+        "knockback_force": 15,
+        "light_strength": 1.0
+      }
+    },
+    {
+      "id": "fx_phase_transition",
+      "name": "انتقال المرحلة",
+      "category": "boss_ability",
+      "type": "combined",
+      "sub_effects": [
+        {
+          "type": "particle_system",
+          "material": "mat_aether_violet",
+          "emission_rate": 200,
+          "particle_lifetime": 2.0,
+          "color": "#7b2cbf",
+          "emission_strength": 1.5,
+          "scale_curve": "ease_in_out"
+        },
+        {
+          "type": "flash",
+          "color": "#7b2cbf",
+          "intensity": 1.0,
+          "duration": 0.3
+        },
+        {
+          "type": "shockwave",
+          "radius": 8.0,
+          "strength": 0.8,
+          "knockback": true
+        }
+      ],
+      "total_duration": 2.0
+    },
+    {
+      "id": "fx_fire_fissure",
+      "name": "شقوق النار",
+      "category": "boss_attack",
+      "type": "line_effect",
+      "material": "mat_naris_fire",
+      "length": 12.0,
+      "width": 0.8,
+      "color": "#ff6b35",
+      "emission_strength": 1.5,
+      "particle_system": {
+        "emission_rate": 100,
+        "particle_lifetime": 2.5,
+        "particle_size": [0.15, 0.35]
+      },
+      "properties": {
+        "collision_enabled": true,
+        "collision_damage": 15,
+        "collision_damage_type": "fire",
+        "light_strength": 0.9
+      }
+    },
+    {
+      "id": "fx_mist_fog_plane",
+      "name": "مستوى ضباب الضباب",
+      "category": "environment",
+      "type": "fog_volume",
+      "material": "mat_mist_cyan",
+      "dimensions": {"x": 100, "y": 2, "z": 100},
+      "color": "#00ffff",
+      "transparency": 0.6,
+      "movement_speed": 0.1,
+      "wave_amplitude": 0.2,
+      "properties": {
+        "light_strength": 0.3,
+        "rim_light_enabled": true,
+        "rim_light_strength": 0.8
+      }
+    },
+    {
+      "id": "fx_ember_particle_emitter",
+      "name": "مشع جزيئات النار",
+      "category": "environment",
+      "type": "particle_system",
+      "material": "mat_naris_fire",
+      "emission_rate": 50,
+      "particle_lifetime": 3.0,
+      "particle_size": [0.1, 0.25],
+      "color": "#ff6b35",
+      "emission_strength": 1.0,
+      "drift_speed": 0.2,
+      "drift_direction": [0, 1, 0],
+      "animation": {
+        "type": "flicker",
+        "frequency": 0.5,
+        "intensity": 0.3
+      }
+    },
+    {
+      "id": "fx_spirit_echo",
+      "name": "صدى الروح",
+      "category": "companion_effect",
+      "type": "ethereal_aura",
+      "material": "mat_mist_cyan",
+      "radius": 1.5,
+      "color": "#00ffff",
+      "transparency": 0.5,
+      "pulsation_speed": 1.0,
+      "pulsation_amplitude": 0.3,
+      "properties": {
+        "light_strength": 0.6,
+        "rim_light_enabled": true,
+        "rim_light_strength": 1.0,
+        "cast_shadow": false
+      }
+    },
+    {
+      "id": "fx_heal_aura",
+      "name": "هالة الشفاء",
+      "category": "spell_effect",
+      "type": "rising_particles",
+      "material": "mat_ancient_gold",
+      "emission_rate": 70,
+      "particle_lifetime": 2.5,
+      "particle_size": [0.08, 0.2],
+      "color": "#d4a574",
+      "emission_strength": 1.1,
+      "spread_angle": 30,
+      "rise_speed": 1.0,
+      "properties": {
+        "collision_enabled": false,
+        "light_strength": 0.7,
+        "cast_shadow": false,
+        "healing_effect": true
+      }
+    }
+  ],
+  "animation_curves": {
+    "ease_in": "y = t^2",
+    "ease_out": "y = 1 - (1-t)^2",
+    "ease_in_out": "y = t < 0.5 ? 2*t^2 : 1 - 2*(1-t)^2",
+    "linear": "y = t"
+  },
+  "color_scheme": {
+    "fire_base": "#ff6b35",
+    "fire_bright": "#ffaa44",
+    "aether_base": "#7b2cbf",
+    "aether_bright": "#a855ff",
+    "mist_base": "#00ffff",
+    "mist_bright": "#00ffff",
+    "gold_base": "#d4a574",
+    "gold_bright": "#e8c77f"
+  }
+}

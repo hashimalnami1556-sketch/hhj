@@ -1,0 +1,38 @@
+{
+  "id": "mace_bone_crusher",
+  "name": "الصولجان الخادم للعظام",
+  "type": "mace",
+  "rarity": "uncommon",
+  "description": "صولجان ثقيل برأس عظمي ملتوي. متخصص في تحطيم الدروع والعظام.",
+  "stats": {
+    "attack": 24,
+    "strength": 5,
+    "strength_requirement": 14,
+    "weight": 8.0
+  },
+  "materials": {
+    "head": "mat_ash_black",
+    "handle": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "armor_break": 1.25,
+    "stun_chance": 0.12,
+    "effective_vs_skeleton": 1.4
+  },
+  "attacks": {
+    "crushing_blow": {
+      "damage": 18,
+      "speed": "slow",
+      "consumes_stamina": 25,
+      "stun_duration": 0.8
+    },
+    "ground_slam": {
+      "damage": 15,
+      "speed": "very_slow",
+      "aoe": true,
+      "radius": 1.5,
+      "consumes_stamina": 35,
+      "knockback": 0.6
+    }
+  }
+}

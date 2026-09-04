@@ -1,0 +1,109 @@
+{
+  "consumables": [
+    {
+      "id": "food_bread_ash",
+      "name": "خبز الرماد",
+      "type": "food",
+      "rarity": "common",
+      "description": "خبز بسيط مصنوع من حبوب الرماد.",
+      "value": 10,
+      "weight": 0.2,
+      "effects": {
+        "health_restore": 15,
+        "stamina_restore": 10,
+        "cooldown": 3
+      }
+    },
+    {
+      "id": "food_meat_roasted",
+      "name": "لحم مشوي",
+      "type": "food",
+      "rarity": "uncommon",
+      "description": "لحم مشوي لذيذ يقوي الجسد.",
+      "value": 40,
+      "weight": 0.3,
+      "effects": {
+        "health_restore": 40,
+        "stamina_restore": 30,
+        "strength_bonus": 2,
+        "duration": 30,
+        "cooldown": 5
+      }
+    },
+    {
+      "id": "food_mushroom_golden",
+      "name": "فطر ذهبي",
+      "type": "food",
+      "rarity": "uncommon",
+      "description": "فطر نادر متوهج يحتوي على طاقة سحرية.",
+      "value": 50,
+      "weight": 0.1,
+      "effects": {
+        "mana_restore": 35,
+        "intelligence_bonus": 3,
+        "duration": 40,
+        "cooldown": 6
+      }
+    },
+    {
+      "id": "food_berry_wild",
+      "name": "توت بري بري",
+      "type": "food",
+      "rarity": "common",
+      "description": "توت بري حلو يجمع من غابات الرماد.",
+      "value": 5,
+      "weight": 0.05,
+      "effects": {
+        "health_restore": 8,
+        "mana_restore": 5,
+        "cooldown": 2
+      }
+    },
+    {
+      "id": "food_fish_ancient",
+      "name": "سمك قديم",
+      "type": "food",
+      "rarity": "rare",
+      "description": "سمك نادر من مياه الضباب الأزرق.",
+      "value": 120,
+      "weight": 0.4,
+      "effects": {
+        "health_restore": 50,
+        "mana_restore": 40,
+        "magic_defense_bonus": 5,
+        "duration": 60,
+        "cooldown": 8
+      }
+    },
+    {
+      "id": "food_stew_hearty",
+      "name": "حساء مشبع",
+      "type": "food",
+      "rarity": "uncommon",
+      "description": "حساء دافئ غني بالمكونات المغذية.",
+      "value": 60,
+      "weight": 0.5,
+      "effects": {
+        "health_restore": 45,
+        "stamina_restore": 40,
+        "poise_bonus": 5,
+        "duration": 45,
+        "cooldown": 7
+      }
+    },
+    {
+      "id": "food_herb_blessed",
+      "name": "عشب مبارك",
+      "type": "food",
+      "rarity": "rare",
+      "description": "عشب نادر يمكنه شفاء معظم الأمراض.",
+      "value": 100,
+      "weight": 0.05,
+      "effects": {
+        "health_restore": 60,
+        "cure_status_effects": true,
+        "cooldown": 10
+      }
+    }
+  ]
+}
