@@ -1,0 +1,119 @@
+{
+  "runes": [
+    {
+      "id": "rune_fire_affinity",
+      "name": "رون التقارب الناري",
+      "type": "damage",
+      "rarity": "rare",
+      "description": "تزيد من ضرر النار بشكل كبير.",
+      "stat_boost": {
+        "fire_damage": 0.25
+      },
+      "socket_type": "rune_slot",
+      "power_level": 3
+    },
+    {
+      "id": "rune_void_mastery",
+      "name": "رون إتقان الفراغ",
+      "type": "damage",
+      "rarity": "legendary",
+      "description": "تحكم كامل على قوة الفراغ.",
+      "stat_boost": {
+        "void_damage": 0.4,
+        "void_resistance": 0.3
+      },
+      "socket_type": "rune_slot",
+      "power_level": 5
+    },
+    {
+      "id": "rune_protection_shield",
+      "name": "رون درع الحماية",
+      "type": "defense",
+      "rarity": "uncommon",
+      "description": "تزيد من الدفاع والصلابة.",
+      "stat_boost": {
+        "defense": 5,
+        "poise": 10
+      },
+      "socket_type": "rune_slot",
+      "power_level": 2
+    },
+    {
+      "id": "rune_swift_wind",
+      "name": "رون الريح السريعة",
+      "type": "utility",
+      "rarity": "rare",
+      "description": "تزيد من سرعة الحركة والهجوم.",
+      "stat_boost": {
+        "movement_speed": 0.2,
+        "attack_speed": 0.15
+      },
+      "socket_type": "rune_slot",
+      "power_level": 3
+    },
+    {
+      "id": "rune_life_essence",
+      "name": "رون جوهر الحياة",
+      "type": "healing",
+      "rarity": "rare",
+      "description": "تزيد من التجدد والحياة.",
+      "stat_boost": {
+        "health_regeneration": 1.0,
+        "health_bonus": 15
+      },
+      "socket_type": "rune_slot",
+      "power_level": 3
+    }
+  ],
+  "gem_system": [
+    {
+      "id": "gem_ruby_fire",
+      "name": "جوهرة ياقوت النار",
+      "type": "fire",
+      "rarity": "rare",
+      "description": "جوهرة حمراء توفر ضرر نار إضافي.",
+      "stat_boost": {
+        "fire_damage": 0.15
+      },
+      "socket_type": "gem_slot",
+      "level": 3
+    },
+    {
+      "id": "gem_sapphire_ice",
+      "name": "جوهرة زفير الجليد",
+      "type": "ice",
+      "rarity": "rare",
+      "description": "جوهرة زرقاء توفر ضرر جليد إضافي.",
+      "stat_boost": {
+        "frost_damage": 0.15
+      },
+      "socket_type": "gem_slot",
+      "level": 3
+    },
+    {
+      "id": "gem_emerald_nature",
+      "name": "جوهرة زمرد الطبيعة",
+      "type": "nature",
+      "rarity": "rare",
+      "description": "جوهرة خضراء توفر ضرر طبيعي إضافي.",
+      "stat_boost": {
+        "nature_damage": 0.15
+      },
+      "socket_type": "gem_slot",
+      "level": 3
+    },
+    {
+      "id": "gem_diamond_void",
+      "name": "جوهرة ماس الفراغ",
+      "type": "void",
+      "rarity": "legendary",
+      "description": "جوهرة سوداء توفر ضرر فراغ قوي جداً.",
+      "stat_boost": {
+        "void_damage": 0.3,
+        "void_penetration": 0.2
+      },
+      "socket_type": "gem_slot",
+      "level": 5
+    }
+  ]
+}
