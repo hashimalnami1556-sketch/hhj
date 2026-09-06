@@ -1,0 +1,98 @@
+{
+  "status_effects": [
+    {
+      "id": "effect_poison",
+      "name": "سم",
+      "type": "damage_over_time",
+      "icon": "icon_poison",
+      "description": "الضرر يتراكم مع الوقت.",
+      "duration": 10,
+      "damage_per_tick": 3,
+      "tick_rate": 1.0,
+      "color": "#00cc00",
+      "removable": true,
+      "cure_item": "herb_blessed"
+    },
+    {
+      "id": "effect_bleed",
+      "name": "نزيف",
+      "type": "damage_over_time",
+      "icon": "icon_bleed",
+      "description": "فقدان الدم المستمر.",
+      "duration": 8,
+      "damage_per_tick": 2,
+      "tick_rate": 1.0,
+      "color": "#cc0000",
+      "removable": true
+    },
+    {
+      "id": "effect_freeze",
+      "name": "تجمد",
+      "type": "crowd_control",
+      "icon": "icon_freeze",
+      "description": "مجمد في مكانك، لا يمكن التحرك.",
+      "duration": 3,
+      "effect_strength": 1.0,
+      "color": "#00ccff",
+      "removable": true,
+      "immunity_after": 2
+    },
+    {
+      "id": "effect_stun",
+      "name": "صعق",
+      "type": "crowd_control",
+      "icon": "icon_stun",
+      "description": "مصعوق، لا يمكنك الهجوم.",
+      "duration": 2,
+      "disable_actions": ["attack", "ability"],
+      "color": "#ffff00",
+      "removable": false
+    },
+    {
+      "id": "effect_burn",
+      "name": "حرق",
+      "type": "damage_over_time",
+      "icon": "icon_burn",
+      "description": "محترق بنار قوية.",
+      "duration": 6,
+      "damage_per_tick": 4,
+      "tick_rate": 0.5,
+      "color": "#ff6600",
+      "removable": true,
+      "cure_item": "potion_fire_resistance"
+    },
+    {
+      "id": "effect_weak",
+      "name": "ضعف",
+      "type": "debuff",
+      "icon": "icon_weak",
+      "description": "قوتك تقل بشكل كبير.",
+      "duration": 12,
+      "damage_multiplier": 0.7,
+      "color": "#aaaaaa",
+      "removable": true
+    },
+    {
+      "id": "effect_protect",
+      "name": "حماية",
+      "type": "buff",
+      "icon": "icon_protect",
+      "description": "مدرع بحماية سحرية.",
+      "duration": 15,
+      "damage_reduction": 0.3,
+      "color": "#0066ff",
+      "removable": false
+    },
+    {
+      "id": "effect_strength_boost",
+      "name": "تعزيز القوة",
+      "type": "buff",
+      "icon": "icon_strength",
+      "description": "قوتك تزداد بشكل كبير.",
+      "duration": 10,
+      "damage_multiplier": 1.4,
+      "color": "#ff0000",
+      "removable": false
+    }
+  ]
+}

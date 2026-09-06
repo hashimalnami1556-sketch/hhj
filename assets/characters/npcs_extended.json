@@ -1,0 +1,127 @@
+{
+  "npcs": [
+    {
+      "id": "npc_blacksmith_forge",
+      "name": "الحداد الأسود",
+      "type": "npc",
+      "role": "blacksmith_craftsman",
+      "rarity": "uncommon",
+      "description": "حداد ماهر يصنع الأسلحة والمعدات.",
+      "stats": {
+        "health": 50,
+        "strength": 14,
+        "defense": 10
+      },
+      "animations": [
+        "idle_hammer",
+        "craft_animation",
+        "conversation"
+      ],
+      "dialogue_trees": {
+        "greeting": "أهلاً بك! أنا أعيد تصقيل الأسلحة والدروع.",
+        "services": [
+          {
+            "id": "service_upgrade_weapon",
+            "description": "ترقية الأسلحة"
+          },
+          {
+            "id": "service_craft_armor",
+            "description": "صناعة درع جديدة"
+          }
+        ]
+      },
+      "crafting_recipes": [
+        "recipe_iron_sword",
+        "recipe_steel_armor"
+      ]
+    },
+    {
+      "id": "npc_alchemist_potion",
+      "name": "الكيميائي المجنون",
+      "type": "npc",
+      "role": "alchemist",
+      "rarity": "rare",
+      "description": "كيميائي غريب الأطوار يصنع الجرعات السحرية.",
+      "stats": {
+        "health": 40,
+        "intelligence": 16
+      },
+      "animations": [
+        "idle_mixing",
+        "potion_brewing",
+        "conversation_crazy"
+      ],
+      "dialogue_trees": {
+        "greeting": "أهلاً يا باحثاً عن قوة سحرية!",
+        "services": [
+          {
+            "id": "service_create_potions",
+            "description": "صناعة جرعات"
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_bard_storyteller",
+      "name": "الشاعر الجوال",
+      "type": "npc",
+      "role": "bard",
+      "rarity": "uncommon",
+      "description": "شاعر يروي قصص الأسلاف القدماء.",
+      "stats": {
+        "health": 45,
+        "intelligence": 12
+      },
+      "animations": [
+        "idle_sing",
+        "performance",
+        "storytelling"
+      ],
+      "dialogue_trees": {
+        "greeting": "هل تريد سماع قصة؟",
+        "stories": [
+          {
+            "id": "story_ancient_war",
+            "title": "حرب الأسلاف",
+            "text": "في زمن بعيد جداً..."
+          }
+        ]
+      }
+    },
+    {
+      "id": "npc_healer_priestess",
+      "name": "الكاهنة الشافية",
+      "type": "npc",
+      "role": "healer_priest",
+      "rarity": "rare",
+      "description": "كاهنة مقدسة توفر شفاءً سحرياً.",
+      "stats": {
+        "health": 55,
+        "intelligence": 14,
+        "magic_defense": 16
+      },
+      "materials": {
+        "robes": "mat_mist_cyan",
+        "amulet": "mat_ancient_gold"
+      },
+      "animations": [
+        "idle_pray",
+        "heal_casting",
+        "blessing"
+      ],
+      "dialogue_trees": {
+        "greeting": "بركات الآلهة عليك يا بطل.",
+        "services": [
+          {
+            "id": "service_healing",
+            "description": "الشفاء من الأمراض"
+          },
+          {
+            "id": "service_blessing",
+            "description": "بركة مؤقتة"
+          }
+        ]
+      }
+    }
+  ]
+}

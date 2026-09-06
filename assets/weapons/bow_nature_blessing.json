@@ -1,0 +1,54 @@
+{
+  "id": "bow_nature_blessing",
+  "name": "قوس البركة الطبيعية",
+  "type": "bow",
+  "rarity": "rare",
+  "description": "قوس أخضر يتوهج بطاقة الطبيعة والحياة.",
+  "stats": {
+    "attack": 24,
+    "dexterity": 8,
+    "intelligence": 5,
+    "dexterity_requirement": 11,
+    "weight": 2.2
+  },
+  "materials": {
+    "limbs": "mat_ancient_gold",
+    "string": "mat_mist_cyan"
+  },
+  "special_properties": {
+    "nature_damage": 1.2,
+    "health_regen_per_shot": 0.1,
+    "poison_curing": true
+  },
+  "ammunition_types": [
+    {
+      "id": "arrow_nature",
+      "name": "سهم طبيعي",
+      "damage": 20,
+      "type": "nature",
+      "healing": 5
+    },
+    {
+      "id": "arrow_explosive_seed",
+      "name": "سهم بذرة متفجرة",
+      "damage": 18,
+      "aoe_radius": 2.0
+    }
+  ],
+  "attacks": {
+    "nature_shot": {
+      "damage": 18,
+      "speed": "medium",
+      "consumes_stamina": 15,
+      "nature_damage": 0.5,
+      "health_regen": 5
+    },
+    "bloom_burst": {
+      "damage": 22,
+      "speed": "slow",
+      "consumes_stamina": 25,
+      "aoe_radius": 1.5,
+      "damage_type": "nature"
+    }
+  }
+}

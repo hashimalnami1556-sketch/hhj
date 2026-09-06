@@ -1,0 +1,116 @@
+{
+  "minibosses": [
+    {
+      "id": "miniboss_corrupted_guardian",
+      "name": "الحارس الفاسد",
+      "type": "corrupted_construct",
+      "rarity": "rare",
+      "description": "آلية قديمة استحوذ عليها الظلام.",
+      "stats": {
+        "health": 120,
+        "attack": 20,
+        "defense": 14,
+        "level": 16
+      },
+      "resistances": {
+        "void": 0.3,
+        "physical": 0.9,
+        "magic": 0.6
+      },
+      "abilities": [
+        {
+          "name": "corruption_beam",
+          "damage": 18,
+          "type": "void",
+          "status_effect": "corruption"
+        },
+        {
+          "name": "ground_stomp",
+          "damage": 15,
+          "aoe_radius": 2.0,
+          "knockback": 0.7
+        }
+      ],
+      "drops": {
+        "experience": 400,
+        "gold": 150,
+        "items": ["ring_evasion_shadow", "mat_aether_crystal"]
+      }
+    },
+    {
+      "id": "miniboss_frost_ancient",
+      "name": "الماضي الجليدي",
+      "type": "elemental_spirit",
+      "rarity": "rare",
+      "description": "روح جليدية قديمة تتجمد كل شيء حولها.",
+      "stats": {
+        "health": 100,
+        "attack": 18,
+        "intelligence": 14,
+        "level": 14
+      },
+      "resistances": {
+        "frost": 0.1,
+        "fire": 1.4,
+        "aether": 1.1
+      },
+      "abilities": [
+        {
+          "name": "blizzard",
+          "damage": 20,
+          "aoe_radius": 3.0,
+          "freeze_chance": 0.5,
+          "duration": 3
+        },
+        {
+          "name": "ice_spikes",
+          "damage": 16,
+          "projectiles": 5,
+          "spread": 1.5
+        }
+      ],
+      "drops": {
+        "experience": 380,
+        "gold": 140,
+        "items": ["sword_ice_eternal"]
+      }
+    },
+    {
+      "id": "miniboss_nature_warden",
+      "name": "حارس الطبيعة",
+      "type": "nature_guardian",
+      "rarity": "rare",
+      "description": "كائن طبيعي قديم يحمي غابات الرماد.",
+      "stats": {
+        "health": 110,
+        "attack": 19,
+        "intelligence": 10,
+        "level": 15
+      },
+      "resistances": {
+        "nature": 0.2,
+        "fire": 1.2,
+        "physical": 0.8
+      },
+      "abilities": [
+        {
+          "name": "entangle",
+          "effect": "root",
+          "duration": 3,
+          "stun_duration": 1
+        },
+        {
+          "name": "nature_burst",
+          "damage": 18,
+          "aoe_radius": 2.5,
+          "healing": 10
+        }
+      ],
+      "drops": {
+        "experience": 390,
+        "gold": 145,
+        "items": ["bow_nature_blessing"]
+      }
+    }
+  ]
+}

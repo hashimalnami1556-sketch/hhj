@@ -1,0 +1,26 @@
+{
+  "id": "armor_dragon_scales",
+  "name": "درع قشور التنين",
+  "type": "heavy_armor",
+  "rarity": "legendary",
+  "description": "درع مصنوعة من قشور تنين قديم. توفر حماية أسطورية.",
+  "stats": {
+    "defense": 35,
+    "strength_bonus": 4,
+    "weight": 22.0
+  },
+  "materials": {
+    "primary": "mat_naris_fire",
+    "accent": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "fire_resistance": 0.5,
+    "physical_damage_reduction": 0.15,
+    "intimidate_effect": 0.25,
+    "dragon_scales_reflect": 0.1
+  },
+  "socket_slots": {
+    "rune_slots": 3,
+    "gem_slots": 3
+  }
+}

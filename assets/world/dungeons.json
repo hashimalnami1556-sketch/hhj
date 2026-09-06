@@ -1,0 +1,73 @@
+{
+  "dungeons": [
+    {
+      "id": "dungeon_ancient_crypt",
+      "name": "القبر القديم",
+      "type": "tomb",
+      "difficulty": "hard",
+      "level_range": "15-20",
+      "location": "ashfall_plains",
+      "description": "قبر ملك قديم مملوء بالكنوز والأشباح.",
+      "floors": 3,
+      "enemies": [
+        "enemy_ash_skeleton",
+        "undead_warrior",
+        "ghost_knight"
+      ],
+      "minibosses": [
+        "miniboss_corrupted_guardian"
+      ],
+      "boss": "skeletal_king",
+      "treasures": [
+        "armor_dragon_scales",
+        "ring_fire_strength"
+      ]
+    },
+    {
+      "id": "dungeon_aether_tower",
+      "name": "برج الأثير",
+      "type": "magic_tower",
+      "difficulty": "hard",
+      "level_range": "18-25",
+      "location": "aether_realm",
+      "description": "برج عملاق يعج بالسحر والقوة الأثيرية.",
+      "floors": 5,
+      "enemies": [
+        "enemy_aether_golem",
+        "arcane_mage",
+        "aether_sentinel"
+      ],
+      "minibosses": [
+        "miniboss_frost_ancient"
+      ],
+      "boss": "aether_lord",
+      "treasures": [
+        "bracers_arcane_focus",
+        "scroll_teleport"
+      ]
+    },
+    {
+      "id": "dungeon_shadow_chasm",
+      "name": "هاوية الظلام",
+      "type": "abyss",
+      "difficulty": "extreme",
+      "level_range": "25-30",
+      "location": "void_rift",
+      "description": "هاوية سحيقة يسكنها الظلام والعدم.",
+      "floors": 7,
+      "enemies": [
+        "enemy_void_spider",
+        "shadow_knight",
+        "void_construct"
+      ],
+      "minibosses": [
+        "miniboss_nature_warden"
+      ],
+      "boss": "void_lord",
+      "treasures": [
+        "item_void_blade_ultimate",
+        "item_mantle_ancients"
+      ]
+    }
+  ]
+}

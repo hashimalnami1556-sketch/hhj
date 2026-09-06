@@ -1,0 +1,123 @@
+{
+  "recipes": [
+    {
+      "id": "recipe_iron_sword",
+      "name": "سيف حديدي",
+      "type": "weapon",
+      "crafting_level": 5,
+      "ingredients": [
+        {"item": "mat_iron_ore", "quantity": 3},
+        {"item": "mat_coal", "quantity": 2},
+        {"item": "mat_steel_ingot", "quantity": 1}
+      ],
+      "output": {
+        "item": "sword_iron_basic",
+        "quantity": 1
+      },
+      "crafting_time": 30,
+      "experience_reward": 75
+    },
+    {
+      "id": "recipe_fire_sword_upgrade",
+      "name": "ترقية السيف الناري",
+      "type": "upgrade",
+      "crafting_level": 15,
+      "ingredients": [
+        {"item": "sword_of_poem", "quantity": 1},
+        {"item": "mat_naris_shard", "quantity": 2},
+        {"item": "mat_aether_crystal", "quantity": 1}
+      ],
+      "output": {
+        "item": "sword_of_poem_tier2",
+        "quantity": 1
+      },
+      "crafting_time": 60,
+      "experience_reward": 200
+    },
+    {
+      "id": "recipe_health_potion_strong",
+      "name": "جرعة صحة قوية",
+      "type": "consumable",
+      "crafting_level": 8,
+      "ingredients": [
+        {"item": "potion_health_minor", "quantity": 2},
+        {"item": "herb_blessed", "quantity": 1},
+        {"item": "mat_mist_essence", "quantity": 1}
+      ],
+      "output": {
+        "item": "potion_health_greater",
+        "quantity": 1
+      },
+      "crafting_time": 20,
+      "experience_reward": 50
+    },
+    {
+      "id": "recipe_mana_elixir",
+      "name": "إكسير المانا",
+      "type": "consumable",
+      "crafting_level": 12,
+      "ingredients": [
+        {"item": "potion_mana_greater", "quantity": 1},
+        {"item": "mat_aether_crystal", "quantity": 1},
+        {"item": "food_mushroom_golden", "quantity": 1}
+      ],
+      "output": {
+        "item": "potion_mana_supreme",
+        "quantity": 1
+      },
+      "crafting_time": 25,
+      "experience_reward": 80
+    },
+    {
+      "id": "recipe_enchantment_fire",
+      "name": "تعويذة النار",
+      "type": "enchantment",
+      "crafting_level": 20,
+      "ingredients": [
+        {"item": "mat_naris_shard", "quantity": 3},
+        {"item": "mat_mist_essence", "quantity": 2},
+        {"item": "scroll_fireball", "quantity": 1}
+      ],
+      "output": {
+        "item": "enchantment_fire_damage",
+        "quantity": 1
+      },
+      "crafting_time": 45,
+      "experience_reward": 150
+    },
+    {
+      "id": "recipe_armor_reinforcement",
+      "name": "تعزيز الدرع",
+      "type": "upgrade",
+      "crafting_level": 16,
+      "ingredients": [
+        {"item": "armor_ash_plate", "quantity": 1},
+        {"item": "mat_steel_ingot", "quantity": 3},
+        {"item": "mat_orichalcum", "quantity": 1}
+      ],
+      "output": {
+        "item": "armor_ash_plate_reinforced",
+        "quantity": 1
+      },
+      "crafting_time": 60,
+      "experience_reward": 180
+    },
+    {
+      "id": "recipe_scroll_teleport",
+      "name": "لفيفة الانتقال",
+      "type": "scroll",
+      "crafting_level": 18,
+      "ingredients": [
+        {"item": "mat_aether_crystal", "quantity": 2},
+        {"item": "parchment_rare", "quantity": 1},
+        {"item": "ink_ethereal", "quantity": 1}
+      ],
+      "output": {
+        "item": "scroll_teleport",
+        "quantity": 1
+      },
+      "crafting_time": 35,
+      "experience_reward": 120
+    }
+  ]
+}

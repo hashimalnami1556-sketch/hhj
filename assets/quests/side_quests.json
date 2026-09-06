@@ -1,0 +1,146 @@
+{
+  "side_quests": [
+    {
+      "id": "quest_lost_amulet",
+      "title": "البحث عن التميمة المفقودة",
+      "type": "side",
+      "difficulty": "easy",
+      "giver": "npc_healer_priestess",
+      "description": "تميمة قديسة مهمة جداً للكاهنة فقدت في الغابة.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "البحث في الغابة المظلمة عن التميمة",
+          "location": "dark_forest",
+          "type": "search"
+        },
+        {
+          "id": "obj_2",
+          "description": "العودة للكاهنة",
+          "location": "ashfall_village",
+          "type": "travel"
+        }
+      ],
+      "rewards": {
+        "experience": 200,
+        "gold": 75,
+        "items": ["ring_health_vitality"]
+      }
+    },
+    {
+      "id": "quest_collect_herbs",
+      "title": "جمع الأعشاب النادرة",
+      "type": "side",
+      "difficulty": "easy",
+      "giver": "npc_alchemist_potion",
+      "description": "الكيميائي يحتاج إلى أعشاب نادرة لصنع جرعات.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "جمع 5 أعشاب نادرة",
+          "item": "herb_rare",
+          "quantity": 5,
+          "type": "collect"
+        }
+      ],
+      "rewards": {
+        "experience": 150,
+        "gold": 60,
+        "items": ["potion_health_greater", "potion_mana_greater"]
+      }
+    },
+    {
+      "id": "quest_challenge_warrior",
+      "title": "تحدي المحارب",
+      "type": "side",
+      "difficulty": "hard",
+      "giver": "companion_warrior_kael",
+      "description": "كايل يريد قياس مهاراتك في المبارزة.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "التغلب على كايل في مبارزة",
+          "enemy": "companion_warrior_kael",
+          "health_threshold": 0,
+          "type": "combat"
+        }
+      ],
+      "rewards": {
+        "experience": 400,
+        "gold": 150,
+        "items": ["skill_point", "ring_strength_amplifier"]
+      }
+    },
+    {
+      "id": "quest_ruins_exploration",
+      "title": "استكشاف الأطلال",
+      "type": "side",
+      "difficulty": "medium",
+      "giver": "guide_elder_sage",
+      "description": "ابحث عن الخرائط القديمة في الأطلال المنسية.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "استكشف خرائب البرج",
+          "location": "ruin_tower",
+          "type": "exploration"
+        },
+        {
+          "id": "obj_2",
+          "description": "أعد الخرائط للحكيم",
+          "item": "map_lost_civilization",
+          "type": "deliver"
+        }
+      ],
+      "rewards": {
+        "experience": 300,
+        "gold": 120,
+        "items": ["lantern_eternal_light"]
+      }
+    },
+    {
+      "id": "quest_beast_hunting",
+      "title": "صيد الوحوش",
+      "type": "side",
+      "difficulty": "hard",
+      "giver": "npc_blacksmith_forge",
+      "description": "الحداد يحتاج إلى أجزاء من وحوش نادرة لصنع أسلحة.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "اجمع أنياب التنين",
+          "item": "dragon_fang",
+          "quantity": 3,
+          "type": "hunt"
+        }
+      ],
+      "rewards": {
+        "experience": 350,
+        "gold": 200,
+        "items": ["armor_dragon_scales"]
+      }
+    },
+    {
+      "id": "quest_mystery_merchant",
+      "title": "غموض التاجر",
+      "type": "side",
+      "difficulty": "medium",
+      "giver": "merchant_old_trader",
+      "description": "التاجر يريد معروفاً خاصاً - إيصال صندوق سري.",
+      "objectives": [
+        {
+          "id": "obj_1",
+          "description": "احمل الصندوق إلى موقع سري",
+          "item": "mysterious_box",
+          "location": "void_rift",
+          "type": "deliver"
+        }
+      ],
+      "rewards": {
+        "experience": 280,
+        "gold": 300,
+        "items": ["ring_fire_strength"]
+      }
+    }
+  ]
+}

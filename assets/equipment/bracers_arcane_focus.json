@@ -1,0 +1,25 @@
+{
+  "id": "bracers_arcane_focus",
+  "name": "أساور التركيز السحري",
+  "type": "bracers",
+  "rarity": "rare",
+  "description": "أساور أرجوانية متوهجة تعزز التركيز السحري.",
+  "stats": {
+    "intelligence_bonus": 5,
+    "magic_power_bonus": 15,
+    "weight": 1.0
+  },
+  "materials": {
+    "primary": "mat_aether_violet",
+    "trim": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "spell_power": 1.2,
+    "mana_cost_reduction": 0.2,
+    "cast_speed": 1.15,
+    "spell_critical_chance": 0.15
+  },
+  "socket_slots": {
+    "gem_slots": 2
+  }
+}

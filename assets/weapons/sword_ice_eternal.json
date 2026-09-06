@@ -1,0 +1,41 @@
+{
+  "id": "sword_ice_eternal",
+  "name": "سيف الجليد الأبدي",
+  "type": "sword",
+  "rarity": "rare",
+  "description": "سيف ثلجي أبيض متوهج. يجمد كل شيء يلمسه.",
+  "stats": {
+    "attack": 30,
+    "dexterity": 5,
+    "intelligence": 4,
+    "dexterity_requirement": 9,
+    "weight": 2.8
+  },
+  "materials": {
+    "blade": "mat_mist_cyan",
+    "handle": "mat_ancient_gold"
+  },
+  "special_properties": {
+    "frost_damage": 1.4,
+    "freeze_chance": 0.2,
+    "freeze_duration": 2.0,
+    "speed_reduction_on_hit": 0.3
+  },
+  "attacks": {
+    "frost_slash": {
+      "damage": 24,
+      "speed": "medium",
+      "consumes_stamina": 18,
+      "frost_damage": 0.6,
+      "freeze_chance": 0.2
+    },
+    "glacial_wave": {
+      "damage": 28,
+      "speed": "slow",
+      "consumes_stamina": 32,
+      "aoe_radius": 2.0,
+      "freeze_chance": 0.4,
+      "movement_slow": 0.5
+    }
+  }
+}

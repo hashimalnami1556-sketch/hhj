@@ -1,0 +1,99 @@
+{
+  "legendary_items": [
+    {
+      "id": "item_void_blade_ultimate",
+      "name": "سيف الفراغ النهائي",
+      "type": "legendary_weapon",
+      "rarity": "legendary",
+      "description": "سيف أسطوري يتحكم بقوة الفراغ نفسها.",
+      "stats": {
+        "attack": 50,
+        "dexterity": 10,
+        "intelligence": 8,
+        "weight": 3.0
+      },
+      "special_properties": {
+        "void_damage": 2.0,
+        "reality_tear": 0.3,
+        "life_steal": 0.4
+      },
+      "abilities": [
+        {
+          "name": "void_annihilation",
+          "damage": 60,
+          "type": "void",
+          "aoe_radius": 3.0
+        }
+      ]
+    },
+    {
+      "id": "item_aether_crown",
+      "name": "تاج الأثير",
+      "type": "legendary_helmet",
+      "rarity": "legendary",
+      "description": "تاج أرجواني متوهج من حضارة قديمة جداً.",
+      "stats": {
+        "defense": 28,
+        "intelligence_bonus": 8,
+        "magic_defense": 25,
+        "weight": 2.0
+      },
+      "special_properties": {
+        "spell_power": 1.4,
+        "mana_regeneration": 2.0,
+        "magic_immunity_percentage": 0.15
+      }
+    },
+    {
+      "id": "item_ring_infinity",
+      "name": "خاتم اللانهاية",
+      "type": "legendary_accessory",
+      "rarity": "legendary",
+      "description": "خاتم يحتوي على قوة الكون نفسه.",
+      "stats": {
+        "all_stats_bonus": 5,
+        "experience_boost": 2.0,
+        "loot_multiplier": 1.5,
+        "weight": 0.05
+      },
+      "special_properties": {
+        "time_dilation": 0.5,
+        "rare_drop_chance": 0.5
+      }
+    },
+    {
+      "id": "item_mantle_ancients",
+      "name": "عباءة الأقدمين",
+      "type": "legendary_cloak",
+      "rarity": "legendary",
+      "description": "عباءة قديمة جداً تحمي من جميع الأذى.",
+      "stats": {
+        "defense": 15,
+        "all_resistance": 0.4,
+        "weight": 0.3
+      },
+      "special_properties": {
+        "damage_reduction": 0.2,
+        "element_absorption": 0.5,
+        "ethereal_form": 0.15
+      }
+    },
+    {
+      "id": "item_codex_wisdom",
+      "name": "قانون الحكمة",
+      "type": "legendary_tome",
+      "rarity": "legendary",
+      "description": "كتاب قديم يحتوي على كل المعرفة.",
+      "stats": {
+        "intelligence_bonus": 10,
+        "mana_bonus": 50,
+        "weight": 2.0
+      },
+      "special_properties": {
+        "spell_unlock": 10,
+        "knowledge_absorption": 1.5,
+        "artifact_attunement": true
+      }
+    }
+  ]
+}
