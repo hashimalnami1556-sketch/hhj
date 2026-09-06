@@ -1,0 +1,247 @@
+{
+  "enchantments": [
+    {
+      "id": "enchant_fire",
+      "name": "سحر النار",
+      "type": "damage_enchantment",
+      "rarity": "common",
+      "description": "يضيف ضرر نار لأسلحتك",
+      "stat_modifications": {
+        "fire_damage": 0.2
+      },
+      "cost_gold": 50,
+      "crafting_materials": [
+        {
+          "item_id": "fire_essence",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["weapon", "chest_armor"],
+      "level_requirement": 5
+    },
+    {
+      "id": "enchant_frost",
+      "name": "سحر الجليد",
+      "type": "damage_enchantment",
+      "rarity": "common",
+      "description": "يضيف ضرر جليد لأسلحتك",
+      "stat_modifications": {
+        "frost_damage": 0.2,
+        "freeze_chance": 0.1
+      },
+      "cost_gold": 50,
+      "crafting_materials": [
+        {
+          "item_id": "ice_crystal",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["weapon", "chest_armor"],
+      "level_requirement": 5
+    },
+    {
+      "id": "enchant_void_strike",
+      "name": "سحر ضربة الفراغ",
+      "type": "damage_enchantment",
+      "rarity": "rare",
+      "description": "يضيف ضرر فراغ قوي جداً",
+      "stat_modifications": {
+        "void_damage": 0.35,
+        "reality_tear": 0.15
+      },
+      "cost_gold": 300,
+      "crafting_materials": [
+        {
+          "item_id": "void_essence",
+          "quantity": 2
+        },
+        {
+          "item_id": "orichalcum",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["weapon"],
+      "level_requirement": 20
+    },
+    {
+      "id": "enchant_defense",
+      "name": "سحر الحماية",
+      "type": "defense_enchantment",
+      "rarity": "uncommon",
+      "description": "يزيد دفاعك بشكل كبير",
+      "stat_modifications": {
+        "defense": 5,
+        "damage_reduction": 0.1
+      },
+      "cost_gold": 80,
+      "crafting_materials": [
+        {
+          "item_id": "mithril_ore",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["chest_armor", "helmet", "leggings"],
+      "level_requirement": 10
+    },
+    {
+      "id": "enchant_swift",
+      "name": "سحر السرعة",
+      "type": "utility_enchantment",
+      "rarity": "uncommon",
+      "description": "يزيد سرعة حركتك وهجومك",
+      "stat_modifications": {
+        "movement_speed": 0.2,
+        "attack_speed": 0.15
+      },
+      "cost_gold": 60,
+      "crafting_materials": [
+        {
+          "item_id": "crystal_pure",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["boots", "leggings", "weapon"],
+      "level_requirement": 8
+    },
+    {
+      "id": "enchant_mana_surge",
+      "name": "سحر موجة الجمان",
+      "type": "mana_enchantment",
+      "rarity": "uncommon",
+      "description": "يزيد جمانك وتجديد الجمان",
+      "stat_modifications": {
+        "mana_bonus": 30,
+        "mana_regeneration": 1.0
+      },
+      "cost_gold": 100,
+      "crafting_materials": [
+        {
+          "item_id": "mana_crystal",
+          "quantity": 2
+        }
+      ],
+      "compatible_slots": ["helmet", "amulet", "ring"],
+      "level_requirement": 12
+    },
+    {
+      "id": "enchant_life_drain",
+      "name": "سحر امتصاص الحياة",
+      "type": "special_enchantment",
+      "rarity": "rare",
+      "description": "يمتص الحياة من الأعداء",
+      "stat_modifications": {
+        "life_steal": 0.2
+      },
+      "cost_gold": 200,
+      "crafting_materials": [
+        {
+          "item_id": "shadow_stone",
+          "quantity": 2
+        },
+        {
+          "item_id": "void_essence",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["weapon"],
+      "level_requirement": 18
+    },
+    {
+      "id": "enchant_resistance_all",
+      "name": "سحر المقاومة الكاملة",
+      "type": "resistance_enchantment",
+      "rarity": "rare",
+      "description": "يزيد مقاومتك لجميع العناصر",
+      "stat_modifications": {
+        "all_resistance": 0.25
+      },
+      "cost_gold": 250,
+      "crafting_materials": [
+        {
+          "item_id": "mithril_ore",
+          "quantity": 2
+        },
+        {
+          "item_id": "fire_essence",
+          "quantity": 1
+        },
+        {
+          "item_id": "ice_crystal",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["chest_armor", "cloak", "amulet"],
+      "level_requirement": 22
+    },
+    {
+      "id": "enchant_critical_strike",
+      "name": "سحر الضربة القاضية",
+      "type": "damage_enhancement",
+      "rarity": "uncommon",
+      "description": "يزيد فرصة الضربة القاضية",
+      "stat_modifications": {
+        "critical_chance": 0.15,
+        "critical_damage": 0.5
+      },
+      "cost_gold": 90,
+      "crafting_materials": [
+        {
+          "item_id": "stone",
+          "quantity": 1
+        },
+        {
+          "item_id": "crystal_pure",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["weapon", "ring"],
+      "level_requirement": 14
+    },
+    {
+      "id": "enchant_spell_power",
+      "name": "سحر قوة السحر",
+      "type": "spell_enhancement",
+      "rarity": "uncommon",
+      "description": "يزيد قوة جميع تعاويذك",
+      "stat_modifications": {
+        "spell_power": 1.25
+      },
+      "cost_gold": 110,
+      "crafting_materials": [
+        {
+          "item_id": "mana_crystal",
+          "quantity": 1
+        },
+        {
+          "item_id": "crystal_pure",
+          "quantity": 1
+        }
+      ],
+      "compatible_slots": ["helmet", "chest_armor", "amulet"],
+      "level_requirement": 16
+    }
+  ],
+  "enchantment_tiers": [
+    {
+      "tier": 1,
+      "name": "المستوى الأول",
+      "effects_increase": 1.0,
+      "cost_multiplier": 1.0,
+      "level_requirement": 5
+    },
+    {
+      "tier": 2,
+      "name": "المستوى الثاني",
+      "effects_increase": 1.5,
+      "cost_multiplier": 2.5,
+      "level_requirement": 15
+    },
+    {
+      "tier": 3,
+      "name": "المستوى الثالث",
+      "effects_increase": 2.0,
+      "cost_multiplier": 5.0,
+      "level_requirement": 25
+    }
+  ]
+}

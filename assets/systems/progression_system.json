@@ -1,160 +1,224 @@
 {
-  "progression": {
-    "levels": [
-      {
-        "level": 1,
-        "experience_required": 0,
-        "stat_gains": {
-          "health": 30,
-          "stamina": 30,
-          "mana": 20
-        },
-        "unlocks": []
-      },
-      {
-        "level": 5,
-        "experience_required": 500,
-        "stat_gains": {
-          "health": 35,
-          "stamina": 35,
-          "mana": 25
-        },
-        "unlocks": ["skill_whirlwind_slash"]
-      },
-      {
-        "level": 10,
-        "experience_required": 1500,
-        "stat_gains": {
-          "health": 40,
-          "stamina": 40,
-          "mana": 30,
-          "strength": 1,
-          "dexterity": 1
-        },
-        "unlocks": ["skill_dragon_strike", "companion_warrior_kael"]
-      },
-      {
-        "level": 15,
-        "experience_required": 3500,
-        "stat_gains": {
-          "health": 45,
-          "stamina": 45,
-          "mana": 35,
-          "intelligence": 1
-        },
-        "unlocks": ["skill_shadow_clone", "companion_mage_elara"]
-      },
-      {
-        "level": 20,
-        "experience_required": 6500,
-        "stat_gains": {
-          "health": 50,
-          "stamina": 50,
-          "mana": 40,
-          "strength": 2,
-          "intelligence": 2
-        },
-        "unlocks": ["skill_berserk_mode", "companion_rogue_shadow"]
-      },
-      {
-        "level": 25,
-        "experience_required": 10500,
-        "stat_gains": {
-          "health": 55,
-          "stamina": 55,
-          "mana": 45,
-          "all_stats": 2
-        },
-        "unlocks": ["skill_inferno_blast", "companion_paladin_grace"]
-      },
-      {
-        "level": 30,
-        "experience_required": 15000,
-        "stat_gains": {
-          "health": 60,
-          "stamina": 60,
-          "mana": 50,
-          "all_stats": 3
-        },
-        "unlocks": ["ultimate_ability_void_annihilation"]
-      }
-    ]
-  },
-  "skill_trees": [
+  "experience_tables": [
     {
-      "id": "tree_warrior",
-      "name": "شجرة المحارب",
-      "description": "تخصص في القتال المباشر والدفاع.",
-      "nodes": [
-        {
-          "id": "node_heavy_armor",
-          "name": "درع ثقيلة",
-          "description": "+5 defense",
-          "requirements": {"level": 1}
-        },
-        {
-          "id": "node_shield_mastery",
-          "name": "إتقان الدرع",
-          "description": "+3 block recovery",
-          "requirements": {"level": 10, "parent": "node_heavy_armor"}
-        },
-        {
-          "id": "node_poise",
-          "name": "ثبات الموقف",
-          "description": "+10 poise",
-          "requirements": {"level": 15}
-        }
-      ]
+      "id": "exp_enemy_ash_skeleton",
+      "enemy_id": "enemy_ash_skeleton",
+      "base_experience": 50,
+      "difficulty_multiplier": 1.0
     },
     {
-      "id": "tree_mage",
-      "name": "شجرة الساحر",
-      "description": "تخصص في السحر والقدرات السحرية.",
-      "nodes": [
-        {
-          "id": "node_spell_power",
-          "name": "قوة التعويذة",
-          "description": "+10% spell damage",
-          "requirements": {"level": 1}
-        },
-        {
-          "id": "node_mana_efficiency",
-          "name": "كفاءة المانا",
-          "description": "-20% mana cost",
-          "requirements": {"level": 10, "parent": "node_spell_power"}
-        },
-        {
-          "id": "node_elemental_mastery",
-          "name": "إتقان العناصر",
-          "description": "+15% fire/ice/lightning damage",
-          "requirements": {"level": 20, "parent": "node_mana_efficiency"}
-        }
-      ]
+      "id": "exp_enemy_wolf_shadow",
+      "enemy_id": "enemy_wolf_shadow",
+      "base_experience": 45,
+      "difficulty_multiplier": 0.9
     },
     {
-      "id": "tree_rogue",
-      "name": "شجرة القاتل",
-      "description": "تخصص في السرعة والاغتيالات.",
-      "nodes": [
-        {
-          "id": "node_backstab",
-          "name": "طعنة خلفية",
-          "description": "+50% backstab damage",
-          "requirements": {"level": 1}
-        },
-        {
-          "id": "node_stealth",
-          "name": "التخفي",
-          "description": "+25% stealth effectiveness",
-          "requirements": {"level": 8, "parent": "node_backstab"}
-        },
-        {
-          "id": "node_critical_strike",
-          "name": "ضربة حاسمة",
-          "description": "+15% critical chance",
-          "requirements": {"level": 12}
-        }
-      ]
+      "id": "exp_enemy_aether_golem",
+      "enemy_id": "enemy_aether_golem",
+      "base_experience": 120,
+      "difficulty_multiplier": 1.5
+    },
+    {
+      "id": "exp_miniboss_corrupted_guardian",
+      "miniboss_id": "miniboss_corrupted_guardian",
+      "base_experience": 500,
+      "difficulty_multiplier": 2.0
+    },
+    {
+      "id": "exp_miniboss_frost_ancient",
+      "miniboss_id": "miniboss_frost_ancient",
+      "base_experience": 450,
+      "difficulty_multiplier": 1.8
+    },
+    {
+      "id": "exp_boss_skeletal_king",
+      "boss_id": "skeletal_king",
+      "base_experience": 1500,
+      "difficulty_multiplier": 3.0
+    },
+    {
+      "id": "exp_boss_void_lord",
+      "boss_id": "void_lord",
+      "base_experience": 3000,
+      "difficulty_multiplier": 4.0
     }
-  ]
+  ],
+  "level_progression": [
+    {
+      "level": 1,
+      "experience_required": 0,
+      "stat_gains": {
+        "max_health": 30,
+        "max_mana": 20,
+        "strength": 1,
+        "dexterity": 1,
+        "intelligence": 1,
+        "vitality": 1
+      },
+      "skill_points": 1,
+      "abilities_unlocked": ["skill_slash", "skill_quick_shot", "skill_fireball"]
+    },
+    {
+      "level": 2,
+      "experience_required": 100,
+      "stat_gains": {
+        "max_health": 35,
+        "max_mana": 25,
+        "strength": 1,
+        "dexterity": 1,
+        "intelligence": 1,
+        "vitality": 1
+      },
+      "skill_points": 1,
+      "abilities_unlocked": ["skill_dodge"]
+    },
+    {
+      "level": 3,
+      "experience_required": 250,
+      "stat_gains": {
+        "max_health": 40,
+        "max_mana": 30,
+        "strength": 2,
+        "dexterity": 1,
+        "intelligence": 1,
+        "vitality": 1
+      },
+      "skill_points": 1,
+      "abilities_unlocked": ["skill_shield_bash"]
+    },
+    {
+      "level": 5,
+      "experience_required": 800,
+      "stat_gains": {
+        "max_health": 50,
+        "max_mana": 40,
+        "strength": 2,
+        "dexterity": 2,
+        "intelligence": 2,
+        "vitality": 2
+      },
+      "skill_points": 1,
+      "abilities_unlocked": ["skill_power_strike", "skill_ice_spike", "skill_poisoned_arrow"]
+    },
+    {
+      "level": 10,
+      "experience_required": 3500,
+      "stat_gains": {
+        "max_health": 80,
+        "max_mana": 70,
+        "strength": 3,
+        "dexterity": 3,
+        "intelligence": 3,
+        "vitality": 3
+      },
+      "skill_points": 2,
+      "abilities_unlocked": ["skill_whirlwind", "skill_meteor_shower", "skill_multishot"]
+    },
+    {
+      "level": 15,
+      "experience_required": 10000,
+      "stat_gains": {
+        "max_health": 120,
+        "max_mana": 110,
+        "strength": 4,
+        "dexterity": 4,
+        "intelligence": 4,
+        "vitality": 4
+      },
+      "skill_points": 2,
+      "abilities_unlocked": ["skill_last_stand", "skill_arcane_shield", "skill_barrage"]
+    },
+    {
+      "level": 20,
+      "experience_required": 25000,
+      "stat_gains": {
+        "max_health": 160,
+        "max_mana": 150,
+        "strength": 5,
+        "dexterity": 5,
+        "intelligence": 5,
+        "vitality": 5
+      },
+      "skill_points": 2,
+      "abilities_unlocked": ["skill_mana_shield", "skill_teleport_strike"]
+    },
+    {
+      "level": 25,
+      "experience_required": 50000,
+      "stat_gains": {
+        "max_health": 200,
+        "max_mana": 200,
+        "strength": 6,
+        "dexterity": 6,
+        "intelligence": 6,
+        "vitality": 6
+      },
+      "skill_points": 3,
+      "abilities_unlocked": []
+    },
+    {
+      "level": 30,
+      "experience_required": 100000,
+      "stat_gains": {
+        "max_health": 250,
+        "max_mana": 250,
+        "strength": 7,
+        "dexterity": 7,
+        "intelligence": 7,
+        "vitality": 7
+      },
+      "skill_points": 3,
+      "abilities_unlocked": []
+    }
+  ],
+  "quest_experience": [
+    {
+      "quest_id": "quest_lost_amulet",
+      "experience_reward": 200,
+      "difficulty": "easy"
+    },
+    {
+      "quest_id": "quest_collect_herbs",
+      "experience_reward": 150,
+      "difficulty": "easy"
+    },
+    {
+      "quest_id": "quest_challenge_warrior",
+      "experience_reward": 400,
+      "difficulty": "hard"
+    },
+    {
+      "quest_id": "quest_ruins_exploration",
+      "experience_reward": 300,
+      "difficulty": "medium"
+    },
+    {
+      "quest_id": "quest_beast_hunting",
+      "experience_reward": 350,
+      "difficulty": "hard"
+    },
+    {
+      "quest_id": "quest_mystery_merchant",
+      "experience_reward": 280,
+      "difficulty": "medium"
+    }
+  ],
+  "stat_descriptions": {
+    "strength": {
+      "name": "القوة",
+      "description": "تزيد الضرر الفيزيائي والحمولة القصوى"
+    },
+    "dexterity": {
+      "name": "الرشاقة",
+      "description": "تزيد سرعة الهجوم والتفادي"
+    },
+    "intelligence": {
+      "name": "الذكاء",
+      "description": "تزيد قوة السحر والجمان"
+    },
+    "vitality": {
+      "name": "الحيوية",
+      "description": "تزيد الصحة والمقاومة"
+    }
+  }
 }

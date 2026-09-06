@@ -2,79 +2,275 @@
   "locations": [
     {
       "id": "location_ashfall_village",
-      "name": "قرية الرماد الساقط",
-      "type": "hub",
-      "description": "قرية صغيرة مركز حضارة البشر.",
+      "name": "قرية رماد الحريق",
+      "type": "village",
+      "region": "ashfall_plains",
       "coordinates": {"x": 0, "y": 0},
-      "size": "medium",
-      "npcs": ["merchant_old_trader", "guide_elder_sage"],
-      "features": [
-        "tavern",
-        "shop",
-        "inn",
-        "quest_board"
+      "description": "قرية صغيرة هادئة تحيطها السهول الرمادية",
+      "level_range": "1-10",
+      "npcs": [
+        {
+          "npc_id": "npc_healer_priestess",
+          "position": "center_temple"
+        },
+        {
+          "npc_id": "npc_bard_storyteller",
+          "position": "tavern"
+        },
+        {
+          "npc_id": "merchant_old_trader",
+          "position": "market_square"
+        }
+      ],
+      "connections": [
+        {
+          "destination": "location_dark_forest",
+          "direction": "north",
+          "travel_time": 15
+        },
+        {
+          "destination": "location_ancient_crypt_entrance",
+          "direction": "east",
+          "travel_time": 20
+        }
+      ],
+      "hazards": [],
+      "resources": ["herb_common", "iron_ore"],
+      "points_of_interest": [
+        {
+          "name": "معبد القمر",
+          "description": "معبد قديم كرسته الكاهنة",
+          "type": "temple"
+        },
+        {
+          "name": "الحانة العملاقة",
+          "description": "مكان اجتماع المسافرين",
+          "type": "tavern"
+        }
       ]
     },
     {
-      "id": "location_ashfall_cave",
-      "name": "كهف الرماد الساقط",
-      "type": "dungeon",
-      "description": "كهف مظلم عميق يحتوي على كنز قديم.",
-      "coordinates": {"x": 10, "y": -5},
-      "difficulty": "hard",
-      "enemies": [
-        "enemy_ash_skeleton",
-        "enemy_fire_wraith"
-      ],
-      "boss": "ash_giant",
-      "rewards": ["crystal_ancient_naris"]
-    },
-    {
       "id": "location_dark_forest",
-      "name": "الغابة المظلمة",
+      "name": "غابة الظلام",
       "type": "wilderness",
-      "description": "غابة كثيفة مليئة بالأسرار والأخطار.",
-      "coordinates": {"x": -15, "y": 10},
-      "difficulty": "medium",
+      "region": "ashfall_plains",
+      "coordinates": {"x": 0, "y": -15},
+      "description": "غابة كثيفة مظلمة وخطيرة",
+      "level_range": "5-15",
       "enemies": [
-        "enemy_void_spider",
-        "enemy_shadow_knight"
+        {
+          "enemy_id": "enemy_wolf_shadow",
+          "spawn_count": "2-4",
+          "spawn_rate": 0.3
+        },
+        {
+          "enemy_id": "enemy_corrupted_deer",
+          "spawn_count": "1-2",
+          "spawn_rate": 0.2
+        }
       ],
-      "exploration_reward": true
+      "hazards": [
+        {
+          "type": "toxic_fog",
+          "damage_per_tick": 2,
+          "description": "ضباب سام يسبب ضرر تدريجي"
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_lost_amulet",
+          "location_type": "objective"
+        }
+      ],
+      "resources": ["herb_rare", "herb_blessed", "iron_ore", "plant_essence"],
+      "points_of_interest": [
+        {
+          "name": "الشجرة العملاقة",
+          "description": "شجرة قديمة عملاقة في قلب الغابة",
+          "type": "landmark"
+        }
+      ]
     },
     {
-      "id": "location_lost_library",
-      "name": "المكتبة المفقودة",
-      "type": "dungeon",
-      "description": "مكتبة قديمة تحتوي على معرفة سحرية.",
-      "coordinates": {"x": 20, "y": 15},
-      "difficulty": "hard",
+      "id": "location_ancient_crypt_entrance",
+      "name": "مدخل القبر القديم",
+      "type": "dungeon_entrance",
+      "region": "ashfall_plains",
+      "coordinates": {"x": 20, "y": 0},
+      "description": "مدخل شبه مخفي لقبر قديم",
+      "level_range": "15-20",
+      "connected_dungeon": "dungeon_ancient_crypt",
       "enemies": [
-        "enemy_aether_golem",
-        "enemy_fire_wraith"
+        {
+          "enemy_id": "enemy_ash_skeleton",
+          "spawn_count": "1-3",
+          "spawn_rate": 0.5
+        }
       ],
-      "treasure": "tome_ancient_magic",
-      "features": ["spell_books", "enchantment_station"]
+      "resources": ["iron_ore", "coal", "bone_fragment"],
+      "points_of_interest": [
+        {
+          "name": "باب الحجر المختوم",
+          "description": "باب حجري قديم يتطلب مفتاح",
+          "type": "locked_door"
+        }
+      ]
     },
     {
-      "id": "location_ancient_temple",
-      "name": "المعبد القديم",
-      "type": "sacred_site",
-      "description": "معبد ضخم مكرس لآلهة قديمة.",
-      "coordinates": {"x": 30, "y": -20},
-      "difficulty": "hard",
-      "bosses": ["aether_guardian"],
-      "treasure": ["amulet_hero_blessing"]
+      "id": "location_aether_realm",
+      "name": "عالم الأثير",
+      "type": "mystical_realm",
+      "region": "aether_dimension",
+      "coordinates": {"x": 50, "y": 50},
+      "description": "عالم سحري معلق بين الواقع والخيال",
+      "level_range": "18-25",
+      "enemies": [
+        {
+          "enemy_id": "enemy_aether_golem",
+          "spawn_count": "1-2",
+          "spawn_rate": 0.4
+        },
+        {
+          "enemy_id": "arcane_mage",
+          "spawn_count": "1-3",
+          "spawn_rate": 0.3
+        }
+      ],
+      "hazards": [
+        {
+          "type": "magical_storm",
+          "damage_per_tick": 4,
+          "description": "عاصفة سحرية تسبب ضرر",
+          "avoidable": true
+        }
+      ],
+      "resources": ["mana_crystal", "aether_shard", "crystal_pure"],
+      "points_of_interest": [
+        {
+          "name": "برج الأثير",
+          "description": "برج عملاق يعج بالسحر",
+          "type": "landmark"
+        }
+      ]
     },
     {
       "id": "location_void_rift",
       "name": "شق الفراغ",
-      "type": "otherworld",
-      "description": "منطقة غريبة حيث الواقع نفسه مشوه.",
+      "type": "abyss",
+      "region": "void_dimension",
+      "coordinates": {"x": 100, "y": 100},
+      "description": "هاوية سحيقة مليئة بالفراغ والعدم",
+      "level_range": "25-30",
+      "enemies": [
+        {
+          "enemy_id": "enemy_void_spider",
+          "spawn_count": "2-4",
+          "spawn_rate": 0.6
+        },
+        {
+          "enemy_id": "shadow_knight",
+          "spawn_count": "1-2",
+          "spawn_rate": 0.4
+        },
+        {
+          "enemy_id": "void_construct",
+          "spawn_count": "1-3",
+          "spawn_rate": 0.3
+        }
+      ],
+      "hazards": [
+        {
+          "type": "void_energy",
+          "damage_per_tick": 5,
+          "description": "طاقة فراغ قاتمة تلتهم الحياة",
+          "avoidable": false
+        }
+      ],
+      "bosses": [
+        {
+          "boss_id": "void_lord",
+          "chamber": "main_chamber"
+        }
+      ],
+      "resources": ["void_essence", "shadow_stone", "obsidian_shard"],
+      "points_of_interest": [
+        {
+          "name": "حجرة الفراغ الرئيسية",
+          "description": "القلب النابض للفراغ",
+          "type": "boss_arena"
+        }
+      ]
+    },
+    {
+      "id": "location_crystalline_cavern",
+      "name": "كهف البلور الشفاف",
+      "type": "cave",
+      "region": "mountain_range",
       "coordinates": {"x": -30, "y": -30},
-      "difficulty": "extreme",
-      "boss": "void_lord",
-      "rewards": ["crystal_ancient_naris", "orichalcum_ingot"]
+      "description": "كهف جميل مليء بالبلور الشفاف والأحجار الكريمة",
+      "level_range": "10-18",
+      "enemies": [
+        {
+          "enemy_id": "enemy_crystal_golem",
+          "spawn_count": "1-2",
+          "spawn_rate": 0.3
+        }
+      ],
+      "hazards": [
+        {
+          "type": "crystal_spikes",
+          "damage_on_touch": 10,
+          "description": "أشواك بلورية حادة"
+        }
+      ],
+      "resources": ["crystal_pure", "gem_diamond", "quartz_shard"],
+      "points_of_interest": [
+        {
+          "name": "بركة البلور",
+          "description": "بركة مياه صافية محاطة بالبلور",
+          "type": "landmark"
+        }
+      ]
+    },
+    {
+      "id": "location_ruin_tower",
+      "name": "برج الأطلال",
+      "type": "ruins",
+      "region": "forgotten_lands",
+      "coordinates": {"x": -50, "y": 30},
+      "description": "برج قديم مهجور يحمل آثار حضارة مفقودة",
+      "level_range": "12-20",
+      "enemies": [
+        {
+          "enemy_id": "enemy_ash_skeleton",
+          "spawn_count": "2-3",
+          "spawn_rate": 0.4
+        },
+        {
+          "enemy_id": "ghost_knight",
+          "spawn_count": "1-2",
+          "spawn_rate": 0.2
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_ruins_exploration",
+          "location_type": "objective"
+        }
+      ],
+      "resources": ["ancient_coin", "old_scroll", "crystal_shard"],
+      "points_of_interest": [
+        {
+          "name": "المكتبة المنسية",
+          "description": "مكتبة قديمة مليئة بالكتب القديمة",
+          "type": "library"
+        },
+        {
+          "name": "الخزنة الملكية",
+          "description": "خزنة مقفلة بأقفال سحرية",
+          "type": "treasure_vault"
+        }
+      ]
     }
   ]
 }

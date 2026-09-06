@@ -1,0 +1,316 @@
+{
+  "crafting_materials": [
+    {
+      "id": "iron_ore",
+      "name": "خام حديد",
+      "type": "metal_ore",
+      "rarity": "common",
+      "description": "خام معدني أساسي يمكن تحويله إلى فولاذ",
+      "stack_limit": 99,
+      "weight": 0.5,
+      "price": 10,
+      "sources": [
+        {
+          "location": "location_ashfall_village",
+          "drop_rate": 0.3
+        },
+        {
+          "enemy": "enemy_ash_skeleton",
+          "drop_rate": 0.2
+        }
+      ]
+    },
+    {
+      "id": "coal",
+      "name": "فحم",
+      "type": "fuel",
+      "rarity": "common",
+      "description": "وقود أساسي للحدادة والصهر",
+      "stack_limit": 99,
+      "weight": 0.3,
+      "price": 8,
+      "sources": [
+        {
+          "location": "location_dark_forest",
+          "drop_rate": 0.2
+        },
+        {
+          "location": "location_ruin_tower",
+          "drop_rate": 0.15
+        }
+      ]
+    },
+    {
+      "id": "steel_ingot",
+      "name": "سبيكة فولاذ",
+      "type": "metal_ingot",
+      "rarity": "uncommon",
+      "description": "معدن قوي مصنوع من الحديد والفحم",
+      "stack_limit": 50,
+      "weight": 0.4,
+      "price": 30,
+      "crafting_recipe": {
+        "requires": [
+          {"item_id": "iron_ore", "quantity": 2},
+          {"item_id": "coal", "quantity": 1}
+        ]
+      }
+    },
+    {
+      "id": "mithril_ore",
+      "name": "خام ميثريل",
+      "type": "metal_ore",
+      "rarity": "rare",
+      "description": "معدن نادر وقوي جداً مقاوم للسحر",
+      "stack_limit": 30,
+      "weight": 0.6,
+      "price": 100,
+      "sources": [
+        {
+          "location": "location_crystalline_cavern",
+          "drop_rate": 0.2
+        }
+      ]
+    },
+    {
+      "id": "mana_crystal",
+      "name": "بلورة جمان",
+      "type": "crystal",
+      "rarity": "uncommon",
+      "description": "بلورة زرقاء تحتوي على الجمان الخالص",
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 50,
+      "sources": [
+        {
+          "enemy": "enemy_aether_golem",
+          "drop_rate": 0.4
+        },
+        {
+          "location": "location_aether_realm",
+          "drop_rate": 0.3
+        }
+      ]
+    },
+    {
+      "id": "crystal_pure",
+      "name": "بلور نقي",
+      "type": "crystal",
+      "rarity": "uncommon",
+      "description": "بلور شفاف نقي يستخدم في التعاويذ",
+      "stack_limit": 50,
+      "weight": 0.15,
+      "price": 40,
+      "sources": [
+        {
+          "location": "location_crystalline_cavern",
+          "drop_rate": 0.5
+        }
+      ]
+    },
+    {
+      "id": "herb_common",
+      "name": "عشبة عادية",
+      "type": "herb",
+      "rarity": "common",
+      "description": "عشبة عادية تستخدم في صنع الجرعات",
+      "stack_limit": 99,
+      "weight": 0.1,
+      "price": 5,
+      "sources": [
+        {
+          "location": "location_ashfall_village",
+          "drop_rate": 0.4
+        },
+        {
+          "location": "location_dark_forest",
+          "drop_rate": 0.5
+        }
+      ]
+    },
+    {
+      "id": "herb_rare",
+      "name": "عشبة نادرة",
+      "type": "herb",
+      "rarity": "uncommon",
+      "description": "عشبة نادرة ذات قوة كبيرة",
+      "stack_limit": 50,
+      "weight": 0.1,
+      "price": 30,
+      "sources": [
+        {
+          "location": "location_dark_forest",
+          "drop_rate": 0.3
+        },
+        {
+          "enemy": "miniboss_nature_warden",
+          "drop_rate": 0.6
+        }
+      ]
+    },
+    {
+      "id": "herb_blessed",
+      "name": "عشبة مباركة",
+      "type": "herb",
+      "rarity": "uncommon",
+      "description": "عشبة مقدسة تزيل السموم",
+      "stack_limit": 50,
+      "weight": 0.1,
+      "price": 25,
+      "sources": [
+        {
+          "location": "location_dark_forest",
+          "drop_rate": 0.2
+        }
+      ]
+    },
+    {
+      "id": "void_essence",
+      "name": "جوهر الفراغ",
+      "type": "essence",
+      "rarity": "legendary",
+      "description": "طاقة فراغ خالصة قوية جداً",
+      "stack_limit": 10,
+      "weight": 0.3,
+      "price": 500,
+      "sources": [
+        {
+          "location": "location_void_rift",
+          "drop_rate": 0.2
+        },
+        {
+          "boss": "void_lord",
+          "drop_rate": 0.5
+        }
+      ]
+    },
+    {
+      "id": "fire_essence",
+      "name": "جوهر النار",
+      "type": "essence",
+      "rarity": "rare",
+      "description": "طاقة نار خالصة",
+      "stack_limit": 20,
+      "weight": 0.2,
+      "price": 200,
+      "sources": [
+        {
+          "rune": "rune_fire_affinity",
+          "drop_rate": 0.3
+        }
+      ]
+    },
+    {
+      "id": "ice_crystal",
+      "name": "بلورة جليدية",
+      "type": "crystal",
+      "rarity": "uncommon",
+      "description": "بلورة زرقاء باردة من الجليد",
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 45,
+      "sources": [
+        {
+          "enemy": "miniboss_frost_ancient",
+          "drop_rate": 0.5
+        }
+      ]
+    },
+    {
+      "id": "bone_fragment",
+      "name": "شظية عظم",
+      "type": "bone",
+      "rarity": "common",
+      "description": "قطعة عظم من عدو هيكلي",
+      "stack_limit": 99,
+      "weight": 0.15,
+      "price": 15,
+      "sources": [
+        {
+          "enemy": "enemy_ash_skeleton",
+          "drop_rate": 0.6
+        }
+      ]
+    },
+    {
+      "id": "dragon_fang",
+      "name": "نياب التنين",
+      "type": "exotic_material",
+      "rarity": "rare",
+      "description": "نياب قوي من تنين عظيم",
+      "stack_limit": 20,
+      "weight": 0.8,
+      "price": 250,
+      "sources": [
+        {
+          "quest": "quest_beast_hunting",
+          "reward": true
+        }
+      ]
+    },
+    {
+      "id": "spider_silk",
+      "name": "حرير عنكبوت",
+      "type": "exotic_material",
+      "rarity": "uncommon",
+      "description": "حرير قوي من عنكبوت الفراغ",
+      "stack_limit": 30,
+      "weight": 0.1,
+      "price": 80,
+      "sources": [
+        {
+          "enemy": "enemy_void_spider",
+          "drop_rate": 0.4
+        }
+      ]
+    },
+    {
+      "id": "orichalcum",
+      "name": "الذهب الأصلي",
+      "type": "metal",
+      "rarity": "rare",
+      "description": "معدن ذهبي نادر وقوي جداً",
+      "stack_limit": 20,
+      "weight": 0.5,
+      "price": 300,
+      "sources": [
+        {
+          "location": "location_ruin_tower",
+          "drop_rate": 0.1
+        }
+      ]
+    },
+    {
+      "id": "shadow_stone",
+      "name": "حجر الظل",
+      "type": "stone",
+      "rarity": "uncommon",
+      "description": "حجر أسود يمتص الضوء",
+      "stack_limit": 50,
+      "weight": 0.3,
+      "price": 60,
+      "sources": [
+        {
+          "location": "location_void_rift",
+          "drop_rate": 0.3
+        }
+      ]
+    },
+    {
+      "id": "gold_coin_bunch",
+      "name": "عنقود عملات ذهب",
+      "type": "currency",
+      "rarity": "common",
+      "description": "مجموعة من العملات الذهبية",
+      "stack_limit": 999,
+      "weight": 0.1,
+      "price": 100,
+      "sources": [
+        {
+          "type": "loot",
+          "drop_rate": 0.5
+        }
+      ]
+    }
+  ]
+}
