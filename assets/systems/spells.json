@@ -1,0 +1,268 @@
+{
+  "spell_schools": [
+    {
+      "school_id": "school_fire",
+      "name": "مدرسة النار",
+      "description": "سحر النار والحرارة والانفجار",
+      "spells": [
+        {
+          "spell_id": "spell_fireball",
+          "name": "كرة النار",
+          "level": 1,
+          "mana_cost": 25,
+          "cooldown": 2.0,
+          "casting_time": 1.0,
+          "description": "إطلاق كرة نار على العدو",
+          "damage": 25,
+          "damage_type": "fire",
+          "aoe_radius": 2.0,
+          "projectile_speed": 10.0
+        },
+        {
+          "spell_id": "spell_inferno",
+          "name": "جهنم",
+          "level": 15,
+          "mana_cost": 60,
+          "cooldown": 4.0,
+          "casting_time": 2.0,
+          "description": "إطلاق موجة نار قوية",
+          "damage": 50,
+          "damage_type": "fire",
+          "aoe_radius": 3.5,
+          "applies_status": "effect_burn",
+          "prerequisites": ["spell_fireball"]
+        },
+        {
+          "spell_id": "spell_meteor_shower",
+          "name": "زخة النيازك",
+          "level": 25,
+          "mana_cost": 80,
+          "cooldown": 6.0,
+          "casting_time": 3.0,
+          "description": "استدعاء نيازك تسقط من السماء",
+          "damage": 60,
+          "damage_type": "fire",
+          "aoe_radius": 4.0,
+          "projectile_count": 8,
+          "prerequisites": ["spell_inferno"]
+        }
+      ]
+    },
+    {
+      "school_id": "school_frost",
+      "name": "مدرسة الجليد",
+      "description": "سحر الجليد والبرد والتجميد",
+      "spells": [
+        {
+          "spell_id": "spell_ice_spike",
+          "name": "مسمار جليدي",
+          "level": 1,
+          "mana_cost": 20,
+          "cooldown": 1.8,
+          "casting_time": 0.8,
+          "description": "إطلاق مسمار جليدي حاد",
+          "damage": 20,
+          "damage_type": "frost",
+          "freeze_chance": 0.25,
+          "freeze_duration": 2.0
+        },
+        {
+          "spell_id": "spell_blizzard",
+          "name": "عاصفة ثلجية",
+          "level": 12,
+          "mana_cost": 50,
+          "cooldown": 3.5,
+          "casting_time": 2.0,
+          "description": "استدعاء عاصفة ثلجية قوية",
+          "damage": 40,
+          "damage_type": "frost",
+          "aoe_radius": 3.0,
+          "freeze_chance": 0.4,
+          "prerequisites": ["spell_ice_spike"]
+        },
+        {
+          "spell_id": "spell_absolute_zero",
+          "name": "الصفر المطلق",
+          "level": 28,
+          "mana_cost": 90,
+          "cooldown": 5.0,
+          "casting_time": 3.0,
+          "description": "تجميد شامل لكل شيء حولك",
+          "damage": 70,
+          "damage_type": "frost",
+          "aoe_radius": 4.5,
+          "freeze_chance": 0.8,
+          "instant_freeze": true,
+          "prerequisites": ["spell_blizzard"]
+        }
+      ]
+    },
+    {
+      "school_id": "school_lightning",
+      "name": "مدرسة البرق",
+      "description": "سحر البرق والكهرباء والصدمات",
+      "spells": [
+        {
+          "spell_id": "spell_lightning_bolt",
+          "name": "شرارة البرق",
+          "level": 3,
+          "mana_cost": 30,
+          "cooldown": 2.0,
+          "casting_time": 0.5,
+          "description": "إطلاق برق مباشر على العدو",
+          "damage": 28,
+          "damage_type": "lightning",
+          "bounce_targets": 2,
+          "bounce_range": 5.0
+        },
+        {
+          "spell_id": "spell_chain_lightning",
+          "name": "برق متسلسل",
+          "level": 16,
+          "mana_cost": 55,
+          "cooldown": 3.0,
+          "casting_time": 1.0,
+          "description": "برق يتسلسل بين الأعداء",
+          "damage": 35,
+          "damage_type": "lightning",
+          "bounce_targets": 5,
+          "bounce_range": 8.0,
+          "stun_chance": 0.2,
+          "prerequisites": ["spell_lightning_bolt"]
+        }
+      ]
+    },
+    {
+      "school_id": "school_healing",
+      "name": "مدرسة الشفاء",
+      "description": "سحر الشفاء واستعادة الصحة",
+      "spells": [
+        {
+          "spell_id": "spell_heal",
+          "name": "شفاء",
+          "level": 1,
+          "mana_cost": 20,
+          "cooldown": 1.5,
+          "casting_time": 1.0,
+          "description": "شفاء نقطة صحة واحد",
+          "heal_amount": 40,
+          "target_type": "single"
+        },
+        {
+          "spell_id": "spell_heal_party",
+          "name": "شفاء جماعي",
+          "level": 12,
+          "mana_cost": 50,
+          "cooldown": 4.0,
+          "casting_time": 2.0,
+          "description": "شفاء جميع الحلفاء حولك",
+          "heal_amount": 50,
+          "target_type": "aoe",
+          "aoe_radius": 6.0,
+          "prerequisites": ["spell_heal"]
+        },
+        {
+          "spell_id": "spell_resurrection",
+          "name": "الإحياء",
+          "level": 30,
+          "mana_cost": 100,
+          "cooldown": 15.0,
+          "casting_time": 3.0,
+          "description": "إحياء حليف مسقوط",
+          "revive_health_percentage": 0.5,
+          "target_type": "fallen_ally",
+          "prerequisites": ["spell_heal_party"]
+        }
+      ]
+    },
+    {
+      "school_id": "school_protection",
+      "name": "مدرسة الحماية",
+      "description": "سحر الدفاع والحماية والأغراض",
+      "spells": [
+        {
+          "spell_id": "spell_shield",
+          "name": "درع",
+          "level": 1,
+          "mana_cost": 25,
+          "cooldown": 2.0,
+          "casting_time": 0.5,
+          "description": "إنشاء درع حول نفسك",
+          "absorption": 50,
+          "duration": 8.0,
+          "target_type": "self"
+        },
+        {
+          "spell_id": "spell_barrier",
+          "name": "حاجز",
+          "level": 18,
+          "mana_cost": 60,
+          "cooldown": 4.0,
+          "casting_time": 1.5,
+          "description": "حاجز قوي يحمي من الضرر",
+          "damage_reduction": 0.4,
+          "duration": 10.0,
+          "target_type": "single",
+          "prerequisites": ["spell_shield"]
+        }
+      ]
+    },
+    {
+      "school_id": "school_control",
+      "name": "مدرسة السيطرة",
+      "description": "سحر التحكم والتأثير والسيطرة",
+      "spells": [
+        {
+          "spell_id": "spell_slow",
+          "name": "إبطاء",
+          "level": 5,
+          "mana_cost": 30,
+          "cooldown": 2.0,
+          "casting_time": 1.0,
+          "description": "إبطاء حركة العدو",
+          "movement_speed_reduction": 0.5,
+          "duration": 6.0,
+          "applies_status": "effect_slow"
+        },
+        {
+          "spell_id": "spell_stun",
+          "name": "صعق",
+          "level": 10,
+          "mana_cost": 40,
+          "cooldown": 3.0,
+          "casting_time": 0.8,
+          "description": "صعق العدو مؤقتاً",
+          "stun_duration": 2.0,
+          "applies_status": "effect_stun",
+          "prerequisites": ["spell_slow"]
+        }
+      ]
+    }
+  ],
+  "spell_modifiers": [
+    {
+      "modifier_id": "modifier_quick_cast",
+      "name": "إطلاق سريع",
+      "description": "تقليل وقت الإطلاق بـ 50%",
+      "effect_type": "casting_speed",
+      "value": 0.5,
+      "cost": 50
+    },
+    {
+      "modifier_id": "modifier_mana_efficiency",
+      "name": "كفاءة الجمان",
+      "description": "تقليل تكلفة الجمان بـ 30%",
+      "effect_type": "mana_reduction",
+      "value": 0.3,
+      "cost": 60
+    },
+    {
+      "modifier_id": "modifier_spell_power",
+      "name": "قوة السحر",
+      "description": "زيادة ضرر السحر بـ 25%",
+      "effect_type": "damage_multiplier",
+      "value": 1.25,
+      "cost": 75
+    }
+  ]
+}

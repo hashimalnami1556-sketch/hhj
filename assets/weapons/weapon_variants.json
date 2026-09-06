@@ -1,0 +1,233 @@
+{
+  "weapons_expanded": [
+    {
+      "id": "sword_flame_dancer",
+      "name": "سيف راقص النار",
+      "type": "sword",
+      "rarity": "rare",
+      "description": "سيف خفيف يرقص مع النار بنعومة",
+      "stats": {
+        "attack": 28,
+        "dexterity": 8,
+        "weight": 2.5
+      },
+      "special_properties": {
+        "fire_damage": 0.35,
+        "attack_speed": 0.2,
+        "movement_speed": 0.1
+      },
+      "abilities": [
+        {
+          "name": "رقصة النار",
+          "damage": 35,
+          "type": "fire",
+          "cooldown": 3.0
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 200
+    },
+    {
+      "id": "staff_mystic_veil",
+      "name": "عصا الحجاب الغامض",
+      "type": "staff",
+      "rarity": "rare",
+      "description": "عصا سحرية توفر حماية سحرية قوية",
+      "stats": {
+        "intelligence_bonus": 8,
+        "mana_bonus": 40,
+        "weight": 3.0
+      },
+      "special_properties": {
+        "spell_power": 1.3,
+        "magic_defense": 12,
+        "mana_regeneration": 1.5
+      },
+      "abilities": [
+        {
+          "name": "جدار سحري",
+          "type": "defense",
+          "damage_reduction": 0.3,
+          "duration": 5.0,
+          "cooldown": 4.0
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 250
+    },
+    {
+      "id": "bow_shadow_strike",
+      "name": "قوس ضربة الظل",
+      "type": "bow",
+      "rarity": "rare",
+      "description": "قوس يخترق الظلام بسهولة",
+      "stats": {
+        "attack": 24,
+        "dexterity": 10,
+        "weight": 2.0
+      },
+      "special_properties": {
+        "piercing": 0.3,
+        "darkness_affinity": 0.25,
+        "attack_speed": 0.15
+      },
+      "abilities": [
+        {
+          "name": "رمية الظل",
+          "damage": 32,
+          "type": "dark",
+          "armor_penetration": 0.4,
+          "cooldown": 2.5
+        }
+      ],
+      "ammunition": "arrow_shadow",
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 180
+    },
+    {
+      "id": "mace_void_crush",
+      "name": "درقة فراغ سحاقة",
+      "type": "blunt_weapon",
+      "rarity": "rare",
+      "description": "مطرقة ثقيلة تسحق كل شيء",
+      "stats": {
+        "attack": 35,
+        "strength": 5,
+        "weight": 4.5
+      },
+      "special_properties": {
+        "void_damage": 0.25,
+        "armor_penetration": 0.2,
+        "stun_chance": 0.15
+      },
+      "abilities": [
+        {
+          "name": "سحق الفراغ",
+          "damage": 50,
+          "type": "void",
+          "aoe_radius": 2.0,
+          "cooldown": 4.0
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 220
+    },
+    {
+      "id": "dagger_poison_fang",
+      "name": "خنجر أنياب السم",
+      "type": "dagger",
+      "rarity": "uncommon",
+      "description": "خنجر صغير لكنه مسموم جداً",
+      "stats": {
+        "attack": 18,
+        "dexterity": 6,
+        "weight": 1.0
+      },
+      "special_properties": {
+        "poison_damage": 0.4,
+        "attack_speed": 0.25
+      },
+      "abilities": [
+        {
+          "name": "طعنة السم",
+          "damage": 22,
+          "type": "poison",
+          "applies_status": "effect_poison",
+          "cooldown": 2.0
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 120
+    },
+    {
+      "id": "halberd_guard",
+      "name": "الهلبرد الحارس",
+      "type": "polearm",
+      "rarity": "uncommon",
+      "description": "رمح ثقيل مع حاجز دفاعي",
+      "stats": {
+        "attack": 26,
+        "defense": 5,
+        "weight": 3.5
+      },
+      "special_properties": {
+        "reach": 1.5,
+        "defense_bonus": 0.1
+      },
+      "abilities": [
+        {
+          "name": "دوران دفاعي",
+          "damage": 28,
+          "type": "physical",
+          "aoe_radius": 2.0,
+          "cooldown": 3.0
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 160
+    },
+    {
+      "id": "whip_serpent_strike",
+      "name": "سوط ضربة الثعبان",
+      "type": "whip",
+      "rarity": "rare",
+      "description": "سوط مرن يتحرك مثل الثعبان",
+      "stats": {
+        "attack": 22,
+        "dexterity": 12,
+        "weight": 1.5
+      },
+      "special_properties": {
+        "reach": 1.2,
+        "multi_hit": 2,
+        "poison_affinity": 0.2
+      },
+      "abilities": [
+        {
+          "name": "ضربة الثعبان",
+          "damage": 26,
+          "type": "physical",
+          "hit_count": 3,
+          "cooldown": 2.5
+        }
+      ],
+      "socket_type": "weapon_slot",
+      "can_enchant": true,
+      "price": 190
+    },
+    {
+      "id": "shield_fortress",
+      "name": "درع الحصن",
+      "type": "shield",
+      "rarity": "uncommon",
+      "description": "درع ضخمة توفر حماية هائلة",
+      "stats": {
+        "defense": 12,
+        "poise": 8,
+        "weight": 2.0
+      },
+      "special_properties": {
+        "damage_reflection": 0.1,
+        "shield_bash_damage": 20
+      },
+      "abilities": [
+        {
+          "name": "صدمة الدرع",
+          "damage": 25,
+          "type": "physical",
+          "stun_duration": 1.5,
+          "cooldown": 3.0
+        }
+      ],
+      "socket_type": "shield_slot",
+      "can_enchant": true,
+      "price": 140
+    }
+  ]
+}
