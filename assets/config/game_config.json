@@ -1,103 +1,173 @@
 {
-  "game": {
-    "title": "NARIS: الأساطير المفقودة",
-    "version": "0.1.0",
+  "game_metadata": {
+    "title": "NARIS: عالم الأثير",
+    "version": "1.0.0",
+    "developer": "Studio NARIS",
     "language": "ar",
-    "description": "لعبة بطل الرحلة الملحمية في عالم الرماد المظلم",
-    "genre": "RPG Action",
-    "target_platform": "Web, Desktop, Mobile"
+    "release_date": "2026-09-06",
+    "description": "لعبة RPG غامرة مع نظام قتال متقدم واستكشاف عميق"
   },
-  "graphics": {
-    "default_resolution": "1920x1080",
-    "vsync": true,
-    "max_frame_rate": 60,
-    "quality_preset": "high",
-    "shadow_quality": "medium",
-    "particle_count": 1000,
-    "draw_distance": 100
-  },
-  "audio": {
-    "master_volume": 0.8,
-    "music_volume": 0.6,
-    "effects_volume": 0.8,
-    "voice_volume": 0.8,
-    "enable_music": true,
-    "enable_effects": true,
-    "enable_voice": true
-  },
-  "gameplay": {
-    "difficulty": "normal",
-    "auto_save": true,
-    "auto_save_interval": 300,
-    "difficulty_levels": {
-      "easy": {
-        "damage_received": 0.7,
-        "experience_gain": 1.2,
-        "enemy_health": 0.8
+  "gameplay_settings": {
+    "difficulty_levels": [
+      {
+        "level": "easy",
+        "enemy_damage_multiplier": 0.7,
+        "player_damage_multiplier": 1.2,
+        "experience_multiplier": 0.8,
+        "loot_multiplier": 0.9
       },
-      "normal": {
-        "damage_received": 1.0,
-        "experience_gain": 1.0,
-        "enemy_health": 1.0
+      {
+        "level": "normal",
+        "enemy_damage_multiplier": 1.0,
+        "player_damage_multiplier": 1.0,
+        "experience_multiplier": 1.0,
+        "loot_multiplier": 1.0
       },
-      "hard": {
-        "damage_received": 1.3,
-        "experience_gain": 1.5,
-        "enemy_health": 1.3
+      {
+        "level": "hard",
+        "enemy_damage_multiplier": 1.4,
+        "player_damage_multiplier": 0.9,
+        "experience_multiplier": 1.3,
+        "loot_multiplier": 1.2
       },
-      "legendary": {
-        "damage_received": 2.0,
-        "experience_gain": 2.5,
-        "enemy_health": 2.0
+      {
+        "level": "nightmare",
+        "enemy_damage_multiplier": 2.0,
+        "player_damage_multiplier": 0.8,
+        "experience_multiplier": 2.0,
+        "loot_multiplier": 1.8
       }
-    }
+    ],
+    "default_difficulty": "normal"
   },
-  "controls": {
-    "movement": {
-      "forward": "W",
-      "backward": "S",
-      "left": "A",
-      "right": "D"
-    },
+  "balance_parameters": {
     "combat": {
-      "attack": "Left_Mouse",
-      "heavy_attack": "Right_Mouse",
-      "ability_1": "Q",
-      "ability_2": "E",
-      "ability_3": "R",
-      "ability_4": "F"
+      "base_attack_cooldown": 1.0,
+      "ability_cooldown_reduction_cap": 0.5,
+      "critical_damage_base": 1.5,
+      "dodge_cap": 0.75,
+      "armor_damage_reduction_per_point": 0.01
     },
-    "interface": {
-      "inventory": "I",
-      "character": "C",
-      "quest_log": "J",
-      "map": "M",
-      "pause": "Escape"
+    "progression": {
+      "max_level": 30,
+      "experience_curve_base": 100,
+      "experience_curve_multiplier": 1.15,
+      "skill_point_frequency": 2,
+      "attribute_point_frequency": 1
+    },
+    "crafting": {
+      "crafting_time_base": 2.0,
+      "success_rate_base": 0.95,
+      "material_quality_bonus_per_level": 0.02
+    },
+    "economy": {
+      "base_npc_markup": 2.0,
+      "vendor_sell_multiplier": 0.5,
+      "shop_restock_interval": 3600,
+      "inflation_rate_per_level": 0.05
     }
   },
-  "features": {
-    "single_player": true,
-    "multiplayer": false,
-    "pvp": false,
-    "companions": true,
-    "crafting": true,
-    "quest_system": true,
-    "skill_tree": true,
-    "dynamic_lighting": true,
-    "day_night_cycle": true
+  "feature_flags": {
+    "pvp_enabled": false,
+    "guilds_enabled": true,
+    "factions_enabled": true,
+    "companions_enabled": true,
+    "enchantments_enabled": true,
+    "daily_challenges_enabled": true,
+    "seasonal_content_enabled": true,
+    "achievements_enabled": true,
+    "trading_enabled": true,
+    "pet_system_enabled": true,
+    "dueling_enabled": false,
+    "raids_enabled": false
   },
-  "performance": {
-    "enable_debug_mode": false,
-    "enable_console": false,
-    "log_level": "warning",
-    "profiling_enabled": false,
-    "memory_limit_mb": 2048
-  },
-  "color_scheme": {
+  "color_palette": {
     "primary": "#ff6b35",
     "secondary": "#7b2cbf",
     "accent": "#00ffff",
-    "highlight": "#d4a574",
-    "dark": "#1a1a1a"
-  }
+    "gold": "#d4a574",
+    "dark": "#1a1a1a",
+    "common": "#ffffff",
+    "uncommon": "#00ff00",
+    "rare": "#0066ff",
+    "legendary": "#ffff00",
+    "epic": "#ff00ff"
+  },
+  "ui_settings": {
+    "inventory_slots": 40,
+    "equipment_slots": 15,
+    "skill_bar_slots": 12,
+    "quick_access_slots": 6,
+    "shop_display_items": 20,
+    "chat_history_size": 100,
+    "minimap_size": 200,
+    "target_name_display": true,
+    "health_bar_display": true,
+    "damage_numbers": true
+  },
+  "network_settings": {
+    "server_region": "middle_east",
+    "max_players_per_instance": 100,
+    "player_despawn_time": 300,
+    "item_despawn_time": 600,
+    "chat_filter_enabled": true,
+    "max_party_size": 4,
+    "party_share_distance": 50.0
+  },
+  "content_schedule": {
+    "daily_reset_time": "00:00",
+    "weekly_reset_day": "monday",
+    "weekly_reset_time": "02:00",
+    "seasonal_duration_days": 90,
+    "event_frequency": "weekly",
+    "maintenance_day": "wednesday",
+    "maintenance_time": "03:00",
+    "maintenance_duration_hours": 2
+  },
+  "localization": {
+    "languages_supported": ["ar", "en", "fr"],
+    "default_language": "ar",
+    "text_direction": "rtl",
+    "date_format": "YYYY-MM-DD",
+    "time_format": "24h",
+    "number_format": "en"
+  },
+  "performance": {
+    "target_fps": 60,
+    "shadow_quality": "high",
+    "texture_quality": "high",
+    "draw_distance": 100.0,
+    "particle_count_max": 500,
+    "max_enemies_render": 50,
+    "lod_distance": 50.0
+  },
+  "accessibility": {
+    "colorblind_mode": true,
+    "text_scale": 1.0,
+    "button_size_multiplier": 1.0,
+    "text_to_speech_enabled": false,
+    "high_contrast_mode": false,
+    "controller_support": true,
+    "remappable_controls": true
+  },
+  "lore": {
+    "world_name": "أثيريا",
+    "setting": "عالم خيالي معرض للفراغ والظلام",
+    "current_era": "عصر البدايات الجديدة",
+    "pantheon": "الآلهة القديمة (المختفية)"
+  },
+  "version_history": [
+    {
+      "version": "1.0.0",
+      "release_date": "2026-09-06",
+      "features": [
+        "إطلاق أولي شامل",
+        "5 أنواع من الأسلحة",
+        "3 فئات شخصية",
+        "20+ مهمة",
+        "نظام الحرفة",
+        "نظام القتال المتقدم"
+      ]
+    }
+  ]
 }

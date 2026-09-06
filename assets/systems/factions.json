@@ -1,0 +1,313 @@
+{
+  "factions": [
+    {
+      "id": "faction_lunar_temple",
+      "name": "معبد القمر",
+      "type": "religious_order",
+      "alignment": "good",
+      "description": "نظام ديني مكرس لحماية البشرية",
+      "leader": "npc_healer_priestess",
+      "headquarters": "location_ashfall_village",
+      "icon": "icon_lunar_temple",
+      "reputation_effects": [
+        {
+          "reputation_level": -50,
+          "status": "معادي",
+          "effects": {
+            "npc_prices_multiplier": 1.5,
+            "damage_taken_from_members": 1.5
+          }
+        },
+        {
+          "reputation_level": 0,
+          "status": "محايد",
+          "effects": {
+            "npc_prices_multiplier": 1.0
+          }
+        },
+        {
+          "reputation_level": 50,
+          "status": "حليف",
+          "effects": {
+            "npc_prices_multiplier": 0.8,
+            "healing_service_discount": 0.2
+          }
+        },
+        {
+          "reputation_level": 100,
+          "status": "عضو",
+          "effects": {
+            "npc_prices_multiplier": 0.7,
+            "healing_service_discount": 0.4,
+            "access_member_only_quests": true,
+            "gain_faction_armor": true
+          }
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_lunar_initiate",
+          "title": "طقوس المعبد",
+          "description": "اخضع لطقوس تدخلك معبد القمر",
+          "reputation_reward": 100,
+          "level_requirement": 10
+        }
+      ],
+      "vendors": ["npc_healer_priestess"],
+      "faction_items": [
+        {
+          "item_id": "armor_lunar_consecrated",
+          "name": "درع معبد القمر المقدسة",
+          "unlock_reputation": 50
+        }
+      ]
+    },
+    {
+      "id": "faction_void_walkers",
+      "name": "سائرو الفراغ",
+      "type": "dark_order",
+      "alignment": "evil",
+      "description": "مجموعة غامضة تسعى لقوة الفراغ",
+      "leader": "unknown",
+      "headquarters": "location_void_rift",
+      "icon": "icon_void_walkers",
+      "reputation_effects": [
+        {
+          "reputation_level": -100,
+          "status": "العدو الأبدي",
+          "effects": {
+            "void_walkers_attack_on_sight": true
+          }
+        },
+        {
+          "reputation_level": 0,
+          "status": "محايد",
+          "effects": {}
+        },
+        {
+          "reputation_level": 50,
+          "status": "بحث",
+          "effects": {
+            "void_ability_unlock": true
+          }
+        },
+        {
+          "reputation_level": 100,
+          "status": "عضو",
+          "effects": {
+            "void_rituals_access": true,
+            "gain_void_power": 0.2,
+            "void_damage_bonus": 0.2
+          }
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_void_pact",
+          "title": "العهد مع الفراغ",
+          "description": "انضم إلى سائري الفراغ",
+          "reputation_reward": 150,
+          "level_requirement": 20,
+          "moral_choice": "evil"
+        }
+      ],
+      "vendors": [],
+      "faction_items": [
+        {
+          "item_id": "armor_void_touched",
+          "name": "درع ملمسة الفراغ",
+          "unlock_reputation": 50
+        }
+      ]
+    },
+    {
+      "id": "faction_dragon_slayers",
+      "name": "قاتلو التنانين",
+      "type": "mercenary_guild",
+      "alignment": "neutral",
+      "description": "نقابة محاربين متخصصة في قتل التنانين",
+      "leader": "companion_warrior_kael",
+      "headquarters": "location_ashfall_village",
+      "icon": "icon_dragon_slayers",
+      "reputation_effects": [
+        {
+          "reputation_level": 0,
+          "status": "محايد",
+          "effects": {}
+        },
+        {
+          "reputation_level": 50,
+          "status": "مجند",
+          "effects": {
+            "dragon_slayer_quests_access": true,
+            "dragon_slayer_damage_bonus": 0.1
+          }
+        },
+        {
+          "reputation_level": 100,
+          "status": "فارس",
+          "effects": {
+            "dragon_slayer_damage_bonus": 0.3,
+            "legendary_dragon_quest_access": true,
+            "gain_dragon_armor": true
+          }
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_dragon_hunt_basic",
+          "title": "صيد أساسي",
+          "description": "اصطد تنين صغير",
+          "reputation_reward": 75,
+          "level_requirement": 15
+        },
+        {
+          "quest_id": "quest_dragon_hunt_legendary",
+          "title": "الصيد الأسطوري",
+          "description": "اصطد تنين أسطوري قديم",
+          "reputation_reward": 250,
+          "level_requirement": 28
+        }
+      ],
+      "vendors": ["npc_blacksmith_forge"],
+      "faction_items": [
+        {
+          "item_id": "armor_dragon_slayer_honored",
+          "name": "درع قاتل التنانين الشرفاء",
+          "unlock_reputation": 100
+        }
+      ]
+    },
+    {
+      "id": "faction_arcane_circle",
+      "name": "الدائرة السحرية",
+      "type": "mage_college",
+      "alignment": "neutral",
+      "description": "أكاديمية للسحرة والمشعوذين",
+      "leader": "npc_sage_arcane",
+      "headquarters": "location_aether_realm",
+      "icon": "icon_arcane_circle",
+      "reputation_effects": [
+        {
+          "reputation_level": 0,
+          "status": "محايد",
+          "effects": {}
+        },
+        {
+          "reputation_level": 50,
+          "status": "المبتدئ",
+          "effects": {
+            "spell_unlock": 3,
+            "spell_power_bonus": 0.1
+          }
+        },
+        {
+          "reputation_level": 100,
+          "status": "الساحر",
+          "effects": {
+            "spell_unlock": 10,
+            "spell_power_bonus": 0.2,
+            "mana_regeneration_bonus": 1.0,
+            "arcane_armor_access": true
+          }
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_arcane_knowledge",
+          "title": "البحث عن المعرفة",
+          "description": "اجمع كتب السحر",
+          "reputation_reward": 100,
+          "level_requirement": 12
+        }
+      ],
+      "vendors": ["npc_alchemist_potion"],
+      "faction_items": [
+        {
+          "item_id": "robe_arcane_master",
+          "name": "عباءة الساحر الماهر",
+          "unlock_reputation": 80
+        }
+      ]
+    },
+    {
+      "id": "faction_merchants_guild",
+      "name": "نقابة التجار",
+      "type": "trade_guild",
+      "alignment": "neutral",
+      "description": "منظمة تجارية قوية",
+      "leader": "merchant_old_trader",
+      "headquarters": "location_ashfall_village",
+      "icon": "icon_merchants_guild",
+      "reputation_effects": [
+        {
+          "reputation_level": 0,
+          "status": "محايد",
+          "effects": {}
+        },
+        {
+          "reputation_level": 50,
+          "status": "تاجر",
+          "effects": {
+            "vendor_discount": 0.1,
+            "sell_price_bonus": 0.1
+          }
+        },
+        {
+          "reputation_level": 100,
+          "status": "رئيس تجار",
+          "effects": {
+            "vendor_discount": 0.2,
+            "sell_price_bonus": 0.2,
+            "exclusive_trade_routes": true
+          }
+        }
+      ],
+      "quests": [
+        {
+          "quest_id": "quest_trade_deal",
+          "title": "صفقة تجارية",
+          "description": "أكمل عملية بيع معقدة",
+          "reputation_reward": 60,
+          "level_requirement": 5
+        }
+      ],
+      "vendors": ["merchant_old_trader"],
+      "faction_items": [
+        {
+          "item_id": "ring_merchants_gold",
+          "name": "خاتم ذهب التجار",
+          "unlock_reputation": 50
+        }
+      ]
+    }
+  ],
+  "guild_system": [
+    {
+      "id": "guild_example",
+      "name": "نقابة مثال",
+      "type": "player_guild",
+      "created_at": "2026-09-01",
+      "leader": "player_id",
+      "members_limit": 50,
+      "members": [],
+      "level": 1,
+      "experience": 0,
+      "treasury": 0,
+      "perks": [
+        {
+          "perk_id": "guild_warehouse",
+          "name": "مستودع النقابة",
+          "level_requirement": 1,
+          "description": "مستودع مشترك للعناصر"
+        },
+        {
+          "perk_id": "guild_hall",
+          "name": "قاعة النقابة",
+          "level_requirement": 3,
+          "description": "مقر اجتماعي للأعضاء"
+        }
+      ]
+    }
+  ]
+}
