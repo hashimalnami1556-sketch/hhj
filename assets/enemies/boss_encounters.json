@@ -1,203 +1,366 @@
 {
-  "bosses": [
+  "boss_encounters": [
     {
-      "id": "boss_shadow_beast",
-      "name": "وحش الظل الكبير",
-      "type": "shadow_creature",
-      "rarity": "legendary",
-      "description": "كائن مظلم قديم يجسد الظلام نفسه.",
-      "stats": {
-        "health": 150,
-        "attack": 28,
-        "defense": 8,
-        "intelligence": 12,
-        "level": 20
+      "id": "encounter_skeletal_king",
+      "boss_id": "skeletal_king",
+      "name": "لقاء ملك الهياكل",
+      "location": "dungeon_ancient_crypt",
+      "difficulty": "hard",
+      "recommended_level": 20,
+      "base_stats": {
+        "max_health": 500,
+        "max_mana": 150,
+        "defense": 15,
+        "magic_defense": 8
       },
-      "resistances": {
-        "void": 0.3,
-        "fire": 1.3
-      },
+      "attack_power": 25,
       "phases": [
         {
-          "name": "phase_1",
-          "health_threshold": 100,
-          "attacks": [
+          "phase": 1,
+          "name": "استيقاظ الملك",
+          "health_threshold": "100% - 60%",
+          "mechanics": [
             {
-              "name": "shadow_slash",
+              "attack_id": "skeletal_slash",
+              "name": "ضربة هيكلية",
+              "damage": 30,
+              "cooldown": 2.0,
+              "type": "melee"
+            },
+            {
+              "attack_id": "bone_throw",
+              "name": "رمي العظام",
               "damage": 20,
-              "type": "void"
-            },
-            {
-              "name": "darkness_burst",
-              "damage": 15,
-              "aoe_radius": 2.5
+              "cooldown": 3.0,
+              "type": "ranged",
+              "projectile_count": 3
             }
-          ]
+          ],
+          "ai_behavior": "aggressive",
+          "adds": []
         },
         {
-          "name": "phase_2",
-          "health_threshold": 50,
-          "attacks": [
+          "phase": 2,
+          "name": "غضب الملك",
+          "health_threshold": "60% - 30%",
+          "mechanics": [
             {
-              "name": "shadow_clone",
-              "clones": 2
+              "attack_id": "bone_explosion",
+              "name": "انفجار العظام",
+              "damage": 45,
+              "cooldown": 4.0,
+              "type": "aoe",
+              "aoe_radius": 3.0,
+              "applies_status": "effect_bleed"
             },
             {
-              "name": "void_explosion",
-              "damage": 25,
-              "aoe_radius": 3.0
+              "attack_id": "undead_summon",
+              "name": "استدعاء الموتى",
+              "cooldown": 6.0,
+              "spawns": [
+                {
+                  "enemy_id": "enemy_ash_skeleton",
+                  "quantity": 2,
+                  "duration": 20.0
+                }
+              ]
             }
-          ]
+          ],
+          "ai_behavior": "tactical",
+          "adds": ["minion_bone_guardian"]
+        },
+        {
+          "phase": 3,
+          "name": "الموت الأخير",
+          "health_threshold": "30% - 0%",
+          "mechanics": [
+            {
+              "attack_id": "death_knell",
+              "name": "جرس الموت",
+              "damage": 60,
+              "cooldown": 5.0,
+              "type": "aoe",
+              "aoe_radius": 4.0,
+              "applies_status": "effect_stun",
+              "stun_duration": 2.0
+            },
+            {
+              "attack_id": "life_drain",
+              "name": "امتصاص الحياة",
+              "damage": 40,
+              "cooldown": 3.0,
+              "type": "channeled",
+              "channel_duration": 2.0,
+              "steals_health": true
+            }
+          ],
+          "ai_behavior": "desperate",
+          "adds": ["minion_bone_guardian", "minion_death_knight"]
         }
       ],
-      "rewards": {
-        "experience": 1500,
-        "gold": 500,
-        "guaranteed_items": ["armor_ash_plate"],
-        "rare_drops": ["ring_evasion_shadow", "cloak_void_walker"]
-      }
+      "immunities": [],
+      "vulnerabilities": [
+        {
+          "damage_type": "fire",
+          "multiplier": 1.3
+        }
+      ],
+      "loot_table": "loot_boss_skeletal_king",
+      "experience_reward": 1500,
+      "special_rewards": [
+        {
+          "item_id": "armor_dragon_scales",
+          "drop_chance": 0.4
+        }
+      ]
     },
     {
-      "id": "boss_fire_dragon",
-      "name": "التنين الناري الأحمر",
-      "type": "dragon",
-      "rarity": "legendary",
-      "description": "تنين عملاق يحترق بنار لا تنطفئ.",
-      "stats": {
-        "health": 200,
-        "attack": 32,
+      "id": "encounter_aether_lord",
+      "boss_id": "aether_lord",
+      "name": "لقاء سيد الأثير",
+      "location": "dungeon_aether_tower",
+      "difficulty": "hard",
+      "recommended_level": 25,
+      "base_stats": {
+        "max_health": 450,
+        "max_mana": 300,
         "defense": 12,
-        "level": 25
+        "magic_defense": 20
       },
-      "resistances": {
-        "fire": 0.2,
-        "aether": 1.2,
-        "void": 1.3
-      },
-      "abilities": [
-        {
-          "name": "inferno_breath",
-          "damage": 30,
-          "type": "fire",
-          "aoe_radius": 3.0
-        },
-        {
-          "name": "tail_swipe",
-          "damage": 25,
-          "knockback": 1.0
-        },
-        {
-          "name": "dragon_roar",
-          "stun_duration": 2,
-          "radius": 2.5
-        }
-      ],
-      "rewards": {
-        "experience": 2000,
-        "gold": 700,
-        "guaranteed_items": ["sword_of_poem"],
-        "rare_drops": ["ring_fire_strength", "helm_flame_drake"]
-      }
-    },
-    {
-      "id": "boss_void_lord",
-      "name": "رب الفراغ الأبدي",
-      "type": "void_entity",
-      "rarity": "legendary",
-      "description": "كائن قديم يمثل قوة الفراغ نفسها.",
-      "stats": {
-        "health": 250,
-        "attack": 35,
-        "defense": 10,
-        "intelligence": 18,
-        "level": 30
-      },
-      "resistances": {
-        "void": 0.1,
-        "aether": 1.4,
-        "fire": 0.9
-      },
+      "attack_power": 22,
       "phases": [
         {
-          "name": "phase_1",
-          "health_threshold": 170,
-          "abilities": [
+          "phase": 1,
+          "name": "الظهور الأثيري",
+          "health_threshold": "100% - 65%",
+          "mechanics": [
             {
-              "name": "void_bolt",
+              "attack_id": "arcane_bolt",
+              "name": "برق سحري",
               "damage": 25,
-              "type": "void"
+              "cooldown": 1.5,
+              "type": "spell",
+              "mana_cost": 20
+            },
+            {
+              "attack_id": "aether_shield",
+              "name": "درع أثيري",
+              "cooldown": 8.0,
+              "type": "defensive",
+              "damage_reduction": 0.4,
+              "duration": 3.0
             }
-          ]
+          ],
+          "ai_behavior": "casting",
+          "adds": []
         },
         {
-          "name": "phase_2",
-          "health_threshold": 85,
-          "abilities": [
+          "phase": 2,
+          "name": "تجنيد العناصر",
+          "health_threshold": "65% - 35%",
+          "mechanics": [
             {
-              "name": "reality_tear",
-              "damage": 35,
-              "aoe_radius": 3.5
-            }
-          ]
-        },
-        {
-          "name": "phase_3",
-          "health_threshold": 0,
-          "abilities": [
-            {
-              "name": "void_annihilation",
+              "attack_id": "meteor_storm",
+              "name": "عاصفة النيازك",
               "damage": 50,
-              "aoe_radius": 4.0
+              "cooldown": 5.0,
+              "type": "aoe",
+              "aoe_radius": 3.5,
+              "applies_status": "effect_burn"
+            },
+            {
+              "attack_id": "summon_elementals",
+              "name": "استدعاء العناصر",
+              "cooldown": 6.0,
+              "spawns": [
+                {
+                  "enemy_id": "enemy_aether_golem",
+                  "quantity": 2,
+                  "duration": 25.0
+                }
+              ]
             }
-          ]
+          ],
+          "ai_behavior": "strategic",
+          "adds": ["minion_aether_golem"]
+        },
+        {
+          "phase": 3,
+          "name": "التفرد الأثيري",
+          "health_threshold": "35% - 0%",
+          "mechanics": [
+            {
+              "attack_id": "reality_distortion",
+              "name": "تشويه الواقع",
+              "damage": 55,
+              "cooldown": 6.0,
+              "type": "aoe",
+              "aoe_radius": 4.0,
+              "confusion_effect": true
+            },
+            {
+              "attack_id": "mana_explosion",
+              "name": "انفجار الجمان",
+              "damage": 60,
+              "cooldown": 4.0,
+              "type": "spell",
+              "scales_with_mana": true,
+              "applies_status": "effect_mana_burn"
+            }
+          ],
+          "ai_behavior": "chaotic",
+          "adds": ["minion_aether_sentinel", "minion_arcane_mage"]
         }
       ],
-      "rewards": {
-        "experience": 3000,
-        "gold": 1000,
-        "guaranteed_items": ["amulet_hero_blessing"],
-        "rare_drops": ["ring_magic_seal", "wand_aether_conduit"]
-      }
+      "immunities": ["effect_freeze"],
+      "vulnerabilities": [
+        {
+          "damage_type": "physical",
+          "multiplier": 1.2
+        }
+      ],
+      "loot_table": "loot_boss_aether_lord",
+      "experience_reward": 2000,
+      "special_rewards": [
+        {
+          "item_id": "item_aether_crown",
+          "drop_chance": 0.35
+        }
+      ]
     },
     {
-      "id": "boss_aether_guardian",
-      "name": "حارس الأثير القديم",
-      "type": "construct",
-      "rarity": "legendary",
-      "description": "آلية قديمة تحرس المعابد الضائعة.",
-      "stats": {
-        "health": 180,
-        "attack": 26,
-        "defense": 16,
-        "level": 22
+      "id": "encounter_void_lord",
+      "boss_id": "void_lord",
+      "name": "لقاء رب الفراغ",
+      "location": "location_void_rift",
+      "difficulty": "extreme",
+      "recommended_level": 30,
+      "base_stats": {
+        "max_health": 800,
+        "max_mana": 200,
+        "defense": 18,
+        "magic_defense": 15
       },
-      "resistances": {
-        "aether": 0.2,
-        "physical": 0.7,
-        "magic": 0.5
-      },
-      "abilities": [
+      "attack_power": 35,
+      "phases": [
         {
-          "name": "laser_beam",
-          "damage": 28,
-          "type": "aether"
+          "phase": 1,
+          "name": "بزوغ الظل",
+          "health_threshold": "100% - 70%",
+          "mechanics": [
+            {
+              "attack_id": "void_pulse",
+              "name": "نبض الفراغ",
+              "damage": 35,
+              "cooldown": 2.0,
+              "type": "aoe",
+              "aoe_radius": 2.0,
+              "applies_status": "effect_weak"
+            },
+            {
+              "attack_id": "shadow_strike",
+              "name": "ضربة الظل",
+              "damage": 40,
+              "cooldown": 3.0,
+              "type": "melee",
+              "can_dodge": false
+            }
+          ],
+          "ai_behavior": "methodical",
+          "adds": []
         },
         {
-          "name": "shield_barrier",
-          "effect": "temporary_immunity"
+          "phase": 2,
+          "name": "تفاقم الفراغ",
+          "health_threshold": "70% - 40%",
+          "mechanics": [
+            {
+              "attack_id": "void_cascade",
+              "name": "شلال الفراغ",
+              "damage": 60,
+              "cooldown": 5.0,
+              "type": "aoe",
+              "aoe_radius": 4.0,
+              "applies_status": "effect_void_corruption",
+              "duration": 8.0
+            },
+            {
+              "attack_id": "shadow_army",
+              "name": "جيش الظل",
+              "cooldown": 7.0,
+              "spawns": [
+                {
+                  "enemy_id": "enemy_void_spider",
+                  "quantity": 3,
+                  "duration": 30.0
+                },
+                {
+                  "enemy_id": "shadow_knight",
+                  "quantity": 2,
+                  "duration": 30.0
+                }
+              ]
+            }
+          ],
+          "ai_behavior": "aggressive",
+          "adds": ["minion_void_construct", "minion_shadow_knight"]
         },
         {
-          "name": "aether_pulse",
-          "damage": 20,
-          "aoe_radius": 2.0
+          "phase": 3,
+          "name": "ابتلاع الوجود",
+          "health_threshold": "40% - 0%",
+          "mechanics": [
+            {
+              "attack_id": "void_annihilation",
+              "name": "إفناء الفراغ",
+              "damage": 80,
+              "cooldown": 6.0,
+              "type": "aoe",
+              "aoe_radius": 5.0,
+              "instant_death_chance": 0.1
+            },
+            {
+              "attack_id": "reality_tear",
+              "name": "تمزق الواقع",
+              "damage": 70,
+              "cooldown": 4.0,
+              "type": "spell",
+              "pierces_defense": true,
+              "applies_status": "effect_void_erosion"
+            },
+            {
+              "attack_id": "void_singularity",
+              "name": "تفرد الفراغ",
+              "cooldown": 8.0,
+              "type": "field",
+              "damage_per_tick": 20,
+              "duration": 5.0,
+              "pulls_player": true
+            }
+          ],
+          "ai_behavior": "frenzied",
+          "adds": ["minion_void_construct", "minion_shadow_knight", "minion_void_sentinel"]
         }
       ],
-      "rewards": {
-        "experience": 1800,
-        "gold": 600,
-        "guaranteed_items": ["shield_mirrored_void"],
-        "rare_drops": ["ring_magic_seal", "armor_mist_robe"]
-      }
+      "immunities": [],
+      "vulnerabilities": [
+        {
+          "damage_type": "aether",
+          "multiplier": 1.4
+        }
+      ],
+      "loot_table": "loot_boss_void_lord",
+      "experience_reward": 3000,
+      "special_rewards": [
+        {
+          "item_id": "item_void_blade_ultimate",
+          "drop_chance": 0.4
+        },
+        {
+          "item_id": "item_ring_infinity",
+          "drop_chance": 0.25
+        }
+      ]
     }
   ]
 }

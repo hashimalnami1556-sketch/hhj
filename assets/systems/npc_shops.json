@@ -1,0 +1,275 @@
+{
+  "npc_shops": [
+    {
+      "shop_id": "shop_healer_priestess",
+      "npc_id": "npc_healer_priestess",
+      "npc_name": "الكاهنة الشافية",
+      "shop_name": "صيدلية معبد القمر",
+      "type": "potion_shop",
+      "location": "location_ashfall_village",
+      "description": "متجر متخصص في جرعات الشفاء والمعالجة",
+      "inventory": [
+        {
+          "item_id": "potion_health",
+          "quantity": 50,
+          "buy_price": 25,
+          "sell_price": 12
+        },
+        {
+          "item_id": "potion_health_greater",
+          "quantity": 20,
+          "buy_price": 75,
+          "sell_price": 35
+        },
+        {
+          "item_id": "potion_mana",
+          "quantity": 40,
+          "buy_price": 30,
+          "sell_price": 15
+        },
+        {
+          "item_id": "herb_blessed",
+          "quantity": 60,
+          "buy_price": 20,
+          "sell_price": 10
+        },
+        {
+          "item_id": "antidote_general",
+          "quantity": 30,
+          "buy_price": 80,
+          "sell_price": 40
+        }
+      ],
+      "services": [
+        {
+          "service_id": "healing_service",
+          "name": "خدمة الشفاء",
+          "description": "شفاء كل إصاباتك مقابل 50 ذهب",
+          "cost_gold": 50,
+          "effect": "full_heal"
+        },
+        {
+          "service_id": "blessing_service",
+          "name": "خدمة البركة",
+          "description": "تلقي بركة الحماية",
+          "cost_gold": 100,
+          "effect": "apply_protection_buff",
+          "duration": 30
+        }
+      ],
+      "restocking_interval": 3600,
+      "reputation_affects_price": true,
+      "unique_items": [
+        {
+          "item_id": "potion_invisibility",
+          "quantity": 5,
+          "buy_price": 200,
+          "requirement": "reputation >= 50"
+        }
+      ]
+    },
+    {
+      "shop_id": "shop_blacksmith_forge",
+      "npc_id": "npc_blacksmith_forge",
+      "npc_name": "الحداد",
+      "shop_name": "حدادة البرق",
+      "type": "weapon_armor_shop",
+      "location": "location_ashfall_village",
+      "description": "متجر متخصص في الأسلحة والدروع",
+      "inventory": [
+        {
+          "item_id": "sword_basic",
+          "quantity": 10,
+          "buy_price": 120,
+          "sell_price": 60
+        },
+        {
+          "item_id": "helmet_iron_basic",
+          "quantity": 8,
+          "buy_price": 50,
+          "sell_price": 25
+        },
+        {
+          "item_id": "chest_leather_light",
+          "quantity": 6,
+          "buy_price": 80,
+          "sell_price": 40
+        },
+        {
+          "item_id": "boots_leather",
+          "quantity": 12,
+          "buy_price": 40,
+          "sell_price": 20
+        },
+        {
+          "item_id": "shield_basic",
+          "quantity": 5,
+          "buy_price": 100,
+          "sell_price": 50
+        }
+      ],
+      "services": [
+        {
+          "service_id": "crafting_service",
+          "name": "خدمة الحرفة",
+          "description": "صنع أسلحة وأدوات جديدة",
+          "cost_gold": "variable",
+          "requires_materials": true,
+          "recipes_available": [
+            "recipe_iron_sword",
+            "recipe_fire_sword_upgrade",
+            "recipe_armor_reinforcement"
+          ]
+        },
+        {
+          "service_id": "upgrade_service",
+          "name": "خدمة الترقية",
+          "description": "ترقية سلاحك أو درعك",
+          "cost_gold": "variable",
+          "requires_materials": true,
+          "upgrade_tiers": 3
+        }
+      ],
+      "restocking_interval": 7200,
+      "reputation_affects_price": true,
+      "unique_items": [
+        {
+          "item_id": "sword_of_poem",
+          "quantity": 1,
+          "buy_price": 300,
+          "requirement": "reputation >= 100"
+        }
+      ]
+    },
+    {
+      "shop_id": "shop_merchant_old",
+      "npc_id": "merchant_old_trader",
+      "npc_name": "التاجر القديم",
+      "shop_name": "متجر التاجر العام",
+      "type": "general_store",
+      "location": "location_ashfall_village",
+      "description": "متجر عام يبيع كل شيء",
+      "inventory": [
+        {
+          "item_id": "potion_health",
+          "quantity": 30,
+          "buy_price": 30,
+          "sell_price": 15
+        },
+        {
+          "item_id": "herb_common",
+          "quantity": 100,
+          "buy_price": 8,
+          "sell_price": 4
+        },
+        {
+          "item_id": "iron_ore",
+          "quantity": 50,
+          "buy_price": 12,
+          "sell_price": 6
+        },
+        {
+          "item_id": "coal",
+          "quantity": 40,
+          "buy_price": 10,
+          "sell_price": 5
+        },
+        {
+          "item_id": "scroll_fireball",
+          "quantity": 15,
+          "buy_price": 120,
+          "sell_price": 60
+        },
+        {
+          "item_id": "ring_iron_band",
+          "quantity": 10,
+          "buy_price": 30,
+          "sell_price": 15
+        }
+      ],
+      "services": [
+        {
+          "service_id": "selling_service",
+          "name": "خدمة البيع",
+          "description": "بيع أي شيء لا تحتاجه",
+          "cost_gold": 0,
+          "accepts_all_items": true
+        }
+      ],
+      "restocking_interval": 1800,
+      "reputation_affects_price": true,
+      "unique_items": [
+        {
+          "item_id": "map_lost_civilization",
+          "quantity": 1,
+          "buy_price": 500,
+          "requirement": "reputation >= 75"
+        }
+      ]
+    },
+    {
+      "shop_id": "shop_alchemist_potion",
+      "npc_id": "npc_alchemist_potion",
+      "npc_name": "الكيميائي",
+      "shop_name": "معمل الكيمياء",
+      "type": "alchemy_shop",
+      "location": "location_ashfall_village",
+      "description": "متجر متخصص في جرعات الكيمياء والعناصر",
+      "inventory": [
+        {
+          "item_id": "potion_fire_resistance",
+          "quantity": 20,
+          "buy_price": 60,
+          "sell_price": 30
+        },
+        {
+          "item_id": "potion_strength",
+          "quantity": 15,
+          "buy_price": 80,
+          "sell_price": 40
+        },
+        {
+          "item_id": "herb_rare",
+          "quantity": 30,
+          "buy_price": 30,
+          "sell_price": 15
+        },
+        {
+          "item_id": "mana_crystal",
+          "quantity": 10,
+          "buy_price": 50,
+          "sell_price": 25
+        },
+        {
+          "item_id": "crystal_pure",
+          "quantity": 15,
+          "buy_price": 40,
+          "sell_price": 20
+        }
+      ],
+      "services": [
+        {
+          "service_id": "potion_brewing",
+          "name": "خدمة تخمير الجرعات",
+          "description": "صنع جرعات مخصصة",
+          "cost_gold": "variable",
+          "requires_materials": true,
+          "recipes_available": [
+            "recipe_health_potion_strong",
+            "recipe_mana_elixir"
+          ]
+        }
+      ],
+      "restocking_interval": 3600,
+      "reputation_affects_price": true,
+      "unique_items": [
+        {
+          "item_id": "potion_mana_greater",
+          "quantity": 25,
+          "buy_price": 100,
+          "requirement": "reputation >= 25"
+        }
+      ]
+    }
+  ]
+}

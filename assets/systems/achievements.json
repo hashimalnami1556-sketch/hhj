@@ -1,0 +1,276 @@
+{
+  "achievements": [
+    {
+      "id": "achievement_first_steps",
+      "name": "الخطوات الأولى",
+      "category": "progression",
+      "description": "الوصول إلى المستوى 5",
+      "icon": "icon_first_steps",
+      "condition": {
+        "type": "level_reached",
+        "value": 5
+      },
+      "rewards": {
+        "experience": 100,
+        "gold": 50
+      }
+    },
+    {
+      "id": "achievement_monster_hunter",
+      "name": "صياد الوحوش",
+      "category": "combat",
+      "description": "قتل 100 عدو",
+      "icon": "icon_monster_hunter",
+      "condition": {
+        "type": "enemy_kills",
+        "value": 100
+      },
+      "rewards": {
+        "experience": 500,
+        "gold": 200
+      },
+      "reward_item": {
+        "item_id": "ring_strength_amplifier",
+        "quantity": 1
+      }
+    },
+    {
+      "id": "achievement_boss_slayer",
+      "name": "قاتل الزعماء",
+      "category": "combat",
+      "description": "هزيمة 3 زعماء",
+      "icon": "icon_boss_slayer",
+      "condition": {
+        "type": "boss_defeats",
+        "value": 3
+      },
+      "rewards": {
+        "experience": 2000,
+        "gold": 1000
+      },
+      "reward_item": {
+        "item_id": "item_mantle_ancients",
+        "quantity": 1
+      }
+    },
+    {
+      "id": "achievement_crafter",
+      "name": "الصانع الماهر",
+      "category": "crafting",
+      "description": "إكمال 20 عملية حرفة",
+      "icon": "icon_crafter",
+      "condition": {
+        "type": "crafting_count",
+        "value": 20
+      },
+      "rewards": {
+        "experience": 800,
+        "gold": 300
+      }
+    },
+    {
+      "id": "achievement_collector",
+      "name": "جامع الكنوز",
+      "category": "exploration",
+      "description": "العثور على 50 عنصراً نادراً",
+      "icon": "icon_collector",
+      "condition": {
+        "type": "rare_items_collected",
+        "value": 50
+      },
+      "rewards": {
+        "experience": 1000,
+        "gold": 500
+      }
+    },
+    {
+      "id": "achievement_quest_master",
+      "name": "معالج المهام",
+      "category": "quests",
+      "description": "إكمال 15 مهمة جانبية",
+      "icon": "icon_quest_master",
+      "condition": {
+        "type": "quests_completed",
+        "value": 15
+      },
+      "rewards": {
+        "experience": 1500,
+        "gold": 600
+      },
+      "reward_item": {
+        "item_id": "lantern_eternal_light",
+        "quantity": 1
+      }
+    },
+    {
+      "id": "achievement_wealthy",
+      "name": "الثري",
+      "category": "wealth",
+      "description": "امتلاك 10000 ذهب",
+      "icon": "icon_wealthy",
+      "condition": {
+        "type": "gold_owned",
+        "value": 10000
+      },
+      "rewards": {
+        "experience": 500,
+        "gold": 1000
+      }
+    },
+    {
+      "id": "achievement_legendary_finder",
+      "name": "مكتشف الأسطورات",
+      "category": "exploration",
+      "description": "العثور على 5 عناصر أسطورية",
+      "icon": "icon_legendary",
+      "condition": {
+        "type": "legendary_items_found",
+        "value": 5
+      },
+      "rewards": {
+        "experience": 3000,
+        "gold": 2000
+      }
+    },
+    {
+      "id": "achievement_spell_master",
+      "name": "معالج السحر",
+      "category": "magic",
+      "description": "تعلم 15 تعويذة",
+      "icon": "icon_spell_master",
+      "condition": {
+        "type": "spells_learned",
+        "value": 15
+      },
+      "rewards": {
+        "experience": 1200,
+        "gold": 500
+      }
+    },
+    {
+      "id": "achievement_void_conqueror",
+      "name": "فاتح الفراغ",
+      "category": "combat",
+      "description": "هزيمة رب الفراغ",
+      "icon": "icon_void_conqueror",
+      "condition": {
+        "type": "boss_defeated",
+        "boss_id": "void_lord"
+      },
+      "rewards": {
+        "experience": 5000,
+        "gold": 3000
+      },
+      "reward_item": {
+        "item_id": "item_void_blade_ultimate",
+        "quantity": 1
+      }
+    },
+    {
+      "id": "achievement_explorer",
+      "name": "المستكشف",
+      "category": "exploration",
+      "description": "زيارة جميع المواقع",
+      "icon": "icon_explorer",
+      "condition": {
+        "type": "locations_visited",
+        "value": 7
+      },
+      "rewards": {
+        "experience": 2000,
+        "gold": 1000
+      }
+    },
+    {
+      "id": "achievement_enchanter",
+      "name": "الساحر",
+      "category": "crafting",
+      "description": "إضافة 10 تعاويذ للعناصر",
+      "icon": "icon_enchanter",
+      "condition": {
+        "type": "enchantments_applied",
+        "value": 10
+      },
+      "rewards": {
+        "experience": 1000,
+        "gold": 400
+      }
+    },
+    {
+      "id": "achievement_speedrunner",
+      "name": "العداء السريع",
+      "category": "challenge",
+      "description": "إكمال زعيم في أقل من دقيقتين",
+      "icon": "icon_speedrunner",
+      "condition": {
+        "type": "boss_speed_run",
+        "time_limit_seconds": 120
+      },
+      "rewards": {
+        "experience": 800,
+        "gold": 600
+      }
+    },
+    {
+      "id": "achievement_no_damage",
+      "name": "التحدي بلا ضرر",
+      "category": "challenge",
+      "description": "قهر زعيم دون تلقي ضرر",
+      "icon": "icon_perfect_dodge",
+      "condition": {
+        "type": "boss_no_damage",
+        "boss_count": 1
+      },
+      "rewards": {
+        "experience": 1500,
+        "gold": 800
+      },
+      "reward_item": {
+        "item_id": "ring_infinity",
+        "quantity": 1
+      }
+    }
+  ],
+  "achievement_categories": [
+    {
+      "category": "progression",
+      "name": "التقدم",
+      "icon": "icon_progression"
+    },
+    {
+      "category": "combat",
+      "name": "القتال",
+      "icon": "icon_combat"
+    },
+    {
+      "category": "crafting",
+      "name": "الحرفة",
+      "icon": "icon_crafting"
+    },
+    {
+      "category": "exploration",
+      "name": "الاستكشاف",
+      "icon": "icon_exploration"
+    },
+    {
+      "category": "quests",
+      "name": "المهام",
+      "icon": "icon_quests"
+    },
+    {
+      "category": "wealth",
+      "name": "الثروة",
+      "icon": "icon_wealth"
+    },
+    {
+      "category": "magic",
+      "name": "السحر",
+      "icon": "icon_magic"
+    },
+    {
+      "category": "challenge",
+      "name": "التحديات",
+      "icon": "icon_challenge"
+    }
+  ]
+}
