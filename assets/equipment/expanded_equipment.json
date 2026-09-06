@@ -1,0 +1,290 @@
+{
+  "armor_pieces": [
+    {
+      "id": "helmet_iron_basic",
+      "name": "خوذة حديد بسيطة",
+      "type": "helmet",
+      "rarity": "common",
+      "description": "خوذة حديد أساسية توفر حماية متوسطة.",
+      "stats": {
+        "defense": 3,
+        "poise": 2,
+        "weight": 0.8
+      },
+      "socket_slots": {
+        "rune_slots": 0,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 50
+    },
+    {
+      "id": "helmet_aether_wizard",
+      "name": "خوذة الأثير للساحر",
+      "type": "helmet",
+      "rarity": "uncommon",
+      "description": "خوذة خفيفة تعزز قوة السحر.",
+      "stats": {
+        "defense": 2,
+        "intelligence_bonus": 3,
+        "spell_power": 1.1,
+        "weight": 0.5
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {
+        "mana_regeneration": 0.5
+      },
+      "price": 120
+    },
+    {
+      "id": "chest_leather_light",
+      "name": "صدرة جلد خفيفة",
+      "type": "chest_armor",
+      "rarity": "common",
+      "description": "صدرة جلد توفر توازن بين الحماية والسرعة.",
+      "stats": {
+        "defense": 5,
+        "movement_speed": 0.1,
+        "weight": 1.5
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 80
+    },
+    {
+      "id": "chest_mithril_plate",
+      "name": "صدرة ميثريل معدنية",
+      "type": "chest_armor",
+      "rarity": "rare",
+      "description": "صدرة قوية من ميثريل نقي.",
+      "stats": {
+        "defense": 15,
+        "physical_damage_reduction": 0.1,
+        "weight": 3.0
+      },
+      "socket_slots": {
+        "rune_slots": 2,
+        "gem_slots": 2
+      },
+      "special_properties": {
+        "magic_defense": 8
+      },
+      "price": 350
+    },
+    {
+      "id": "leggings_iron",
+      "name": "درع الساقين الحديد",
+      "type": "leggings",
+      "rarity": "common",
+      "description": "درع ساقين حديدية.",
+      "stats": {
+        "defense": 4,
+        "poise": 3,
+        "weight": 1.2
+      },
+      "socket_slots": {
+        "rune_slots": 0,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 60
+    },
+    {
+      "id": "leggings_wind",
+      "name": "درع الريح",
+      "type": "leggings",
+      "rarity": "uncommon",
+      "description": "درع ساقين خفيفة تزيد السرعة.",
+      "stats": {
+        "defense": 3,
+        "movement_speed": 0.2,
+        "dodge_chance": 0.08,
+        "weight": 0.8
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {
+        "attack_speed": 0.1
+      },
+      "price": 140
+    },
+    {
+      "id": "boots_leather",
+      "name": "حذاء جلد",
+      "type": "boots",
+      "rarity": "common",
+      "description": "حذاء جلد مريح وسريع.",
+      "stats": {
+        "defense": 2,
+        "movement_speed": 0.15,
+        "weight": 0.6
+      },
+      "socket_slots": {
+        "rune_slots": 0,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 40
+    },
+    {
+      "id": "boots_shadow_step",
+      "name": "حذاء خطوة الظل",
+      "type": "boots",
+      "rarity": "rare",
+      "description": "حذاء سحري يسمح بتحركات خاطفة.",
+      "stats": {
+        "defense": 4,
+        "movement_speed": 0.35,
+        "dodge_chance": 0.15,
+        "weight": 0.4
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {
+        "dash_cooldown_reduction": 0.2
+      },
+      "price": 280
+    },
+    {
+      "id": "ring_iron_band",
+      "name": "خاتم حلقة الحديد",
+      "type": "ring",
+      "rarity": "common",
+      "description": "خاتم حديد بسيط يزيد الدفاع.",
+      "stats": {
+        "defense": 2,
+        "weight": 0.05
+      },
+      "socket_slots": {
+        "rune_slots": 0,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 30
+    },
+    {
+      "id": "ring_nature_bond",
+      "name": "خاتم الرابط الطبيعي",
+      "type": "ring",
+      "rarity": "uncommon",
+      "description": "خاتم يربطك بقوى الطبيعة.",
+      "stats": {
+        "nature_damage": 0.15,
+        "health_regeneration": 0.3,
+        "weight": 0.05
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 0
+      },
+      "special_properties": {
+        "poison_resistance": 0.2
+      },
+      "price": 120
+    },
+    {
+      "id": "amulet_protection",
+      "name": "تميمة الحماية",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "description": "تميمة قديمة توفر حماية عامة.",
+      "stats": {
+        "defense": 3,
+        "all_resistance": 0.1,
+        "weight": 0.1
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 100
+    },
+    {
+      "id": "amulet_frost_protection",
+      "name": "تميمة حماية الجليد",
+      "type": "amulet",
+      "rarity": "uncommon",
+      "description": "تميمة توفر حماية من البرد والجليد.",
+      "stats": {
+        "frost_resistance": 0.3,
+        "cold_immunity": 0.1,
+        "weight": 0.1
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 0
+      },
+      "special_properties": {},
+      "price": 110
+    },
+    {
+      "id": "belt_strength",
+      "name": "حزام القوة",
+      "type": "belt",
+      "rarity": "uncommon",
+      "description": "حزام قوي يزيد الضرر.",
+      "stats": {
+        "strength_bonus": 2,
+        "attack": 5,
+        "weight": 0.4
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {},
+      "price": 130
+    },
+    {
+      "id": "cloak_invisibility",
+      "name": "عباءة الاختفاء",
+      "type": "cloak",
+      "rarity": "rare",
+      "description": "عباءة سحرية تقلل من اكتشافك.",
+      "stats": {
+        "detection_reduction": 0.4,
+        "defense": 3,
+        "weight": 0.5
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {
+        "stealth_movement_bonus": 0.2
+      },
+      "price": 350
+    },
+    {
+      "id": "shoulder_pauldrons_void",
+      "name": "كتفيات الفراغ",
+      "type": "shoulder_armor",
+      "rarity": "rare",
+      "description": "كتفيات معدنية تامتص طاقة الفراغ.",
+      "stats": {
+        "defense": 6,
+        "void_resistance": 0.25,
+        "weight": 1.0
+      },
+      "socket_slots": {
+        "rune_slots": 1,
+        "gem_slots": 1
+      },
+      "special_properties": {
+        "void_damage_absorption": 0.15
+      },
+      "price": 200
+    }
+  ]
+}

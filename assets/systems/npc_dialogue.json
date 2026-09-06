@@ -1,0 +1,409 @@
+{
+  "dialogue_trees": [
+    {
+      "id": "dialogue_healer_priestess",
+      "character": "npc_healer_priestess",
+      "name": "حوار الكاهنة الشافية",
+      "initial_greeting": "السلام عليكم، يا مسافر! أنا هنا لمساعدة المحتاجين.",
+      "dialogue_nodes": [
+        {
+          "node_id": "greeting",
+          "text": "ما الذي تحتاجه؟",
+          "options": [
+            {
+              "text": "أريد شفاء جروحي",
+              "next_node": "healing_option",
+              "requires_quest": null
+            },
+            {
+              "text": "هل لديك مهام لي؟",
+              "next_node": "quest_option",
+              "requires_quest": null
+            },
+            {
+              "text": "حدثني عن نفسك",
+              "next_node": "backstory",
+              "requires_quest": null
+            },
+            {
+              "text": "وداعاً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "healing_option",
+          "text": "يمكنني شفاء جراحك... ولكن يتطلب هذا تكلفة.",
+          "options": [
+            {
+              "text": "كم تطلب؟ (تكلفة: 50 ذهب)",
+              "next_node": "healing_confirmed",
+              "cost": 50,
+              "action": "heal_player"
+            },
+            {
+              "text": "هذا مكلف جداً.",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_option",
+          "text": "أنا بحاجة إلى تميمة مفقودة... هل يمكنك مساعدتي؟",
+          "options": [
+            {
+              "text": "سأساعدك",
+              "next_node": "quest_accepted",
+              "action": "accept_quest",
+              "quest_id": "quest_lost_amulet"
+            },
+            {
+              "text": "أنا مشغول الآن",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "backstory",
+          "text": "أنا خادمة معبد القمر. لقد كرست حياتي لمساعدة الآخرين والدفاع عن الضعفاء.",
+          "options": [
+            {
+              "text": "ذلك رائع",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "healing_confirmed",
+          "text": "أتمنى لك الشفاء السريع، يا صديقي!",
+          "options": [
+            {
+              "text": "شكراً لك",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_accepted",
+          "text": "شكراً لك! أتطلع إلى عودتك بالتميمة.",
+          "options": [
+            {
+              "text": "سأعود قريباً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "farewell",
+          "text": "أراك لاحقاً، يا صديقي!",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "dialogue_blacksmith_forge",
+      "character": "npc_blacksmith_forge",
+      "name": "حوار الحداد",
+      "initial_greeting": "مرحباً بك في حدادتي! هل تريد سلاحاً قوياً؟",
+      "dialogue_nodes": [
+        {
+          "node_id": "greeting",
+          "text": "كيف يمكنني مساعدتك؟",
+          "options": [
+            {
+              "text": "أريد حرفة سلاح",
+              "next_node": "crafting_option",
+              "requires_quest": null
+            },
+            {
+              "text": "هل تملك صيد وحوش؟",
+              "next_node": "quest_option",
+              "requires_quest": null
+            },
+            {
+              "text": "عرّفني بنفسك",
+              "next_node": "backstory",
+              "requires_quest": null
+            },
+            {
+              "text": "وداعاً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "crafting_option",
+          "text": "يمكنني صنع سلاح قوي لك. هل لديك المواد اللازمة؟",
+          "options": [
+            {
+              "text": "نعم، لدي",
+              "next_node": "select_recipe",
+              "action": "open_crafting_menu"
+            },
+            {
+              "text": "لا، ما المواد المطلوبة؟",
+              "next_node": "materials_info",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_option",
+          "text": "نعم! أحتاج إلى أنياب التنين لصنع أسلحة قوية جداً.",
+          "options": [
+            {
+              "text": "سأجلب لك الأنياب",
+              "next_node": "quest_accepted",
+              "action": "accept_quest",
+              "quest_id": "quest_beast_hunting"
+            },
+            {
+              "text": "هذا صعب جداً",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "backstory",
+          "text": "أنا حداد من أب وجد حدادين. استغرقت مئة سنة لإتقان حرفتي.",
+          "options": [
+            {
+              "text": "مثير للإعجاب!",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "materials_info",
+          "text": "لصنع سيف حديدي: تحتاج إلى 3 خام حديد و2 فحم و1 سبيكة فولاذ.",
+          "options": [
+            {
+              "text": "سأجمع المواد",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_accepted",
+          "text": "عظيم! احضر لي 3 أنياب تنين وسأصنع لك أعظم سلاح.",
+          "options": [
+            {
+              "text": "أفهم",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "farewell",
+          "text": "في انتظارك مجدداً!",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "dialogue_merchant_old",
+      "character": "merchant_old_trader",
+      "name": "حوار التاجر القديم",
+      "initial_greeting": "أهلاً وسهلاً! هل تريد شراء أو بيع شيء ما؟",
+      "dialogue_nodes": [
+        {
+          "node_id": "greeting",
+          "text": "ماذا تريد؟",
+          "options": [
+            {
+              "text": "أريد شراء شيء ما",
+              "next_node": "shop_option",
+              "action": "open_shop"
+            },
+            {
+              "text": "أريد بيع أشياء",
+              "next_node": "sell_option",
+              "action": "open_sell_menu"
+            },
+            {
+              "text": "هل لديك عرض خاص؟",
+              "next_node": "quest_option",
+              "requires_quest": null
+            },
+            {
+              "text": "وداعاً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "shop_option",
+          "text": "لدي أفضل البضائع في المملكة! انظر بنفسك.",
+          "options": [
+            {
+              "text": "شكراً",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "sell_option",
+          "text": "أشتري كل شيء! اعرض علي ما لديك.",
+          "options": [
+            {
+              "text": "هنا",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_option",
+          "text": "نعم! أحتاج إلى معروف خاص... إحمل صندوقاً سرياً إلى الفراغ.",
+          "options": [
+            {
+              "text": "سأفعل ذلك",
+              "next_node": "quest_accepted",
+              "action": "accept_quest",
+              "quest_id": "quest_mystery_merchant"
+            },
+            {
+              "text": "هذا غريب جداً",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "quest_accepted",
+          "text": "رائع! احمل هذا الصندوق واذهب إلى الفراغ السحيق. ستعرف الموقع.",
+          "options": [
+            {
+              "text": "حسناً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "farewell",
+          "text": "عودك في السلام!",
+          "options": []
+        }
+      ]
+    },
+    {
+      "id": "dialogue_bard_storyteller",
+      "character": "npc_bard_storyteller",
+      "name": "حوار الشاعر القصاص",
+      "initial_greeting": "أهلاً بك! تريد أن تسمع القصص والأساطير؟",
+      "dialogue_nodes": [
+        {
+          "node_id": "greeting",
+          "text": "هل تريد قصة؟",
+          "options": [
+            {
+              "text": "قصة عن التنانين",
+              "next_node": "dragon_story",
+              "requires_quest": null
+            },
+            {
+              "text": "قصة عن الآلهة القديمة",
+              "next_node": "gods_story",
+              "requires_quest": null
+            },
+            {
+              "text": "قصة مرعبة",
+              "next_node": "horror_story",
+              "requires_quest": null
+            },
+            {
+              "text": "وداعاً",
+              "next_node": "farewell",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "dragon_story",
+          "text": "كان يا ما كان تنين عظيم يحرس الكنوز تحت الجبال. قيل أنه كان أقوى المخلوقات في الأرض...",
+          "options": [
+            {
+              "text": "ماذا حدث له؟",
+              "next_node": "dragon_story_2",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "dragon_story_2",
+          "text": "سقط في معركة عظيمة مع الآلهة. ولكن روحه تحوم بعد حول جبل الظلام...",
+          "options": [
+            {
+              "text": "شكراً على القصة",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "gods_story",
+          "text": "الآلهة القديمة خلقوا هذا العالم منذ ملايين السنين. كانوا يحكمون السماء والأرض...",
+          "options": [
+            {
+              "text": "أين هم الآن؟",
+              "next_node": "gods_story_2",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "gods_story_2",
+          "text": "اختفوا في الفراغ بين النجوم. ولكن قد نرى عودتهم يوماً ما...",
+          "options": [
+            {
+              "text": "شكراً",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "horror_story",
+          "text": "في الليل البهيم، عندما تشرق القمر الأسود، يخرج شيء ما من الفراغ... شيء قديم جداً...",
+          "options": [
+            {
+              "text": "ماذا يفعل هذا الشيء؟",
+              "next_node": "horror_story_2",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "horror_story_2",
+          "text": "يلتهم روح من يرى وجهه! لذا احذر من الظلام...",
+          "options": [
+            {
+              "text": "أشكرك على التحذير!",
+              "next_node": "greeting",
+              "requires_quest": null
+            }
+          ]
+        },
+        {
+          "node_id": "farewell",
+          "text": "عودك بأمان، يا صديقي!",
+          "options": []
+        }
+      ]
+    }
+  ]
+}

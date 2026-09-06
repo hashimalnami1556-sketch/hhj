@@ -1,0 +1,250 @@
+{
+  "skill_trees": [
+    {
+      "id": "skill_tree_warrior",
+      "name": "شجرة مهارات المحارب",
+      "class": "warrior",
+      "description": "مهارات القتال الجسدي والدفاع القوي",
+      "skills": [
+        {
+          "id": "skill_slash",
+          "name": "ضربة مقطوعة",
+          "level": 1,
+          "type": "attack",
+          "description": "ضربة سريعة بالسلاح",
+          "damage": 15,
+          "mana_cost": 0,
+          "cooldown": 1.5,
+          "animation": "slash_animation"
+        },
+        {
+          "id": "skill_power_strike",
+          "name": "ضربة قوية",
+          "level": 5,
+          "type": "attack",
+          "description": "ضربة قوية تسبب ضرر إضافي",
+          "damage": 35,
+          "mana_cost": 20,
+          "cooldown": 3.0,
+          "prerequisites": ["skill_slash"],
+          "animation": "power_strike_animation"
+        },
+        {
+          "id": "skill_whirlwind",
+          "name": "إعصار دوار",
+          "level": 10,
+          "type": "aoe_attack",
+          "description": "دوران سريع يضرب جميع الأعداء حولك",
+          "damage": 40,
+          "aoe_radius": 3.0,
+          "mana_cost": 40,
+          "cooldown": 4.0,
+          "prerequisites": ["skill_power_strike"],
+          "animation": "whirlwind_animation"
+        },
+        {
+          "id": "skill_shield_bash",
+          "name": "صدمة الدرع",
+          "level": 3,
+          "type": "defense",
+          "description": "صدمة درعك ضد الأعداء",
+          "damage": 20,
+          "stun_duration": 1.5,
+          "mana_cost": 15,
+          "cooldown": 2.5,
+          "animation": "shield_bash_animation"
+        },
+        {
+          "id": "skill_fortify",
+          "name": "تحصين",
+          "level": 7,
+          "type": "defense",
+          "description": "تقوية دفاعاتك مؤقتاً",
+          "defense_boost": 0.3,
+          "duration": 8.0,
+          "mana_cost": 30,
+          "cooldown": 5.0,
+          "animation": "fortify_animation"
+        },
+        {
+          "id": "skill_last_stand",
+          "name": "الوقفة الأخيرة",
+          "level": 15,
+          "type": "defense",
+          "description": "تقليل كل الضرر الوارد بشكل كبير",
+          "damage_reduction": 0.5,
+          "duration": 5.0,
+          "mana_cost": 60,
+          "cooldown": 10.0,
+          "prerequisites": ["skill_fortify"],
+          "animation": "last_stand_animation"
+        }
+      ]
+    },
+    {
+      "id": "skill_tree_mage",
+      "name": "شجرة مهارات الساحر",
+      "class": "mage",
+      "description": "السحر والقوى الأثيرية",
+      "skills": [
+        {
+          "id": "skill_fireball",
+          "name": "كرة النار",
+          "level": 1,
+          "type": "spell",
+          "description": "إطلاق كرة نار تضرب الأعداء",
+          "damage": 25,
+          "aoe_radius": 2.0,
+          "mana_cost": 25,
+          "cooldown": 2.0,
+          "animation": "fireball_animation"
+        },
+        {
+          "id": "skill_ice_spike",
+          "name": "مسمار جليدي",
+          "level": 1,
+          "type": "spell",
+          "description": "إطلاق مسمار جليدي حاد",
+          "damage": 20,
+          "freeze_chance": 0.3,
+          "mana_cost": 20,
+          "cooldown": 1.8,
+          "animation": "ice_spike_animation"
+        },
+        {
+          "id": "skill_meteor_shower",
+          "name": "زخة النيازك",
+          "level": 12,
+          "type": "aoe_spell",
+          "description": "استدعاء نيازك تسقط على منطقة",
+          "damage": 50,
+          "aoe_radius": 4.0,
+          "mana_cost": 80,
+          "cooldown": 6.0,
+          "prerequisites": ["skill_fireball"],
+          "animation": "meteor_shower_animation"
+        },
+        {
+          "id": "skill_arcane_shield",
+          "name": "درع سحري",
+          "level": 5,
+          "type": "protection",
+          "description": "إنشاء درع سحري يمتص الضرر",
+          "absorption": 50,
+          "duration": 10.0,
+          "mana_cost": 40,
+          "cooldown": 4.0,
+          "animation": "arcane_shield_animation"
+        },
+        {
+          "id": "skill_mana_shield",
+          "name": "درع الجمان",
+          "level": 8,
+          "type": "protection",
+          "description": "استخدم جمانك لامتصاص الضرر",
+          "mana_to_damage_ratio": 1.5,
+          "duration": 15.0,
+          "cooldown": 5.0,
+          "animation": "mana_shield_animation"
+        },
+        {
+          "id": "skill_teleport_strike",
+          "name": "ضربة التنقل",
+          "level": 10,
+          "type": "movement_attack",
+          "description": "التنقل خلف العدو والهجوم",
+          "damage": 45,
+          "mana_cost": 50,
+          "cooldown": 5.0,
+          "prerequisites": ["skill_ice_spike"],
+          "animation": "teleport_strike_animation"
+        }
+      ]
+    },
+    {
+      "id": "skill_tree_ranger",
+      "name": "شجرة مهارات الرماح",
+      "class": "ranger",
+      "description": "الرماية والحركة السريعة",
+      "skills": [
+        {
+          "id": "skill_quick_shot",
+          "name": "رمية سريعة",
+          "level": 1,
+          "type": "ranged_attack",
+          "description": "رمية سريعة بالقوس",
+          "damage": 18,
+          "mana_cost": 0,
+          "cooldown": 1.2,
+          "animation": "quick_shot_animation"
+        },
+        {
+          "id": "skill_piercing_shot",
+          "name": "رمية اخترقت",
+          "level": 4,
+          "type": "ranged_attack",
+          "description": "سهم قوي يخترق الدروع",
+          "damage": 32,
+          "armor_penetration": 0.3,
+          "mana_cost": 15,
+          "cooldown": 2.5,
+          "prerequisites": ["skill_quick_shot"],
+          "animation": "piercing_shot_animation"
+        },
+        {
+          "id": "skill_multishot",
+          "name": "رمايات متعددة",
+          "level": 8,
+          "type": "ranged_aoe",
+          "description": "إطلاق عدة أسهم في اتجاهات مختلفة",
+          "damage": 25,
+          "projectile_count": 5,
+          "mana_cost": 35,
+          "cooldown": 4.0,
+          "prerequisites": ["skill_quick_shot"],
+          "animation": "multishot_animation"
+        },
+        {
+          "id": "skill_dodge",
+          "name": "تفادي",
+          "level": 2,
+          "type": "defense",
+          "description": "تفادي سريع لتجنب الهجمات",
+          "dodge_chance": 0.4,
+          "duration": 2.0,
+          "mana_cost": 20,
+          "cooldown": 3.0,
+          "animation": "dodge_animation"
+        },
+        {
+          "id": "skill_poisoned_arrow",
+          "name": "سهم مسموم",
+          "level": 6,
+          "type": "ranged_effect",
+          "description": "سهم يضرب العدو بالسم",
+          "damage": 20,
+          "poison_damage_per_tick": 3,
+          "poison_duration": 10.0,
+          "mana_cost": 25,
+          "cooldown": 3.0,
+          "prerequisites": ["skill_quick_shot"],
+          "animation": "poisoned_arrow_animation"
+        },
+        {
+          "id": "skill_barrage",
+          "name": "وابل النار",
+          "level": 14,
+          "type": "ranged_aoe",
+          "description": "إمطار هائل من الأسهم",
+          "damage": 35,
+          "projectile_count": 15,
+          "aoe_radius": 3.0,
+          "mana_cost": 70,
+          "cooldown": 7.0,
+          "prerequisites": ["skill_multishot"],
+          "animation": "barrage_animation"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "consumables": [
+    {
+      "id": "potion_health",
+      "name": "جرعة الصحة",
+      "type": "potion",
+      "rarity": "common",
+      "description": "جرعة أساسية تعيد 30 نقطة صحة.",
+      "effect": {
+        "type": "heal",
+        "value": 30
+      },
+      "cooldown": 2,
+      "stack_limit": 99,
+      "weight": 0.2,
+      "price": 25
+    },
+    {
+      "id": "potion_health_greater",
+      "name": "جرعة صحة أقوى",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة قوية تعيد 75 نقطة صحة.",
+      "effect": {
+        "type": "heal",
+        "value": 75
+      },
+      "cooldown": 3,
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 75
+    },
+    {
+      "id": "potion_health_supreme",
+      "name": "جرعة صحة عليا",
+      "type": "potion",
+      "rarity": "rare",
+      "description": "جرعة نادرة تعيد كل الصحة المفقودة.",
+      "effect": {
+        "type": "heal",
+        "value": "full"
+      },
+      "cooldown": 5,
+      "stack_limit": 20,
+      "weight": 0.2,
+      "price": 250
+    },
+    {
+      "id": "potion_mana",
+      "name": "جرعة الجمان",
+      "type": "potion",
+      "rarity": "common",
+      "description": "جرعة تعيد 40 نقطة جمان.",
+      "effect": {
+        "type": "mana_restore",
+        "value": 40
+      },
+      "cooldown": 2,
+      "stack_limit": 99,
+      "weight": 0.2,
+      "price": 30
+    },
+    {
+      "id": "potion_mana_greater",
+      "name": "جرعة جمان أقوى",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "جرعة قوية تعيد 100 نقطة جمان.",
+      "effect": {
+        "type": "mana_restore",
+        "value": 100
+      },
+      "cooldown": 3,
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 100
+    },
+    {
+      "id": "potion_fire_resistance",
+      "name": "جرعة مقاومة النار",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "توفر حماية من ضرر النار لمدة 30 ثانية.",
+      "effect": {
+        "type": "status_effect",
+        "status_id": "effect_fire_resistance",
+        "duration": 30
+      },
+      "cooldown": 2,
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 60
+    },
+    {
+      "id": "potion_strength",
+      "name": "جرعة القوة",
+      "type": "potion",
+      "rarity": "uncommon",
+      "description": "تزيد الضرر بنسبة 50% لمدة 20 ثانية.",
+      "effect": {
+        "type": "status_effect",
+        "status_id": "effect_strength_boost",
+        "duration": 20
+      },
+      "cooldown": 3,
+      "stack_limit": 50,
+      "weight": 0.2,
+      "price": 80
+    },
+    {
+      "id": "potion_invisibility",
+      "name": "جرعة الاختفاء",
+      "type": "potion",
+      "rarity": "rare",
+      "description": "تجعلك غير مرئي للأعداء لمدة 15 ثانية.",
+      "effect": {
+        "type": "status_effect",
+        "status_id": "effect_invisibility",
+        "duration": 15
+      },
+      "cooldown": 5,
+      "stack_limit": 20,
+      "weight": 0.2,
+      "price": 200
+    },
+    {
+      "id": "scroll_teleport",
+      "name": "لفافة التنقل",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "description": "تنقلك إلى الموقع الأخير الذي قمت به حفظ.",
+      "effect": {
+        "type": "teleport",
+        "target": "last_save"
+      },
+      "stack_limit": 20,
+      "weight": 0.1,
+      "price": 150
+    },
+    {
+      "id": "scroll_fireball",
+      "name": "لفافة كرة النار",
+      "type": "scroll",
+      "rarity": "uncommon",
+      "description": "تطلق كرة نار قوية بضرر 50 نقطة.",
+      "effect": {
+        "type": "spell",
+        "spell_id": "spell_fireball",
+        "damage": 50,
+        "aoe_radius": 2.0
+      },
+      "cooldown": 4,
+      "stack_limit": 30,
+      "weight": 0.1,
+      "price": 120
+    },
+    {
+      "id": "scroll_heal_party",
+      "name": "لفافة الشفاء الجماعي",
+      "type": "scroll",
+      "rarity": "rare",
+      "description": "تشفي جميع الحلفاء بـ 50 نقطة صحة.",
+      "effect": {
+        "type": "spell",
+        "spell_id": "spell_heal_party",
+        "heal_value": 50,
+        "range": 15.0
+      },
+      "cooldown": 5,
+      "stack_limit": 15,
+      "weight": 0.1,
+      "price": 250
+    },
+    {
+      "id": "food_bread",
+      "name": "خبز بسيط",
+      "type": "food",
+      "rarity": "common",
+      "description": "خبز يعيد 20 صحة عند الأكل.",
+      "effect": {
+        "type": "heal",
+        "value": 20,
+        "satiation": 10
+      },
+      "stack_limit": 99,
+      "weight": 0.3,
+      "price": 10
+    },
+    {
+      "id": "food_roasted_meat",
+      "name": "لحم مشوي",
+      "type": "food",
+      "rarity": "uncommon",
+      "description": "لحم غني يعيد 45 صحة وجمان.",
+      "effect": {
+        "type": "heal_dual",
+        "health_value": 45,
+        "mana_value": 30,
+        "satiation": 20
+      },
+      "cooldown": 3,
+      "stack_limit": 50,
+      "weight": 0.4,
+      "price": 50
+    },
+    {
+      "id": "food_dragon_steak",
+      "name": "شريحة التنين",
+      "type": "food",
+      "rarity": "rare",
+      "description": "لحم فاخر يعيد كل الصحة والجمان.",
+      "effect": {
+        "type": "heal_full",
+        "satiation": 40
+      },
+      "cooldown": 5,
+      "stack_limit": 20,
+      "weight": 0.5,
+      "price": 300
+    },
+    {
+      "id": "elixir_void_purity",
+      "name": "إكسير نقاء الفراغ",
+      "type": "elixir",
+      "rarity": "legendary",
+      "description": "إكسير قوي يعطيك مناعة من جميع الحالات السلبية لمدة 30 ثانية.",
+      "effect": {
+        "type": "status_effect",
+        "status_id": "effect_void_immunity",
+        "duration": 30
+      },
+      "cooldown": 10,
+      "stack_limit": 5,
+      "weight": 0.2,
+      "price": 500
+    },
+    {
+      "id": "herb_blessed",
+      "name": "عشبة مباركة",
+      "type": "herb",
+      "rarity": "common",
+      "description": "عشبة نقية تزيل السموم من الجسد.",
+      "effect": {
+        "type": "remove_status",
+        "status_ids": ["effect_poison", "effect_bleed"]
+      },
+      "stack_limit": 99,
+      "weight": 0.1,
+      "price": 20
+    },
+    {
+      "id": "herb_rare",
+      "name": "عشبة نادرة",
+      "type": "herb",
+      "rarity": "uncommon",
+      "description": "عشبة نادرة توفر 50 صحة إضافية.",
+      "effect": {
+        "type": "heal",
+        "value": 50
+      },
+      "stack_limit": 50,
+      "weight": 0.1,
+      "price": 60
+    },
+    {
+      "id": "antidote_general",
+      "name": "ترياق عام",
+      "type": "antidote",
+      "rarity": "uncommon",
+      "description": "يزيل أي سم أو فيروس من الجسد.",
+      "effect": {
+        "type": "remove_status",
+        "status_ids": ["effect_poison", "effect_burn", "effect_weak"]
+      },
+      "cooldown": 2,
+      "stack_limit": 50,
+      "weight": 0.1,
+      "price": 80
+    },
+    {
+      "id": "revive_orb",
+      "name": "كرة الإحياء",
+      "type": "revive_item",
+      "rarity": "legendary",
+      "description": "تحييك عند الموت بـ 50% من الصحة القصوى.",
+      "effect": {
+        "type": "revive",
+        "health_percentage": 0.5
+      },
+      "stack_limit": 3,
+      "weight": 0.3,
+      "price": 1000
+    }
+  ]
+}
