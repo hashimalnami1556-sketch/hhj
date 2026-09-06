@@ -1,0 +1,304 @@
+{
+  "armor_sets": [
+    {
+      "id": "set_iron_warrior",
+      "name": "مجموعة محارب الحديد",
+      "rarity": "uncommon",
+      "description": "مجموعة متوازنة من درع الحديد للمحاربين",
+      "pieces": [
+        {
+          "slot": "helmet",
+          "item_id": "helmet_iron_basic"
+        },
+        {
+          "slot": "chest_armor",
+          "item_id": "chest_leather_light"
+        },
+        {
+          "slot": "leggings",
+          "item_id": "leggings_iron"
+        },
+        {
+          "slot": "boots",
+          "item_id": "boots_leather"
+        }
+      ],
+      "set_bonuses": [
+        {
+          "pieces_required": 2,
+          "bonus_name": "قوة الحديد",
+          "bonus_effects": {
+            "defense": 3,
+            "poise": 2
+          }
+        },
+        {
+          "pieces_required": 3,
+          "bonus_name": "جسم الحديد",
+          "bonus_effects": {
+            "defense": 6,
+            "physical_damage_reduction": 0.05,
+            "poise": 4
+          }
+        },
+        {
+          "pieces_required": 4,
+          "bonus_name": "قلب الحديد",
+          "bonus_effects": {
+            "defense": 10,
+            "physical_damage_reduction": 0.1,
+            "poise": 6,
+            "attack": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_aether_mage",
+      "name": "مجموعة ساحر الأثير",
+      "rarity": "rare",
+      "description": "مجموعة خفيفة قوية للسحرة والمشعوذين",
+      "pieces": [
+        {
+          "slot": "helmet",
+          "item_id": "helmet_aether_wizard"
+        },
+        {
+          "slot": "chest_armor",
+          "item_id": "chest_mithril_plate"
+        },
+        {
+          "slot": "leggings",
+          "item_id": "leggings_wind"
+        },
+        {
+          "slot": "boots",
+          "item_id": "boots_shadow_step"
+        }
+      ],
+      "set_bonuses": [
+        {
+          "pieces_required": 2,
+          "bonus_name": "موهبة الأثير",
+          "bonus_effects": {
+            "spell_power": 1.1,
+            "mana_regeneration": 0.5,
+            "intelligence_bonus": 2
+          }
+        },
+        {
+          "pieces_required": 3,
+          "bonus_name": "سيادة الأثير",
+          "bonus_effects": {
+            "spell_power": 1.2,
+            "mana_regeneration": 1.0,
+            "intelligence_bonus": 4,
+            "magic_defense": 10
+          }
+        },
+        {
+          "pieces_required": 4,
+          "bonus_name": "تفرد الأثير",
+          "bonus_effects": {
+            "spell_power": 1.3,
+            "mana_regeneration": 2.0,
+            "intelligence_bonus": 6,
+            "magic_defense": 15,
+            "mana_cost_reduction": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_void_assassin",
+      "name": "مجموعة قاتل الفراغ",
+      "rarity": "legendary",
+      "description": "مجموعة قاتمة قوية جداً لقاتلي الليل",
+      "pieces": [
+        {
+          "slot": "chest_armor",
+          "item_id": "armor_void_touch"
+        },
+        {
+          "slot": "shoulder_armor",
+          "item_id": "shoulder_pauldrons_void"
+        },
+        {
+          "slot": "leggings",
+          "item_id": "leggings_wind"
+        },
+        {
+          "slot": "boots",
+          "item_id": "boots_shadow_step"
+        },
+        {
+          "slot": "cloak",
+          "item_id": "cloak_invisibility"
+        }
+      ],
+      "set_bonuses": [
+        {
+          "pieces_required": 2,
+          "bonus_name": "خطى الظل",
+          "bonus_effects": {
+            "void_damage": 0.2,
+            "movement_speed": 0.15,
+            "dodge_chance": 0.1
+          }
+        },
+        {
+          "pieces_required": 3,
+          "bonus_name": "ملك الفراغ",
+          "bonus_effects": {
+            "void_damage": 0.35,
+            "movement_speed": 0.25,
+            "dodge_chance": 0.15,
+            "stealth_movement_bonus": 0.2
+          }
+        },
+        {
+          "pieces_required": 4,
+          "bonus_name": "سيد الفراغ",
+          "bonus_effects": {
+            "void_damage": 0.5,
+            "movement_speed": 0.35,
+            "dodge_chance": 0.2,
+            "stealth_movement_bonus": 0.3,
+            "life_steal": 0.15
+          }
+        },
+        {
+          "pieces_required": 5,
+          "bonus_name": "إمبراطور الفراغ",
+          "bonus_effects": {
+            "void_damage": 0.65,
+            "movement_speed": 0.45,
+            "dodge_chance": 0.25,
+            "stealth_movement_bonus": 0.4,
+            "life_steal": 0.25,
+            "attack_speed": 0.2,
+            "void_resistance": 0.3
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_nature_ranger",
+      "name": "مجموعة رماح الطبيعة",
+      "rarity": "rare",
+      "description": "مجموعة متوازنة للقوس والطبيعة",
+      "pieces": [
+        {
+          "slot": "helmet",
+          "item_id": "helmet_aether_wizard"
+        },
+        {
+          "slot": "chest_armor",
+          "item_id": "chest_leather_light"
+        },
+        {
+          "slot": "boots",
+          "item_id": "boots_shadow_step"
+        },
+        {
+          "slot": "ring",
+          "item_id": "ring_nature_bond"
+        }
+      ],
+      "set_bonuses": [
+        {
+          "pieces_required": 2,
+          "bonus_name": "ألفة الطبيعة",
+          "bonus_effects": {
+            "nature_damage": 0.15,
+            "health_regeneration": 0.3,
+            "movement_speed": 0.1
+          }
+        },
+        {
+          "pieces_required": 3,
+          "bonus_name": "صداقة الطبيعة",
+          "bonus_effects": {
+            "nature_damage": 0.25,
+            "health_regeneration": 0.5,
+            "movement_speed": 0.15,
+            "poison_resistance": 0.2
+          }
+        },
+        {
+          "pieces_required": 4,
+          "bonus_name": "سيطرة الطبيعة",
+          "bonus_effects": {
+            "nature_damage": 0.35,
+            "health_regeneration": 1.0,
+            "movement_speed": 0.25,
+            "poison_resistance": 0.3,
+            "attack_speed": 0.15
+          }
+        }
+      ]
+    },
+    {
+      "id": "set_dragon_slayer",
+      "name": "مجموعة قاتل التنانين",
+      "rarity": "legendary",
+      "description": "أسطورية مجموعة صنعت لمحاربة التنانين",
+      "pieces": [
+        {
+          "slot": "chest_armor",
+          "item_id": "armor_dragon_scales"
+        },
+        {
+          "slot": "helmet",
+          "item_id": "helmet_iron_basic"
+        },
+        {
+          "slot": "leggings",
+          "item_id": "leggings_iron"
+        },
+        {
+          "slot": "boots",
+          "item_id": "boots_leather"
+        },
+        {
+          "slot": "ring",
+          "item_id": "ring_fire_strength"
+        }
+      ],
+      "set_bonuses": [
+        {
+          "pieces_required": 2,
+          "bonus_name": "مطارد التنانين",
+          "bonus_effects": {
+            "fire_resistance": 0.15,
+            "attack": 5,
+            "fire_damage": 0.2
+          }
+        },
+        {
+          "pieces_required": 3,
+          "bonus_name": "محارب التنانين",
+          "bonus_effects": {
+            "fire_resistance": 0.25,
+            "attack": 10,
+            "fire_damage": 0.35,
+            "defense": 8
+          }
+        },
+        {
+          "pieces_required": 5,
+          "bonus_name": "قاتل التنانين",
+          "bonus_effects": {
+            "fire_resistance": 0.4,
+            "attack": 15,
+            "fire_damage": 0.5,
+            "defense": 15,
+            "critical_chance": 0.2,
+            "critical_damage": 0.5,
+            "dragon_slayer_damage": 1.5
+          }
+        }
+      ]
+    }
+  ]
+}

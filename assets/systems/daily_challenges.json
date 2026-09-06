@@ -1,0 +1,237 @@
+{
+  "daily_challenges": [
+    {
+      "id": "daily_monster_slayer",
+      "name": "قاتل الوحوش اليومي",
+      "type": "combat",
+      "description": "اقتل 20 عدو في جميع أنحاء العالم",
+      "difficulty": "easy",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_kill_enemies",
+          "type": "kill_count",
+          "target_count": 20,
+          "any_enemy": true
+        }
+      ],
+      "rewards": {
+        "experience": 300,
+        "gold": 100,
+        "daily_currency": 50
+      }
+    },
+    {
+      "id": "daily_dungeon_delver",
+      "name": "غواص الكهوف اليومي",
+      "type": "exploration",
+      "description": "استكشف 3 طوابق في أي زنزانة",
+      "difficulty": "medium",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_explore_dungeons",
+          "type": "dungeon_floor_count",
+          "target_count": 3,
+          "any_dungeon": true
+        }
+      ],
+      "rewards": {
+        "experience": 500,
+        "gold": 200,
+        "daily_currency": 75,
+        "random_item": {
+          "item_type": "uncommon",
+          "quantity": 1
+        }
+      }
+    },
+    {
+      "id": "daily_boss_hunter",
+      "name": "صياد الزعماء اليومي",
+      "type": "combat",
+      "description": "انتصر على زعيم واحد على الأقل",
+      "difficulty": "hard",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_defeat_boss",
+          "type": "boss_count",
+          "target_count": 1,
+          "any_boss": true
+        }
+      ],
+      "rewards": {
+        "experience": 1000,
+        "gold": 500,
+        "daily_currency": 150,
+        "random_item": {
+          "item_type": "rare",
+          "quantity": 1
+        }
+      }
+    },
+    {
+      "id": "daily_crafter",
+      "name": "الحرفي اليومي",
+      "type": "crafting",
+      "description": "أكمل 5 عمليات حرفة",
+      "difficulty": "medium",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_craft_items",
+          "type": "crafting_count",
+          "target_count": 5
+        }
+      ],
+      "rewards": {
+        "experience": 400,
+        "gold": 150,
+        "daily_currency": 60,
+        "crafting_materials": {
+          "item_id": "iron_ore",
+          "quantity": 10
+        }
+      }
+    },
+    {
+      "id": "daily_treasure_seeker",
+      "name": "باحث الكنوز اليومي",
+      "type": "exploration",
+      "description": "اجمع 5 عناصر نادرة",
+      "difficulty": "medium",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_rare_items",
+          "type": "rare_item_count",
+          "target_count": 5
+        }
+      ],
+      "rewards": {
+        "experience": 600,
+        "gold": 250,
+        "daily_currency": 80
+      }
+    },
+    {
+      "id": "daily_quest_master",
+      "name": "معالج المهام اليومي",
+      "type": "quests",
+      "description": "أكمل 2 مهمة جانبية",
+      "difficulty": "medium",
+      "reset_time": "24h",
+      "objectives": [
+        {
+          "objective_id": "obj_side_quests",
+          "type": "quest_count",
+          "target_count": 2,
+          "quest_type": "side"
+        }
+      ],
+      "rewards": {
+        "experience": 700,
+        "gold": 300,
+        "daily_currency": 100
+      }
+    }
+  ],
+  "special_events": [
+    {
+      "id": "event_double_experience",
+      "name": "حدث الخبرة المضاعفة",
+      "type": "buff",
+      "description": "احصل على ضعف الخبرة من جميع المصادر",
+      "start_date": "2026-09-08",
+      "end_date": "2026-09-14",
+      "duration_hours": 168,
+      "active": false,
+      "buff_modifier": {
+        "experience_multiplier": 2.0
+      }
+    },
+    {
+      "id": "event_rare_loot_festival",
+      "name": "مهرجان الغنائم النادرة",
+      "type": "loot_drop",
+      "description": "ارتفاع معدل ظهور العناصر النادرة",
+      "start_date": "2026-09-10",
+      "end_date": "2026-09-17",
+      "duration_hours": 168,
+      "active": false,
+      "loot_modifiers": {
+        "rare_drop_chance_multiplier": 2.0,
+        "legendary_drop_chance_multiplier": 1.5
+      }
+    },
+    {
+      "id": "event_void_invasion",
+      "name": "غزو الفراغ",
+      "type": "boss_event",
+      "description": "ظهور أعداء فراغ قوية في جميع المواقع",
+      "start_date": "2026-09-15",
+      "end_date": "2026-09-21",
+      "duration_hours": 144,
+      "active": false,
+      "special_mechanics": {
+        "additional_void_enemies": true,
+        "void_boss_spawn_chance": 0.1,
+        "void_loot_multiplier": 2.0
+      }
+    },
+    {
+      "id": "event_gold_rush",
+      "name": "حمى الذهب",
+      "type": "resource",
+      "description": "احصل على ذهب إضافي من جميع المصادر",
+      "start_date": "2026-09-20",
+      "end_date": "2026-09-22",
+      "duration_hours": 48,
+      "active": false,
+      "modifiers": {
+        "gold_multiplier": 1.5
+      }
+    }
+  ],
+  "seasonal_content": [
+    {
+      "id": "season_summer_blazes",
+      "name": "موسم ألسنة الصيف",
+      "season": "summer",
+      "duration_days": 90,
+      "theme": "fire_and_heat",
+      "special_enemies": [
+        {
+          "enemy_id": "enemy_fire_elemental",
+          "spawn_increase": 2.0
+        }
+      ],
+      "seasonal_rewards": [
+        {
+          "reward_id": "seasonal_weapon_fire_sword",
+          "name": "سيف النار الموسمي"
+        }
+      ]
+    },
+    {
+      "id": "season_winter_frost",
+      "name": "موسم الجليد الشتوي",
+      "season": "winter",
+      "duration_days": 90,
+      "theme": "ice_and_cold",
+      "special_enemies": [
+        {
+          "enemy_id": "enemy_ice_elemental",
+          "spawn_increase": 2.0
+        }
+      ],
+      "seasonal_rewards": [
+        {
+          "reward_id": "seasonal_weapon_frost_staff",
+          "name": "عصا الجليد الموسمية"
+        }
+      ]
+    }
+  ]
+}
