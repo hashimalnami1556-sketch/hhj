@@ -1,0 +1,208 @@
+{
+  "project_name": "NAR: Chronicles of the Fallen Star",
+  "description": "AAAA game asset pipeline configuration",
+  "version": "1.0.0",
+
+  "directories": {
+    "project_root": "./",
+    "assets": "./assets",
+    "blender": "./assets/blender",
+    "source": "./assets/blender/source",
+    "work": "./assets/blender/work",
+    "export": "./assets/blender/export",
+    "textures": "./assets/blender/textures",
+    "lods": "./assets/blender/export/lods",
+    "pbr": "./assets/blender/textures/pbr"
+  },
+
+  "quality_presets": {
+    "mobile": {
+      "target_poly_count": 50000,
+      "texture_resolution": "2k",
+      "lod_levels": 3,
+      "reduction_ratios": [1.0, 0.4, 0.15]
+    },
+    "console": {
+      "target_poly_count": 150000,
+      "texture_resolution": "4k",
+      "lod_levels": 4,
+      "reduction_ratios": [1.0, 0.5, 0.25, 0.1]
+    },
+    "pc_high": {
+      "target_poly_count": 500000,
+      "texture_resolution": "4k",
+      "lod_levels": 4,
+      "reduction_ratios": [1.0, 0.5, 0.25, 0.1]
+    },
+    "pc_ultra": {
+      "target_poly_count": 2000000,
+      "texture_resolution": "8k",
+      "lod_levels": 4,
+      "reduction_ratios": [1.0, 0.6, 0.3, 0.15]
+    }
+  },
+
+  "lod_settings": {
+    "lod_levels": 4,
+    "screen_thresholds": [450, 200, 100, 0],
+    "reduction_ratios": [1.0, 0.5, 0.25, 0.1],
+    "decimate_method": "COLLAPSE",
+    "preserve_topology": true,
+    "smooth_normals": true
+  },
+
+  "pbr_baking_settings": {
+    "resolution_2k": [2048, 2048],
+    "resolution_4k": [4096, 4096],
+    "resolution_8k": [8192, 8192],
+    "default_resolution": "4k",
+    "texture_maps": {
+      "bake_normal": true,
+      "bake_roughness": true,
+      "bake_metallic": true,
+      "bake_ao": true,
+      "bake_curvature": true,
+      "bake_height": true,
+      "bake_emissive": true
+    },
+    "normal_map_settings": {
+      "format": "DXT5",
+      "strength": 1.0
+    },
+    "ao_settings": {
+      "distance": 1.0,
+      "samples": 256
+    },
+    "bake_engine": "CYCLES",
+    "bake_samples": 128,
+    "use_gpu": true
+  },
+
+  "uv_automation_settings": {
+    "udim_tile_size": 1024,
+    "max_udim_tiles": 16,
+    "use_smart_uv": true,
+    "seam_angle": 66.0,
+    "island_margin": 0.02,
+    "angle_limit": 66.0,
+    "stretch_limit": 0.1,
+    "generate_lightmap_uvs": true,
+    "lightmap_uv_channel": 1,
+    "uv_per_lod": true
+  },
+
+  "retopology_settings": {
+    "target_poly_count": 50000,
+    "character_target_poly_count": 100000,
+    "voxel_size": 0.1,
+    "use_face_count": false,
+    "face_count_target": 50000,
+    "use_mesh_symmetry": true,
+    "preserve_uv_seams": true
+  },
+
+  "batch_processing_settings": {
+    "num_threads": 4,
+    "batch_size": 5,
+    "use_gpu_rendering": true,
+    "output_formats": ["FBX", "GLTF"],
+    "cleanup_temp_files": true,
+    "generate_report": true
+  },
+
+  "asset_categories": {
+    "character": {
+      "target_poly_count": 100000,
+      "texture_resolution": "4k",
+      "bake_samples": 256,
+      "generate_lightmap": true,
+      "use_mesh_symmetry": true,
+      "priority": 1
+    },
+    "environment": {
+      "target_poly_count": 500000,
+      "texture_resolution": "4k",
+      "bake_samples": 128,
+      "generate_lightmap": true,
+      "use_mesh_symmetry": false,
+      "priority": 2
+    },
+    "prop": {
+      "target_poly_count": 50000,
+      "texture_resolution": "2k",
+      "bake_samples": 128,
+      "generate_lightmap": false,
+      "use_mesh_symmetry": true,
+      "priority": 3
+    },
+    "vehicle": {
+      "target_poly_count": 150000,
+      "texture_resolution": "4k",
+      "bake_samples": 128,
+      "generate_lightmap": true,
+      "use_mesh_symmetry": true,
+      "priority": 2
+    },
+    "weapon": {
+      "target_poly_count": 30000,
+      "texture_resolution": "2k",
+      "bake_samples": 96,
+      "generate_lightmap": false,
+      "use_mesh_symmetry": true,
+      "priority": 3
+    },
+    "architectural": {
+      "target_poly_count": 500000,
+      "texture_resolution": "4k",
+      "bake_samples": 128,
+      "generate_lightmap": true,
+      "use_mesh_symmetry": false,
+      "priority": 2
+    }
+  },
+
+  "material_library": {
+    "pbr_metallic": "PBR_Metallic",
+    "pbr_specular": "PBR_Specular",
+    "pbr_cloth": "PBR_Cloth",
+    "pbr_skin": "PBR_Skin",
+    "pbr_organic": "PBR_Organic"
+  },
+
+  "export_settings": {
+    "fbx": {
+      "enabled": true,
+      "smooth_groups": true,
+      "mesh_modifiers": true,
+      "bake_animation": false
+    },
+    "gltf": {
+      "enabled": true,
+      "format": "GLB",
+      "draco_compression": true
+    },
+    "usdz": {
+      "enabled": false,
+      "format": "USDZ"
+    }
+  },
+
+  "performance": {
+    "blender_cuda_cores": 10752,
+    "num_cpu_threads": 16,
+    "ram_gb": 64,
+    "vram_gb": 24
+  },
+
+  "notifications": {
+    "email_on_completion": false,
+    "slack_webhook": null,
+    "discord_webhook": null
+  },
+
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+    "file": "./processing.log"
+  }
+}

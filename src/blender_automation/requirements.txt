@@ -1,0 +1,30 @@
+# Blender Asset Automation Framework - Python Dependencies
+#
+# Note: Blender includes most of these, but listed for reference
+# when using as standalone module or in custom environments
+
+# Core dependencies (bundled with Blender)
+# numpy >= 1.19.0
+# PIL (Pillow) >= 7.0.0
+
+# Optional external dependencies for cloud/distributed processing
+# (Not required for local Blender usage)
+
+# For cloud rendering support
+# requests >= 2.25.0
+# boto3 >= 1.17.0  # AWS S3 support
+
+# For monitoring and reporting
+# aiohttp >= 3.7.0
+# prometheus-client >= 0.9.0
+
+# For database logging
+# sqlalchemy >= 1.4.0
+# psycopg2-binary >= 2.8.0
+
+# Development and testing
+# pytest >= 6.2.0
+# pytest-cov >= 2.12.0
+# black >= 21.0
+# flake8 >= 3.9.0
+# mypy >= 0.900
