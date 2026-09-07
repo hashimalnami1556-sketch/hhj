@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # Main asset processing service
+  asset-pipeline:
+    build: .
+    container_name: nar-asset-pipeline
+    image: nar-blender-automation:latest
+
+    # GPU support (requires nvidia-docker)
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility
+      - BLENDER_PATH=/usr/local/bin/blender
+
+    # Volume mounts
+    volumes:
+      - ./assets/source:/workspace/assets/source
+      - ./exports:/workspace/exports
+      - ./configs:/workspace/configs
+      - ./logs:/workspace/logs
+
+    # Resource limits
+    deploy:
+      resources:
+        limits:
+          cpus: '8'
+          memory: 16G
+        reservations:
+          cpus: '4'
+          memory: 8G
+
+    # Network configuration
+    networks:
+      - asset-pipeline-network
+
+  # Optional: Dashboard/monitoring service
+  dashboard:
+    image: nginx:latest
+    container_name: nar-dashboard
+    ports:
+      - "8080:80"
+    volumes:
+      - ./logs:/usr/share/nginx/html:ro
+    networks:
+      - asset-pipeline-network
+    depends_on:
+      - asset-pipeline
+
+networks:
+  asset-pipeline-network:
+    driver: bridge
+
+volumes:
+  blender-cache:
+    driver: local

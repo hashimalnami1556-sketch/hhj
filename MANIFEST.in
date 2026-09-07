@@ -1,0 +1,34 @@
+# Include all package data
+recursive-include src/blender_automation *.py
+recursive-include src/blender_automation *.md
+recursive-include src/blender_automation *.json
+recursive-include src/blender_automation *.txt
+
+# Include documentation
+include README.md
+include INSTALL.md
+include COMPLETE_GUIDE.md
+include BLENDER_AUTOMATION_SUMMARY.md
+include IMPLEMENTATION_STATUS.md
+
+# Include launchers
+include run.ps1
+include run.sh
+
+# Include setup files
+include setup.py
+include setup.cfg
+include pyproject.toml
+
+# Include Docker files
+include Dockerfile
+include docker-compose.yml
+
+# Exclude unnecessary files
+global-exclude __pycache__
+global-exclude *.pyc
+global-exclude *.pyo
+global-exclude *.pyd
+global-exclude .DS_Store
+global-exclude *.egg-info
+global-exclude .pytest_cache

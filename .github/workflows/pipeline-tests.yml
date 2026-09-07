@@ -1,0 +1,107 @@
+name: Pipeline Tests and Validation
+
+on:
+  push:
+    branches: [ main, develop, "claude/*" ]
+    paths:
+      - 'src/blender_automation/**'
+      - 'setup.py'
+      - 'pyproject.toml'
+      - '.github/workflows/**'
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        python-version: ['3.9', '3.10', '3.11']
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install -e ".[dev]"
+
+    - name: Lint with flake8
+      run: |
+        pip install flake8
+        # Stop the build if there are Python syntax errors or undefined names
+        flake8 src/blender_automation --count --select=E9,F63,F7,F82 --show-source --statistics
+        # Exit-zero treats all errors as warnings
+        flake8 src/blender_automation --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Type check with mypy
+      run: |
+        pip install mypy
+        mypy src/blender_automation --ignore-missing-imports || true
+
+    - name: Test imports
+      run: |
+        python -c "from src.blender_automation.config import BlenderAssetPipelineConfig; print('✓ Config module')"
+        python -c "from src.blender_automation.lod_generator import LODGenerator; print('✓ LOD module')"
+        python -c "from src.blender_automation.pbr_baker import PBRBaker; print('✓ PBR module')"
+        python -c "from src.blender_automation.uv_automation import UVAutomator; print('✓ UV module')"
+        python -c "from src.blender_automation.retopology_tools import RetopologyTools; print('✓ Retopology module')"
+        python -c "from src.blender_automation.batch_processor import BatchProcessor; print('✓ Batch module')"
+        python -c "from src.blender_automation.main import NARAssetPipeline; print('✓ Main module')"
+        python -c "from src.blender_automation.production_workflow import ProductionWorkflow; print('✓ Production workflow module')"
+
+    - name: Validate configuration
+      run: |
+        python -c "
+        import json
+        with open('src/blender_automation/example_config.json') as f:
+            config = json.load(f)
+        print(f'✓ Config validated: {len(config)} sections')
+        print(f'  Presets: {list(config.get(\"quality_presets\", {}).keys())}')
+        print(f'  Categories: {list(config.get(\"asset_categories\", {}).keys())}')
+        "
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Security scan
+      run: |
+        pip install bandit
+        bandit -r src/blender_automation -ll || true
+
+  documentation:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Validate documentation
+      run: |
+        echo "✓ Checking documentation files..."
+        [ -f "src/blender_automation/README.md" ] && echo "  ✓ README.md" || echo "  ✗ README.md missing"
+        [ -f "src/blender_automation/QUICK_START.md" ] && echo "  ✓ QUICK_START.md" || echo "  ✗ QUICK_START.md missing"
+        [ -f "src/blender_automation/USAGE_EXAMPLES.md" ] && echo "  ✓ USAGE_EXAMPLES.md" || echo "  ✗ USAGE_EXAMPLES.md missing"
+        [ -f "src/blender_automation/UNREAL_ENGINE_INTEGRATION.md" ] && echo "  ✓ UNREAL_ENGINE_INTEGRATION.md" || echo "  ✗ UNREAL_ENGINE_INTEGRATION.md missing"
+        [ -f "COMPLETE_GUIDE.md" ] && echo "  ✓ COMPLETE_GUIDE.md" || echo "  ✗ COMPLETE_GUIDE.md missing"
+        [ -f "INSTALL.md" ] && echo "  ✓ INSTALL.md" || echo "  ✗ INSTALL.md missing"
+
+    - name: Line count check
+      run: |
+        echo "Code statistics:"
+        wc -l src/blender_automation/*.py | tail -1
+        echo "Documentation statistics:"
+        wc -l src/blender_automation/*.md | tail -1
+        echo "Total documentation:"
+        wc -l *.md | tail -1
